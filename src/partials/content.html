@@ -52,6 +52,34 @@
       nicht-proprietärer Software. Damit wollen wir unseren Beitrag zu einer
       offenen, transparenten Stadt beitragen.
     </p>
+    <pre><code>
+module.exports = function (options = {}) {
+const {
+  insert = { after: 'h1' },
+  title = 'Content',
+  ignoreMissingSelector = false,
+  ignoreMissingHeadings = false,
+  toggle // ['show', 'hide', true],
+} = options
+
+if (typeof insert !== 'object') {
+  throw new PostHtmlTocError(`unexpected 'options.insert': ${insert}`)
+}
+
+const insertKeys = Object.keys(insert)
+
+switch (insertKeys.length) {
+  case 1:
+    break
+  case 0:
+    throw new PostHtmlTocError(`empty 'options.insert'`)
+  default:
+    throw new PostHtmlTocError(`too many keys in 'options.insert': ${insertKeys}`)
+}
+
+const position = insertKeys[0]
+const selector = insert[position]
+    </code></pre>
     <p>
       Die Plattform Stadtpuls ist eine prototypische Offene Datenplattform,
       welche Sensordaten von & für Berlin als in einer gemeinsamen Datenbasis
