@@ -5,7 +5,7 @@
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html",
-    "format": "prettier --write src/**/*.{html,js,css}"
+    "format": "prettier --write src/**/*.{html,js,jsx,css}"
   },
   "repository": {
     "type": "git",
@@ -13,25 +13,28 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/technologiestiftung/stadtpuls-story-template/issues"
   },
   "homepage": "https://github.com/technologiestiftung/stadtpuls-story-template#readme",
   "devDependencies": {
+    "@parcel/transformer-mdx": "^2.0.0",
     "@tailwindcss/typography": "0.4.1",
     "autoprefixer": "10.3.7",
     "parcel": "2.0.0",
     "postcss": "8.3.11",
-    "posthtml": "0.16.5",
-    "posthtml-doctype": "1.1.1",
-    "posthtml-highlight": "1.1.2",
-    "posthtml-include": "1.7.2",
     "prettier": "2.4.1",
     "tailwindcss": "2.2.17"
   },
   "engines": {
     "node": "14.18.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@mdx-js/react": "1.6.22",
+    "prism-react-renderer": "1.2.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "reaviz": "11.1.1"
+  }
 }

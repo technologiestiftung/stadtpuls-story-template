@@ -209,7 +209,7 @@
 
   .prose-sm a,
   .prose a {
-    @apply text-blue underline-green hover:text-purple transition font-headline font-bold;
+    @apply focus-offset text-blue underline-green hover:text-purple transition font-headline font-bold;
   }
 
   .prose-sm button a,
