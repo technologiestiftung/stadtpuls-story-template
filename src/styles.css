@@ -18,11 +18,11 @@
   @variants responsive {
     .bg-black-dot-pattern {
       @apply bg-black;
-      background-image: url("images/patterns/black.svg");
+      background-image: url('images/patterns/black.svg');
     }
     .bg-white-dot-pattern {
       @apply bg-white;
-      background-image: url("images/patterns/white.svg");
+      background-image: url('images/patterns/white.svg');
     }
     .animate-fade-in {
       opacity: 0;
@@ -37,78 +37,78 @@
 }
 @layer base {
   @font-face {
-    font-family: "Sora";
-    src: url("fonts/Sora-Regular.woff2") format("woff2"),
-      url("fonts/Sora-Regular.ttf") format("truetype");
+    font-family: 'Sora';
+    src: url('fonts/Sora-Regular.woff2') format('woff2'),
+      url('fonts/Sora-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
   @font-face {
-    font-family: "Sora";
-    src: url("fonts/Sora-Italic.woff2") format("woff2"),
-      url("fonts/Sora-Italic.ttf") format("truetype");
+    font-family: 'Sora';
+    src: url('fonts/Sora-Italic.woff2') format('woff2'),
+      url('fonts/Sora-Italic.ttf') format('truetype');
     font-weight: 400;
     font-style: italic;
   }
   @font-face {
-    font-family: "Sora";
-    src: url("fonts/Sora-Bold.woff2") format("woff2"),
-      url("fonts/Sora-Bold.ttf") format("truetype");
+    font-family: 'Sora';
+    src: url('fonts/Sora-Bold.woff2') format('woff2'),
+      url('fonts/Sora-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
   }
   @font-face {
-    font-family: "Sora";
-    src: url("fonts/Sora-BoldItalic.woff2") format("woff2"),
-      url("fonts/Sora-BoldItalic.ttf") format("truetype");
+    font-family: 'Sora';
+    src: url('fonts/Sora-BoldItalic.woff2') format('woff2'),
+      url('fonts/Sora-BoldItalic.ttf') format('truetype');
     font-weight: 700;
     font-style: italic;
   }
 
   @font-face {
-    font-family: "SpaceGrotesk";
-    src: url("fonts/SpaceGrotesk-Light.woff2") format("woff2"),
-      url("fonts/SpaceGrotesk-Light.woff") format("woff");
+    font-family: 'SpaceGrotesk';
+    src: url('fonts/SpaceGrotesk-Light.woff2') format('woff2'),
+      url('fonts/SpaceGrotesk-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "SpaceGrotesk";
-    src: url("fonts/SpaceGrotesk-Regular.woff2") format("woff2"),
-      url("fonts/SpaceGrotesk-Regular.woff") format("woff");
+    font-family: 'SpaceGrotesk';
+    src: url('fonts/SpaceGrotesk-Regular.woff2') format('woff2'),
+      url('fonts/SpaceGrotesk-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "SpaceGrotesk";
-    src: url("fonts/SpaceGrotesk-Medium.woff2") format("woff2"),
-      url("fonts/SpaceGrotesk-Medium.woff") format("woff");
+    font-family: 'SpaceGrotesk';
+    src: url('fonts/SpaceGrotesk-Medium.woff2') format('woff2'),
+      url('fonts/SpaceGrotesk-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "SpaceGrotesk";
-    src: url("fonts/SpaceGrotesk-Bold.woff2") format("woff2"),
-      url("fonts/SpaceGrotesk-Bold.woff") format("woff");
+    font-family: 'SpaceGrotesk';
+    src: url('fonts/SpaceGrotesk-Bold.woff2') format('woff2'),
+      url('fonts/SpaceGrotesk-Bold.woff') format('woff');
     font-weight: 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "SpaceGrotesk";
-    src: url("fonts/SpaceGrotesk[wght].woff2") format("woff2"),
-      url("fonts/SpaceGrotesk[wght].woff") format("woff");
+    font-family: 'SpaceGrotesk';
+    src: url('fonts/SpaceGrotesk[wght].woff2') format('woff2'),
+      url('fonts/SpaceGrotesk[wght].woff') format('woff');
     font-weight: 300 700;
     font-style: normal;
   }
 
   @font-face {
-    font-family: "SpaceMono";
-    src: url("fonts/SpaceGrotesk[wght].woff2") format("woff2"),
-      url("fonts/SpaceGrotesk[wght].woff") format("woff");
+    font-family: 'SpaceMono';
+    src: url('fonts/SpaceGrotesk[wght].woff2') format('woff2'),
+      url('fonts/SpaceGrotesk[wght].woff') format('woff');
     font-weight: 300 900;
     font-style: monospace;
   }
@@ -126,67 +126,67 @@
     overflow: hidden;
   }
 
-  [type="text"],
-  [type="email"],
-  [type="url"],
-  [type="password"],
-  [type="number"],
-  [type="date"],
-  [type="datetime-local"],
-  [type="month"],
-  [type="search"],
-  [type="tel"],
-  [type="time"],
-  [type="week"],
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
   [multiple],
   textarea,
   select {
     @apply block w-full border-gray-200 mb-4 text-black font-headline focus:text-blue focus:border-purple focus:ring-green focus:ring-2 bg-white;
   }
 
-  [type="text"].error,
-  [type="email"].error,
-  [type="url"].error,
-  [type="password"].error,
-  [type="number"].error,
-  [type="date"].error,
-  [type="datetime-local"].error,
-  [type="month"].error,
-  [type="search"].error,
-  [type="tel"].error,
-  [type="time"].error,
-  [type="week"].error,
+  [type='text'].error,
+  [type='email'].error,
+  [type='url'].error,
+  [type='password'].error,
+  [type='number'].error,
+  [type='date'].error,
+  [type='datetime-local'].error,
+  [type='month'].error,
+  [type='search'].error,
+  [type='tel'].error,
+  [type='time'].error,
+  [type='week'].error,
   [multiple].error,
   textarea.error,
   select.error {
     @apply border-error focus:border-error focus:ring-error;
   }
 
-  [type="text"]:disabled,
-  [type="email"]:disabled,
-  [type="url"]:disabled,
-  [type="password"]:disabled,
-  [type="number"]:disabled,
-  [type="date"]:disabled,
-  [type="datetime-local"]:disabled,
-  [type="month"]:disabled,
-  [type="search"]:disabled,
-  [type="tel"]:disabled,
-  [type="time"]:disabled,
-  [type="week"]:disabled,
+  [type='text']:disabled,
+  [type='email']:disabled,
+  [type='url']:disabled,
+  [type='password']:disabled,
+  [type='number']:disabled,
+  [type='date']:disabled,
+  [type='datetime-local']:disabled,
+  [type='month']:disabled,
+  [type='search']:disabled,
+  [type='tel']:disabled,
+  [type='time']:disabled,
+  [type='week']:disabled,
   [multiple]:disabled,
   textarea:disabled,
   select:disabled {
     @apply opacity-50;
   }
 
-  [type="checkbox"],
-  [type="radio"] {
+  [type='checkbox'],
+  [type='radio'] {
     @apply mr-2 transform translate-y-0.5 border-gray-400 text-blue focus:ring-blue bg-white;
   }
 
-  [type="checkbox"].error,
-  [type="radio"].error {
+  [type='checkbox'].error,
+  [type='radio'].error {
     @apply border-error text-error focus:ring-error;
   }
 
@@ -196,14 +196,14 @@
   .prose-sm h4,
   .prose-sm h5,
   .prose-sm h6,
-  .prose-sm [class~="lead"],
+  .prose-sm [class~='lead'],
   .prose h1,
   .prose h2,
   .prose h3,
   .prose h4,
   .prose h5,
   .prose h6,
-  .prose [class~="lead"] {
+  .prose [class~='lead'] {
     @apply font-headline;
   }
 

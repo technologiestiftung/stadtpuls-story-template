@@ -1,107 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stadtpuls Story - DEINE STORY TITEL HIER</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <main class="bg-white-dot-pattern min-h-screen">
-    <header class="relative overflow-hidden bg-black-dot-pattern">
-      <section
-        class="
-          px-8 sm:px-12 md:px-16 lg:px-20
-          pt-6 sm:pt-8 md:pt-10 lg:pt-12
-          pb-36 sm:pb-40
-          max-w-4xl mx-auto w-full h-full z-10
-          flex flex-col justify-between relative
-        "
-      >
-        <a href="https://stadtpuls.com" title="Die Hauptseite von Stadtpuls" class="transition-opacity hover:opacity-60">
-          <img src="images/logo.svg" alt="Stadtpuls Logo" width="157px" />
-        </a>
-        <div itemscope itemtype="http://schema.org/Article">
-          <h1 class="text-white text-4xl lg:text-5xl font-bold font-headline mb-4 mt-20" itemprop="name">
-            State of Dataviz
-          </h1>
-          <h2 class="text-white text-xl lg:text-2xl opacity-90 mb-4">
-            2021 Observations: <br />
-            Data through the lens of the Observable Community
-          </h2>
-          <p class="text-white text-sm lg:text-base">
-            <a
-              class="transition-opacity hover:opacity-80"
-              href="https://stadtpuls.com/accounts/squeezer44"
-              target="_blank"
-              rel="noreferrer noopener"
-              itemprop="author"
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stadtpuls Story - DEINE STORY TITEL HIER</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="bg-white-dot-pattern min-h-screen">
+      <header class="relative overflow-hidden bg-black-dot-pattern">
+        <section
+          class="
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            pt-6
+            sm:pt-8
+            md:pt-10
+            lg:pt-12
+            pb-36
+            sm:pb-40
+            max-w-4xl
+            mx-auto
+            w-full
+            h-full
+            z-10
+            flex flex-col
+            justify-between
+            relative
+          "
+        >
+          <a
+            href="https://stadtpuls.com"
+            title="Die Hauptseite von Stadtpuls"
+            class="transition-opacity hover:opacity-60"
+          >
+            <img src="images/logo.svg" alt="Stadtpuls Logo" width="157px" />
+          </a>
+          <div itemscope itemtype="http://schema.org/Article">
+            <h1
+              class="
+                text-white text-4xl
+                lg:text-5xl
+                font-bold font-headline
+                mb-4
+                mt-20
+              "
+              itemprop="name"
             >
-              <img class="inline-block" src="https://source.boringavatars.com/pixel/24/squeezer44?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC" alt="Avatar of squeezer44">
-              <span class="mx-1 inline-block underline underline-green">squeezer44</span>
-            </a>
-            <span class="opacity-80"> – <time itemprop="datePublished" datetime="2021-10-25">25. Oktober 2021</time></span>
-          </p>
-        </div>
-      </section>
-      <img class="absolute top-0 left-0 w-full h-full object-cover opacity-40" src="images/story-cover.jpg" alt="DIE BESCHREIBUNG DEINES STORY-COVER HIER" />
-      <div class="bg-purple absolute inset-0 pointer-events-none mix-blend-color opacity-80" aria-hidden="true"></div>
-    </header>
-    <div class="relative">
-      <div class="from-white bg-gradient-to-t absolute inset-0 bottom-1/2 pointer-events-none"></div>
-      <div class="bg-white absolute inset-0 top-1/2 pointer-events-none"></div>
-      <article class="py-10 sm:py-12 md:py-14 lg:py-16 px-8 sm:px-12 md:px-16 lg:px-20 max-w-4xl mx-auto -mt-28 bg-white relative min-h-[calc(50vh+80px)s]">
-        <section class="prose-sm lg:prose max-w-none relative">
-          <p class="lead">
-            One of Observable’s motivating principles is to listen to and learn from its passionate and fast-growing community.
-          </p>
-          <p class="lead">
-            Hundreds of our community members generously participated in two research surveys about data analysis and visualization
-            over the past year. Here’s what we learned.
-          </p>
-          <h2>Data is exploding, for everyone</h2>
-          <p>With the explosive growth in online technologies, services and information, <a href="https://seedscientific.com/how-much-data-is-created-every-day/">data is overwhelming</a> for all of us. Making
-          sense of it is the biggest issue facing our connected world. For businesses, there is an urgent need for
-          cross-functional teams to gain data-driven insights quickly to inform business decisions.</p>
-          <h2>The data visualization community is growing</h2>
-          <p>Observable’s survey data shows accelerated interest and growth in data visualization. This is confirmed by other
-          industry observers: Fortune Business Insights in 2020 estimated a market size of $8.85B as of 2019 and projected growth
-          (CAGR) of 10.2% through 2027.</p>
-          <p>This growth in business investment and community size makes it clear that businesses are prioritizing tool investments
-          for their teams to work with data, and gain data-driven insights.</p>
-          <p>Our surveys show that working with data is no longer something that primarily specialists do; working with data is
-          increasingly becoming a critical skill for many jobs. More people are investing in their own data-centric skills to meet
-          the rising business needs, and to excel in their chosen professions.</p>
-          <h2>Data Practitioners: data specialists and their collaborators</h2>
-          <p>The people investing in their data skills are in different job functions. They analyze data, share insights and
-          communicate with each other:</p>
-          <ul>
-            <li>Data scientists</li>
-            <li>Data engineers</li>
-            <li>Data architects</li>
-            <li>Business and financial analysts</li>
-            <li>Data visualization (dataviz) creators</li>
-            <li>Business Intelligence / Operational dashboard developers</li>
-            <li>Those who collaborate with the above, such as product managers, team leads, and decision makers</li>
-          </ul>
-          <p>Observable uses the term <em>data practitioners</em> as an inclusive identity covering all of the people who work together on
-          data.</p>
-          <h3>Which role best describes you?</h3>
-          <p>Note that for the “hobbyist” category, deeper inspection showed that these people were in fact doing data-work,
-          including data exploration, data analysis, data visualizations and dashboard creation, etc. They self-identified as
-          hobbyists because they were doing this work in a personal capacity and not as part of their official job. This further
-          strengthens the hypothesis on the broadening group of data practitioners honing their data-related skills.</p>
-          <h2>More practitioners are entering the field to match industry demand</h2>
-          <p>We're seeing that <em>more and diverse</em> practitioners are entering the field and beginning to sharpen their skills with
-          languages and libraries for more complex data visualizations. This growth of the field may be fostered by easier access
-          to learning materials outside of traditional learning environments, tools to break down silos and allow various
-          skill-sets to participate and drive data visualization creation, and the sprouting of digital communities for
-          collaboration and troubleshooting.</p>
+              State of Dataviz
+            </h1>
+            <h2 class="text-white text-xl lg:text-2xl opacity-90 mb-4">
+              2021 Observations: <br />
+              Data through the lens of the Observable Community
+            </h2>
+            <p class="text-white text-sm lg:text-base">
+              <a
+                class="transition-opacity hover:opacity-80"
+                href="https://stadtpuls.com/accounts/squeezer44"
+                target="_blank"
+                rel="noreferrer noopener"
+                itemprop="author"
+              >
+                <img
+                  class="inline-block"
+                  src="https://source.boringavatars.com/pixel/24/squeezer44?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
+                  alt="Avatar of squeezer44"
+                />
+                <span class="mx-1 inline-block underline underline-green"
+                  >squeezer44</span
+                >
+              </a>
+              <span class="opacity-80">
+                –
+                <time itemprop="datePublished" datetime="2021-10-25"
+                  >25. Oktober 2021</time
+                ></span
+              >
+            </p>
+          </div>
         </section>
-      </article>
-    </div>
-  </main>
-  <script type="module" src="index.js"></script>
-</body>
+        <img
+          class="absolute top-0 left-0 w-full h-full object-cover opacity-40"
+          src="images/story-cover.jpg"
+          alt="DIE BESCHREIBUNG DEINES STORY-COVER HIER"
+        />
+        <div
+          class="
+            bg-purple
+            absolute
+            inset-0
+            pointer-events-none
+            mix-blend-color
+            opacity-80
+          "
+          aria-hidden="true"
+        ></div>
+      </header>
+      <div class="relative">
+        <div
+          class="
+            from-white
+            bg-gradient-to-t
+            absolute
+            inset-0
+            bottom-1/2
+            pointer-events-none
+          "
+        ></div>
+        <div
+          class="bg-white absolute inset-0 top-1/2 pointer-events-none"
+        ></div>
+        <article
+          class="
+            pt-10
+            sm:pt-12
+            md:pt-14
+            lg:pt-16
+            pb-5
+            sm:pb-6
+            md:pb-7
+            lg:pb-8
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            max-w-4xl
+            mx-auto
+            -mt-28
+            bg-white
+            relative
+            min-h-[calc(50vh+80px)s]
+          "
+        >
+          <section class="prose-sm lg:prose max-w-none relative">
+            <p class="lead">
+              One of Observable’s motivating principles is to listen to and
+              learn from its passionate and fast-growing community.
+            </p>
+            <p class="lead">
+              Hundreds of our community members generously participated in two
+              research surveys about data analysis and visualization over the
+              past year. Here’s what we learned.
+            </p>
+            <h2>Data is exploding, for everyone</h2>
+            <p>
+              With the explosive growth in online technologies, services and
+              information,
+              <a
+                href="https://seedscientific.com/how-much-data-is-created-every-day/"
+                >data is overwhelming</a
+              >
+              for all of us. Making sense of it is the biggest issue facing our
+              connected world. For businesses, there is an urgent need for
+              cross-functional teams to gain data-driven insights quickly to
+              inform business decisions.
+            </p>
+            <h2>The data visualization community is growing</h2>
+            <p>
+              Observable’s survey data shows accelerated interest and growth in
+              data visualization. This is confirmed by other industry observers:
+              Fortune Business Insights in 2020 estimated a market size of
+              $8.85B as of 2019 and projected growth (CAGR) of 10.2% through
+              2027.
+            </p>
+            <p>
+              This growth in business investment and community size makes it
+              clear that businesses are prioritizing tool investments for their
+              teams to work with data, and gain data-driven insights.
+            </p>
+            <p>
+              Our surveys show that working with data is no longer something
+              that primarily specialists do; working with data is increasingly
+              becoming a critical skill for many jobs. More people are investing
+              in their own data-centric skills to meet the rising business
+              needs, and to excel in their chosen professions.
+            </p>
+            <h2>
+              Data Practitioners: data specialists and their collaborators
+            </h2>
+            <p>
+              The people investing in their data skills are in different job
+              functions. They analyze data, share insights and communicate with
+              each other:
+            </p>
+            <ul>
+              <li>Data scientists</li>
+              <li>Data engineers</li>
+              <li>Data architects</li>
+              <li>Business and financial analysts</li>
+              <li>Data visualization (dataviz) creators</li>
+              <li>Business Intelligence / Operational dashboard developers</li>
+              <li>
+                Those who collaborate with the above, such as product managers,
+                team leads, and decision makers
+              </li>
+            </ul>
+            <p>
+              Observable uses the term <em>data practitioners</em> as an
+              inclusive identity covering all of the people who work together on
+              data.
+            </p>
+            <h3>Which role best describes you?</h3>
+          </section>
+        </article>
+        <section
+          class="
+            justify-between
+            flex flex-wrap
+            gap-8
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            bg-white-dot-pattern
+            relative
+            py-10
+            sm:py-12
+            md:py-14
+            lg:py-16
+            mx-auto
+            max-w-5xl
+          "
+        >
+          <ul class="max-w-[200px] flex flex-col gap-2 text-sm justify-center">
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#2164AA]
+                  inline-block
+                "
+              ></span>
+              Hobbyist
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#2A7AB9]
+                  inline-block
+                "
+              ></span>
+              Academic or government researcher
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#418FC5]
+                  inline-block
+                "
+              ></span>
+              Front-end developer
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#5BA3CF]
+                  inline-block
+                "
+              ></span>
+              Other
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#79B5D9]
+                  inline-block
+                "
+              ></span>
+              Student
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#99C7E1]
+                  inline-block
+                "
+              ></span>
+              Educator
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#B5D4E9]
+                  inline-block
+                "
+              ></span>
+              Journalist
+            </li>
+          </ul>
+          <div class="order-first lg:order-none">
+            <canvas id="chart1"></canvas>
+          </div>
+          <ul class="max-w-[200px] flex flex-col gap-2 text-sm justify-center">
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#9F3303]
+                  inline-block
+                "
+              ></span>
+              Data architecht
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#C44104]
+                  inline-block
+                "
+              ></span>
+              Data scientist
+            </li>
+            <li class="pl-6 relative">
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-1
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#E25609]
+                  inline-block
+                "
+              ></span>
+              Data analyst or business analyst
+            </li>
+          </ul>
+        </section>
+        <article
+          class="
+            pt-5
+            sm:pt-6
+            md:pt-7
+            lg:pt-8
+            pb-10
+            sm:pb-12
+            md:pb-14
+            lg:pb-16
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            max-w-4xl
+            mx-auto
+            bg-white
+            relative
+          "
+        >
+          <section class="prose-sm lg:prose max-w-none relative">
+            <p>
+              Note that for the “hobbyist” category, deeper inspection showed
+              that these people were in fact doing data-work, including data
+              exploration, data analysis, data visualizations and dashboard
+              creation, etc. They self-identified as hobbyists because they were
+              doing this work in a personal capacity and not as part of their
+              official job. This further strengthens the hypothesis on the
+              broadening group of data practitioners honing their data-related
+              skills.
+            </p>
+            <h2>
+              More practitioners are entering the field to match industry demand
+            </h2>
+            <p>
+              We're seeing that <em>more and diverse</em> practitioners are
+              entering the field and beginning to sharpen their skills with
+              languages and libraries for more complex data visualizations. This
+              growth of the field may be fostered by easier access to learning
+              materials outside of traditional learning environments, tools to
+              break down silos and allow various skill-sets to participate and
+              drive data visualization creation, and the sprouting of digital
+              communities for collaboration and troubleshooting.
+            </p>
+          </section>
+        </article>
+      </div>
+    </main>
+    <script type="module" src="index.js"></script>
+  </body>
 </html>
