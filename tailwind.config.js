@@ -40,7 +40,7 @@ const fallbackFonts = [
 ];
 
 module.exports = {
-  purge: ["./src/index.js", "./src/index.html"],
+  purge: ["./src/**/*.js", "./src/**/*.html"],
   mode: "jit",
   darkMode: false,
   theme: {
