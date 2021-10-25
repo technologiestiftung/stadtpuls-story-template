@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer utilities {
+  .focus-offset {
+    @apply focus:ring-2 focus:ring-offset-gray-50 focus:ring-offset-2 focus:outline-none focus:ring-green;
+  }
+  .focus-offset-dark {
+    @apply focus:ring-2 focus:ring-offset-black focus:ring-offset-2 focus:outline-none focus:ring-green;
+  }
+  .navigation-link {
+    @apply transition font-headline border-gray-200 lg:border-green border-b hover:border-purple hover:text-green lg:px-0 lg:py-0 lg:inline-block leading-tight;
+  }
+  .navigation-link-active {
+    @apply decoration-clone font-headline text-white bg-purple font-bold border-green hover:text-white hover:bg-purple hover:border-green cursor-default lg:px-2 lg:-ml-2 lg:py-0.5;
+  }
+
+  @variants responsive {
+    .bg-black-dot-pattern {
+      @apply bg-black;
+      background-image: url("images/patterns/black.svg");
+    }
+    .bg-white-dot-pattern {
+      @apply bg-white;
+      background-image: url("images/patterns/white.svg");
+    }
+    .animate-fade-in {
+      opacity: 0;
+      animation: fadeIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
+    }
+    .animate-slide-in {
+      opacity: 0;
+      animation: slideIn 1s cubic-bezier(0.165, 0.84, 0.44, 1) 1 forwards;
+      transform-origin: 50% 0;
+    }
+  }
+}
+@layer base {
+  @font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-Regular.woff2") format("woff2"),
+      url("fonts/Sora-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-Italic.woff2") format("woff2"),
+      url("fonts/Sora-Italic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-Bold.woff2") format("woff2"),
+      url("fonts/Sora-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: "Sora";
+    src: url("fonts/Sora-BoldItalic.woff2") format("woff2"),
+      url("fonts/Sora-BoldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("fonts/SpaceGrotesk-Light.woff2") format("woff2"),
+      url("fonts/SpaceGrotesk-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("fonts/SpaceGrotesk-Regular.woff2") format("woff2"),
+      url("fonts/SpaceGrotesk-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("fonts/SpaceGrotesk-Medium.woff2") format("woff2"),
+      url("fonts/SpaceGrotesk-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("fonts/SpaceGrotesk-Bold.woff2") format("woff2"),
+      url("fonts/SpaceGrotesk-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceGrotesk";
+    src: url("fonts/SpaceGrotesk[wght].woff2") format("woff2"),
+      url("fonts/SpaceGrotesk[wght].woff") format("woff");
+    font-weight: 300 700;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "SpaceMono";
+    src: url("fonts/SpaceGrotesk[wght].woff2") format("woff2"),
+      url("fonts/SpaceGrotesk[wght].woff") format("woff");
+    font-weight: 300 900;
+    font-style: monospace;
+  }
+
+  body {
+    @apply font-sans bg-white;
+  }
+
+  main {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  html.no-scroll {
+    overflow: hidden;
+  }
+
+  [type="text"],
+  [type="email"],
+  [type="url"],
+  [type="password"],
+  [type="number"],
+  [type="date"],
+  [type="datetime-local"],
+  [type="month"],
+  [type="search"],
+  [type="tel"],
+  [type="time"],
+  [type="week"],
+  [multiple],
+  textarea,
+  select {
+    @apply block w-full border-gray-200 mb-4 text-black font-headline focus:text-blue focus:border-purple focus:ring-green focus:ring-2 bg-white;
+  }
+
+  [type="text"].error,
+  [type="email"].error,
+  [type="url"].error,
+  [type="password"].error,
+  [type="number"].error,
+  [type="date"].error,
+  [type="datetime-local"].error,
+  [type="month"].error,
+  [type="search"].error,
+  [type="tel"].error,
+  [type="time"].error,
+  [type="week"].error,
+  [multiple].error,
+  textarea.error,
+  select.error {
+    @apply border-error focus:border-error focus:ring-error;
+  }
+
+  [type="text"]:disabled,
+  [type="email"]:disabled,
+  [type="url"]:disabled,
+  [type="password"]:disabled,
+  [type="number"]:disabled,
+  [type="date"]:disabled,
+  [type="datetime-local"]:disabled,
+  [type="month"]:disabled,
+  [type="search"]:disabled,
+  [type="tel"]:disabled,
+  [type="time"]:disabled,
+  [type="week"]:disabled,
+  [multiple]:disabled,
+  textarea:disabled,
+  select:disabled {
+    @apply opacity-50;
+  }
+
+  [type="checkbox"],
+  [type="radio"] {
+    @apply mr-2 transform translate-y-0.5 border-gray-400 text-blue focus:ring-blue bg-white;
+  }
+
+  [type="checkbox"].error,
+  [type="radio"].error {
+    @apply border-error text-error focus:ring-error;
+  }
+
+  .prose-sm h1,
+  .prose-sm h2,
+  .prose-sm h3,
+  .prose-sm h4,
+  .prose-sm h5,
+  .prose-sm h6,
+  .prose-sm [class~="lead"],
+  .prose h1,
+  .prose h2,
+  .prose h3,
+  .prose h4,
+  .prose h5,
+  .prose h6,
+  .prose [class~="lead"] {
+    @apply font-headline;
+  }
+
+  .prose-sm a,
+  .prose a {
+    @apply text-blue underline-green hover:text-purple transition font-headline font-bold;
+  }
+
+  .prose-sm button a,
+  .prose button a {
+    @apply no-underline text-black;
+    font-size: inherit;
+  }
+
+  .prose-sm button:hover a,
+  .prose button:hover a {
+    @apply text-purple;
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 100;
+    }
+  }
+
+  @keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translate(0, 20px) scale(0.99);
+    }
+    100% {
+      opacity: 100;
+      transform: translate(0, 0) scale(1);
+    }
+  }
+}
