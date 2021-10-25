@@ -1,0 +1,20 @@
+{
+  "name": "stadtpuls-story-template",
+  "version": "1.0.0",
+  "description": "An HTML template for creating stories using stadtpuls.com sensor data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technologiestiftung/stadtpuls-story-template.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/technologiestiftung/stadtpuls-story-template/issues"
+  },
+  "homepage": "https://github.com/technologiestiftung/stadtpuls-story-template#readme"
+}
