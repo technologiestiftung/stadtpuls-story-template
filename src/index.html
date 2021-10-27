@@ -26,15 +26,16 @@
             class="header-logo"
           >
             <img src="images/logo.svg" alt="Stadtpuls Logo" width="157px" />
+            <span>Stories</span>
           </a>
           <div itemscope itemtype="http://schema.org/Article">
             <h1 class="header-title" itemprop="name">
-              Der Beginn einer neuen Datengeschichte
+              Der Beginn einer neuen Daten&shy;geschichte
             </h1>
             <h2 class="header-subtitle">
-              Mit den Stadtpuls-Daten werden neue Erkenntnisse über die Stadt
-              gewonnen, verarbeitet und ausgewertet, um neue spannende
-              Einsichten zu gewinnen.
+              Mit den Stadtpuls-Daten werden neue Erkennt&shy;nisse über die
+              Stadt ge&shy;wonnen, ver&shy;arbeitet und aus&shy;gewertet, um
+              neue spann&shy;ende Ein&shy;sichten zu ge&shy;winnen.
             </h2>
             <p class="header-publication-info">
               <a
@@ -85,12 +86,13 @@
               Verfügung zu stellen. Nutzer:innen können sich über einzelne
               IoT-Projekte informieren, selber Projekte und Sensoren anlegen
               oder Daten aus Projekten für die eigene Analyse nutzen. Die
-              Sensor- und Echtzeitdaten stammen aus unterschiedlichen
-              Datenquellen der Forschung, Verwaltung und Stadtgesellschaft und
-              werden in einer Postgres-Datenbank gesammelt. Schließlich
-              visualisieren wir die Daten, um Betrachter:innen einen erstes
-              Gefühl für die Datenbasis zu ermöglichen und stellen alle Daten
-              zum Download, sowie mittels REST-API kostenlos zur Verfügung.
+              Sensor- und <code>Echtzeitdaten</code> stammen aus
+              unterschiedlichen Datenquellen der Forschung, Verwaltung und
+              Stadtgesellschaft und werden in einer Postgres-Datenbank
+              gesammelt. Schließlich visualisieren wir die Daten, um
+              Betrachter:innen einen erstes Gefühl für die Datenbasis zu
+              ermöglichen und stellen alle Daten zum Download, sowie mittels
+              REST-API kostenlos zur Verfügung.
             </p>
             <h2>Sensordaten von & für Berlin</h2>
             <p>
@@ -98,7 +100,9 @@
               auf nicht-proprietärer Software. Damit wollen wir unseren Beitrag
               zu einer offenen, transparenten Stadt beitragen.
             </p>
-            <pre><code>module.exports = function (options = {}) {
+            <pre
+              class="wide-block"
+            ><code>module.exports = function (options = {}) {
 const {
   insert = { after: 'h1' },
   title = 'Content',
@@ -152,85 +156,75 @@ const selector = insert[position]</code></pre>
               die Daten deiner Sensoren zum Download sowie über eine REST-API
               frei als Open Data bereitgestellt.
             </p>
+            <hr />
             <h3>Du möchtest den digitalen Puls deiner Stadt fühlen?</h3>
           </section>
-        </article>
-        <section class="chart1-container">
-          <ul>
-            <li class="pl-6 relative">
-              <span style="--data-color: #1e1a5a"></span>
-              Internet Of Things
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #332f66"></span>
-              Datenforschung
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #4a4878"></span>
-              Datenvisualisierung
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #636188"></span>
-              Weiteres
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #787696"></span>
-              Datenstudie
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #9695ae"></span>
-              Datenlehre
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #b4b4c7"></span>
-              Journalismus
-            </li>
-          </ul>
-          <div class="order-first lg:order-none">
-            <canvas id="chart1"></canvas>
-          </div>
-          <ul class="max-w-[200px] flex flex-col gap-2 text-sm justify-center">
-            <li class="pl-6 relative">
-              <span style="--data-color: #8330ff"></span>
-              Datenarchitektur
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #46eca1"></span>
-              Datenwissenschaft
-            </li>
-            <li class="pl-6 relative">
-              <span style="--data-color: #0000c2"></span>
-              Datenanalyse
-            </li>
-          </ul>
-        </section>
-
-        <article
-          class="
-            pt-5
-            sm:pt-6
-            md:pt-7
-            lg:pt-8
-            pb-10
-            sm:pb-12
-            md:pb-14
-            lg:pb-16
-            px-8
-            sm:px-12
-            md:px-16
-            lg:px-20
-            max-w-4xl
-            mx-auto
-            bg-white
-            relative
-          "
-        >
-          <section class="prose-sm lg:prose max-w-none relative">
+          <section class="wide-block chart1-container">
+            <ul>
+              <li class="pl-6 relative">
+                <span style="--data-color: #1e1a5a"></span>
+                Internet Of Things
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #332f66"></span>
+                Datenforschung
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #4a4878"></span>
+                Datenvisualisierung
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #636188"></span>
+                Weiteres
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #787696"></span>
+                Datenstudie
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #9695ae"></span>
+                Datenlehre
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #b4b4c7"></span>
+                Journalismus
+              </li>
+            </ul>
+            <div class="order-first lg:order-none">
+              <canvas id="chart1"></canvas>
+            </div>
+            <ul
+              class="max-w-[200px] flex flex-col gap-2 text-sm justify-center"
+            >
+              <li class="pl-6 relative">
+                <span style="--data-color: #8330ff"></span>
+                Datenarchitektur
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #46eca1"></span>
+                Datenwissenschaft
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #0000c2"></span>
+                Datenanalyse
+              </li>
+            </ul>
+          </section>
+          <section class="prose">
             <p>
-              Die Plattform Stadtpuls sammelt Sensordaten Berlins, bereitet
-              diese auf und stellt sie der gesamten Stadtgesellschaft frei
-              zugänglich zur Verfügung. Egal ob du Forscher:in, Tüftler:in oder
-              IoT-Neuling bist: du kannst aktiver Teil der Plattform werden!
+              Die Plattform Stadtpuls
+              <span class="tag" style="--data-color: #8330ff"
+                >Datenarchitektur</span
+              >sammelt Sensordaten Berlins, bereitet diese auf und stellt sie
+              der gesamten Stadtgesellschaft frei zugänglich zur Verfügung
+              <span class="tag" style="--data-color: #46eca1"
+                >Datenwissenschaft</span
+              >. Egal ob du Forscher:in, Tüftler:i
+              <span class="tag" style="--data-color: #0000c2"
+                >Datenanalyse</span
+              >
+              oder IoT-Neuling bist: du kannst aktiver Teil der Plattform
+              werden!
             </p>
             <h2>Drei Gründe, die für Stadtpuls sprechen</h2>
             <p>
@@ -245,6 +239,16 @@ const selector = insert[position]</code></pre>
               Prozessoptimierung und für eine bessere Stadtplanung. Man könnte
               sagen:
             </p>
+            <section class="wide-block alert-info">
+              <p><em>By Max Mustermann, Jane Doe, and Jesus Ejemplo</em></p>
+              <p>
+                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
+                neuen Datengeschichte
+                <br />
+                <span class="emoji">🎥 </span> Sehen Sie sich das Video und die
+                Lernmaterialien des vom Autoren geleiteten Workshops an
+              </p>
+            </section>
           </section>
         </article>
       </div>
