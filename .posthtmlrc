@@ -1,9 +1,0 @@
-{
-  "plugins": {
-    "posthtml-include": {
-      "root": "./src"
-    },
-    "posthtml-doctype": { "doctype": "HTML 5" },
-    "posthtml-highlight": {}
-  }
-}

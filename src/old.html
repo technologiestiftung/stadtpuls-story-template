@@ -5,70 +5,140 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stadtpuls Story - DEINE STORY TITEL HIER</title>
-    <link rel="stylesheet" href="/vendor/css/preflight-2.2.17.css" />
-    <link rel="stylesheet" href="/vendor/css/typography.min.css" />
-    <link rel="stylesheet" href="/styles.css" />
-    <link rel="stylesheet" href="/vendor/css/shades-of-purple.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="vendor/css/shades-of-purple.min.css" />
+    <script src="vendor/js/chart.min.js"></script>
   </head>
   <body>
-    <main>
-      <header>
-        <section>
-          <img
-            class="header-hero-img"
-            src="images/story-cover.jpg"
-            alt="DIE BESCHREIBUNG DEINES STORY-COVER HIER"
-          />
-          <div class="header-hero-color" aria-hidden="true"></div>
+    <main class="bg-white-dot-pattern min-h-screen">
+      <header class="relative overflow-hidden bg-black-dot-pattern">
+        <section
+          class="
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            pt-6
+            sm:pt-8
+            md:pt-10
+            lg:pt-12
+            pb-36
+            sm:pb-40
+            max-w-4xl
+            mx-auto
+            w-full
+            h-full
+            z-10
+            flex flex-col
+            justify-between
+            relative
+          "
+        >
           <a
             href="https://stadtpuls.com"
             title="Die Hauptseite von Stadtpuls"
-            class="header-logo"
+            class="transition-opacity hover:opacity-60"
           >
             <img src="images/logo.svg" alt="Stadtpuls Logo" width="157px" />
           </a>
           <div itemscope itemtype="http://schema.org/Article">
-            <h1 class="header-title" itemprop="name">
+            <h1
+              class="
+                text-white text-4xl
+                lg:text-5xl
+                font-bold font-headline
+                mb-4
+                mt-20
+              "
+              itemprop="name"
+            >
               Der Beginn einer neuen Datengeschichte
             </h1>
-            <h2 class="header-subtitle">
+            <h2 class="text-white text-xl lg:text-2xl opacity-90 mb-4">
               Mit den Stadtpuls-Daten werden neue Erkenntnisse über die Stadt
               gewonnen, verarbeitet und ausgewertet, um neue spannende Einsichten zu
               gewinnen.
             </h2>
-            <p class="header-publication-info">
+            <p class="text-white text-sm lg:text-base">
               <a
-                class="header-profile-link"
+                class="transition-opacity hover:opacity-80"
                 href="https://stadtpuls.com/accounts/maxmusta"
                 target="_blank"
                 rel="noreferrer noopener"
                 itemprop="author"
               >
                 <img
-                  class="header-profile-img"
+                  class="inline-block"
                   src="https://source.boringavatars.com/pixel/24/maxmusta?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
                   alt="Avatar of maxmusta"
                 />
-                <span>
-                  Max Mustermann
-                </span>
+                <span class="mx-1 inline-block underline underline-green"
+                  >Max Mustermann</span
+                >
               </a>
-              <span class="header-publication-date">
+              <span class="opacity-80">
                 –
-                <time itemprop="datePublished" datetime="2021-10-25">
-                  25. Oktober 2021
-                </time>
-              </span
+                <time itemprop="datePublished" datetime="2021-10-25"
+                  >25. Oktober 2021</time
+                ></span
               >
             </p>
           </div>
         </section>
+        <img
+          class="absolute top-0 left-0 w-full h-full object-cover opacity-40"
+          src="images/story-cover.jpg"
+          alt="DIE BESCHREIBUNG DEINES STORY-COVER HIER"
+        />
+        <div
+          class="
+            bg-purple
+            absolute
+            inset-0
+            pointer-events-none
+            mix-blend-color
+            opacity-80
+          "
+          aria-hidden="true"
+        ></div>
       </header>
-      <div class="content-container">
-        <div class="content-gradient-overlay"></div>
-        <div class="content-gradient-cover"></div>
-        <article>
-          <section class="prose">
+      <div class="relative">
+        <div
+          class="
+            from-white
+            bg-gradient-to-t
+            absolute
+            inset-0
+            bottom-1/2
+            pointer-events-none
+          "
+        ></div>
+        <div
+          class="bg-white absolute inset-0 top-1/2 pointer-events-none"
+        ></div>
+        <article
+          class="
+            pt-10
+            sm:pt-12
+            md:pt-14
+            lg:pt-16
+            pb-5
+            sm:pb-6
+            md:pb-7
+            lg:pb-8
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            max-w-4xl
+            mx-auto
+            -mt-28
+            bg-white
+            relative
+            min-h-[calc(50vh+80px)s]
+          "
+        >
+          <section class="prose-sm lg:prose max-w-none relative">
             <p class="lead">
               IoT ist eine Abkürzung für "Internet of Things" und bedeutet übersetzt
               soviel wie "Internet der Dinge". Dabei unterscheidet man zwischen
@@ -101,32 +171,32 @@
               offenen, transparenten Stadt beitragen.
             </p>
             <pre><code>
-module.exports = function (options = {}) {
-const {
-  insert = { after: 'h1' },
-  title = 'Content',
-  ignoreMissingSelector = false,
-  ignoreMissingHeadings = false,
-  toggle // ['show', 'hide', true],
-} = options
+        module.exports = function (options = {}) {
+        const {
+          insert = { after: 'h1' },
+          title = 'Content',
+          ignoreMissingSelector = false,
+          ignoreMissingHeadings = false,
+          toggle // ['show', 'hide', true],
+        } = options
 
-if (typeof insert !== 'object') {
-  throw new PostHtmlTocError(`unexpected 'options.insert': ${insert}`)
-}
+        if (typeof insert !== 'object') {
+          throw new PostHtmlTocError(`unexpected 'options.insert': ${insert}`)
+        }
 
-const insertKeys = Object.keys(insert)
+        const insertKeys = Object.keys(insert)
 
-switch (insertKeys.length) {
-  case 1:
-    break
-  case 0:
-    throw new PostHtmlTocError(`empty 'options.insert'`)
-  default:
-    throw new PostHtmlTocError(`too many keys in 'options.insert': ${insertKeys}`)
-}
+        switch (insertKeys.length) {
+          case 1:
+            break
+          case 0:
+            throw new PostHtmlTocError(`empty 'options.insert'`)
+          default:
+            throw new PostHtmlTocError(`too many keys in 'options.insert': ${insertKeys}`)
+        }
 
-const position = insertKeys[0]
-const selector = insert[position]
+        const position = insertKeys[0]
+        const selector = insert[position]
             </code></pre>
             <p>
               Die Plattform Stadtpuls ist eine prototypische Offene Datenplattform,
@@ -157,34 +227,129 @@ const selector = insert[position]
             <h3>Du möchtest den digitalen Puls deiner Stadt fühlen?</h3>
           </section>
         </article>
-        <section class="chart1-container">
-          <ul>
+        <section
+          class="
+            justify-between
+            flex flex-wrap
+            gap-8
+            px-8
+            sm:px-12
+            md:px-16
+            lg:px-20
+            bg-white-dot-pattern
+            relative
+            py-10
+            sm:py-12
+            md:py-14
+            lg:py-16
+            mx-auto
+            max-w-5xl
+          "
+        >
+          <ul class="max-w-[200px] flex flex-col gap-2 text-sm justify-center">
             <li class="pl-6 relative">
-              <span style="--data-color: #1E1A5A;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#1E1A5A]
+                  inline-block
+                "
+              ></span>
               Internet Of Things
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #332F66;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#332F66]
+                  inline-block
+                "
+              ></span>
               Datenforschung
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #4A4878;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#4A4878]
+                  inline-block
+                "
+              ></span>
               Datenvisualisierung
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #636188;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#636188]
+                  inline-block
+                "
+              ></span>
               Weiteres
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #787696;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#787696]
+                  inline-block
+                "
+              ></span>
               Datenstudie
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #9695AE;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#9695AE]
+                  inline-block
+                "
+              ></span>
               Datenlehre
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #B4B4C7;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#B4B4C7]
+                  inline-block
+                "
+              ></span>
               Journalismus
             </li>
           </ul>
@@ -193,15 +358,48 @@ const selector = insert[position]
           </div>
           <ul class="max-w-[200px] flex flex-col gap-2 text-sm justify-center">
             <li class="pl-6 relative">
-              <span style="--data-color: #8330FF;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#8330FF]
+                  inline-block
+                "
+              ></span>
               Datenarchitektur
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #46ECA1;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#46ECA1]
+                  inline-block
+                "
+              ></span>
               Datenwissenschaft
             </li>
             <li class="pl-6 relative">
-              <span style="--data-color: #0000C2;"></span>
+              <span
+                class="
+                  absolute
+                  left-0
+                  top-0.5
+                  w-4
+                  h-4
+                  rounded
+                  bg-[#0000C2]
+                  inline-block
+                "
+              ></span>
               Datenanalyse
             </li>
           </ul>
@@ -251,8 +449,6 @@ const selector = insert[position]
 
       </div>
     </main>
-    <script src="vendor/js/highlight.min.js" type="text/javascript"></script>
-    <script src="vendor/js/chart.min.js" type="text/javascript"></script>
     <script src="index.js" type="text/javascript"></script>
   </body>
 </html>
