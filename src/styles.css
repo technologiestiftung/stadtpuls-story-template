@@ -375,7 +375,24 @@ article {
   z-index: 10;
 }
 
+article > .prose,
+article > .prose-sm {
+  font-size: 3.5rem;
+  max-width: 100%;
+}
+
+article > .prose pre code.hljs {
+  padding: 10rem 10rem 10rem;
+}
+
+article > .prose pre {
+  width: calc(100% + 20rem);
+  margin-left: -10rem;
+  padding: 0;
+}
+
 @media screen and (min-width: 640px) {
+  article > .prose pre code.hljs,
   article {
     padding: 12rem 12rem 10rem;
   }
@@ -383,9 +400,15 @@ article {
   article:first-of-type {
     margin-top: -28rem;
   }
+
+  article > .prose pre {
+    width: calc(100% + 24rem);
+    margin-left: -12rem;
+  }
 }
 
 @media screen and (min-width: 900px) {
+  article > .prose pre code.hljs,
   article {
     padding: 14rem 14rem 10rem;
   }
@@ -394,31 +417,79 @@ article {
   article > .prose-sm {
     font-size: 4rem;
   }
+
+  article > .prose pre {
+    width: calc(100% + 28rem);
+    margin-left: -14rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
+  article > .prose pre code.hljs,
   article {
     padding: 16rem 16rem 10rem;
   }
 
-  article > .prose,
-  article > .prose-sm {
+  article > .prose {
     font-size: 4.5rem;
   }
-}
 
-article > .prose,
-article > .prose-sm {
-  font-size: 3.5rem;
+  article > .prose pre {
+    width: calc(100% + 32rem);
+    margin-left: -16rem;
+  }
 }
 
 article .lead {
   color: var(--gray-700);
 }
 
-article code,
-article pre {
-  font-family: var(--font-mono);
+article > .prose code,
+article > .prose pre {
+  font-family: var(--font-monospace);
+  font-size: 100%;
+  background: var(--black);
+  color: var(--white);
+}
+
+article > .prose code .hljs-comment {
+  color: var(--gray-500);
+}
+
+article > .prose code .hljs-title {
+  color: #c855fa;
+}
+
+article > .prose code .hljs-attr {
+  color: var(--warning);
+}
+
+article > .prose code .hljs-literal,
+article > .prose code .hljs-number {
+  color: var(--error);
+}
+
+article > .prose code .hljs-built_in,
+article > .prose code .hljs-keyword,
+article > .prose code .hljs-section,
+article > .prose code .hljs-selector-tag {
+  color: #1cfce6;
+}
+
+article > .prose code .hljs-addition,
+article > .prose code .hljs-attribute,
+article > .prose code .hljs-bullet,
+article > .prose code .hljs-code,
+article > .prose code .hljs-deletion,
+article > .prose code .hljs-quote,
+article > .prose code .hljs-regexp,
+article > .prose code .hljs-selector-attr,
+article > .prose code .hljs-selector-class,
+article > .prose code .hljs-selector-pseudo,
+article > .prose code .hljs-string,
+article > .prose code .hljs-symbol,
+article > .prose code .hljs-template-tag {
+  color: var(--green);
 }
 
 /* CHARTS */
