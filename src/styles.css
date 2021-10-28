@@ -175,6 +175,11 @@ a,
   color: var(--gray-800);
 }
 
+.prose p code::before,
+.prose p code::after {
+  content: '';
+}
+
 .prose .emoji {
   font-family: 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
     'Noto Color Emoji';
@@ -259,7 +264,7 @@ header {
 }
 
 header > section {
-  padding: 6rem 6rem 8rem;
+  padding: 6rem 6rem 12rem;
   max-width: var(--content-max-width);
   margin: 0 auto;
   color: var(--white);
@@ -268,19 +273,19 @@ header > section {
 
 @media screen and (min-width: 640px) {
   header > section {
-    padding: 8rem 12rem 38rem;
+    padding: 8rem 12rem 42rem;
   }
 }
 
 @media screen and (min-width: 900px) {
   header > section {
-    padding: 10rem 14rem 38rem;
+    padding: 10rem 14rem 42rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   header > section {
-    padding: 12rem 16rem 38rem;
+    padding: 12rem 16rem 42rem;
   }
 }
 
@@ -321,30 +326,17 @@ header a:focus {
 
 .header-title {
   font-size: 9rem;
-  line-height: 9rem;
+  line-height: 11rem;
   font-weight: 700;
   margin-bottom: 4rem;
   margin-top: 20rem;
   position: relative;
 }
 
-.header-subtitle {
-  font-size: 5.225rem;
-  line-height: 7rem;
-  opacity: 0.9;
-  margin-bottom: 4rem;
-  position: relative;
-}
-
 @media screen and (min-width: 1024px) {
   .header-title {
     font-size: 12rem;
-    line-height: 12rem;
-  }
-
-  .header-subtitle {
-    font-size: 6rem;
-    line-height: 8rem;
+    line-height: 14rem;
   }
 }
 
@@ -535,7 +527,7 @@ article .wide-block {
 
 /* LEAD INTRODUCTION */
 /* ------------------------------------------------------- */
-article .lead {
+.prose [class~='lead'] {
   color: var(--gray-700);
 }
 
