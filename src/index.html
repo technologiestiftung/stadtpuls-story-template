@@ -12,7 +12,7 @@
   </head>
   <body>
     <main>
-      <header>
+      <header class="black-dot-pattern">
         <section>
           <img
             class="header-hero-img"
@@ -40,17 +40,32 @@
             <p class="header-publication-info">
               <a
                 class="header-profile-link"
-                href="https://stadtpuls.com/accounts/maxmusta"
+                href="https://stadtpuls.com/accounts/janedoe"
                 target="_blank"
                 rel="noreferrer noopener"
                 itemprop="author"
               >
                 <img
                   class="header-profile-img"
-                  src="https://source.boringavatars.com/pixel/24/maxmusta?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
-                  alt="Avatar of maxmusta"
+                  src="https://source.boringavatars.com/pixel/24/janedoe?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
+                  alt="Avatar of janedoe"
                 />
-                <span> Max Mustermann </span>
+                <span> Jane Doe </span>
+              </a>
+              <span class="header-profile-separator">&</span>
+              <a
+                class="header-profile-link"
+                href="https://stadtpuls.com/accounts/johndoe"
+                target="_blank"
+                rel="noreferrer noopener"
+                itemprop="author"
+              >
+                <img
+                  class="header-profile-img"
+                  src="https://source.boringavatars.com/pixel/24/johndoe?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
+                  alt="Avatar of johndoe"
+                />
+                <span> John Doe </span>
               </a>
               <span class="header-publication-date">
                 –
@@ -65,7 +80,7 @@
       <div class="content-container">
         <div class="content-gradient-overlay"></div>
         <div class="content-gradient-cover"></div>
-        <article>
+        <article class="container" itemscope itemtype="http://schema.org/Article">
           <section class="prose">
             <p class="lead">
               IoT ist eine Abkürzung für "Internet of Things" und bedeutet
@@ -204,7 +219,7 @@ const selector = insert[position]</code></pre>
             <hr />
             <h3>Du möchtest den digitalen Puls deiner Stadt fühlen?</h3>
           </section>
-          <section class="wide-block chart1-container">
+          <section class="wide-block chart1-container white-dot-pattern">
             <ul>
               <li class="pl-6 relative">
                 <span style="--data-color: #1e1a5a"></span>
@@ -285,8 +300,108 @@ const selector = insert[position]</code></pre>
               sagen:
             </p>
           </section>
+          <section class="authors-container">
+            <div class="author-block" itemprop="author">
+              <img
+                class="author-portrait"
+                src="images/author-1.png"
+                alt="Portrait of Author 1"
+              />
+              <div>
+                <h3>Jane Doe</h3>
+                <small>Open Data Researcher</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic assumenda.</p>
+                <footer>
+                  <a href="https://stadpuls.com/janedoe">@janedoe</a>
+                  <a href="https://janedoe.com">Portfolio</a>
+                </footer>
+              </div>
+            </div>
+            <div class="author-block" itemprop="author">
+              <img
+                class="author-portrait"
+                src="images/author-2.png"
+                alt="Portrait of Author 2"
+              />
+              <div>
+                <h3>John Doe</h3>
+                <small>Open Data Researcher</small>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic assumenda. Optio ullam, facere, odio distinctio maiores.</p>
+                <footer>
+                  <a href="https://stadpuls.com/johndoe">@johndoe</a>
+                </footer>
+              </div>
+            </div>
+          </section>
         </article>
-        <footer>section.</footer>
+        <footer class="white-dot-pattern">
+          <section class="container sharing-info">
+            <div class="prose">
+              <h2>Hat's dir gefallen?</h2>
+              <p>Dann kannst du diese Story hier teilen:</p>
+              <div class="sharing-links">
+                <!-- Twitter (url, text, @mention) -->
+                <a
+                  class="share-btn"
+                  href="https://twitter.com/share?url=<URL>&text=<TEXT>via=<USERNAME>"
+                >
+                  Twitter
+                </a>
+                <!-- Facebook (url) -->
+                <a
+                  class="share-btn"
+                  href="https://www.facebook.com/sharer/sharer.php?u=<URL>"
+                >
+                  Facebook
+                </a>
+                <!-- LinkedIn (url, title, summary, source url) -->
+                <a
+                  class="share-btn"
+                  href="https://www.linkedin.com/shareArticle?url=<URL>&title=<TITLE>&summary=<SUMMARY>&source=<SOURCE_URL>"
+                >
+                  LinkedIn
+                </a>
+                <!-- Email (subject, body) -->
+                <a class="share-btn" href="mailto:?subject=<SUBJECT>&body=<BODY>">
+                  Email
+                </a>
+            </div>
+            </section>
+          </section>
+          <section class="finance">
+            <ul class="container">
+              <li>
+                Ein Projekt der:
+                <a href="https://technologiestiftung-berlin.de/">
+                  <img src="images/tsb-logo.svg" alt="Logo der Technologiestiftung Berlin">
+                </a>
+              </li>
+              <li>
+                Durchgeführt vom:
+                <a href="https://www.citylab-berlin.org/">
+                  <img src="images/citylab-logo.svg" alt="Logo des CityLABs Berlin">
+                </a>
+              </li>
+              <li>
+                Gefördert von:
+                <a href="https://www.berlin.de/">
+                  <img src="images/berlin-logo.svg" alt="Logo der Stadt Berlin">
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="credits">
+            <div class="container">
+              <span>
+                © 2021 Technologiestiftung Berlin
+              </span>
+              <div class="links">
+                <a href="https://www.technologiestiftung-berlin.de/de/impressum/">Impressum</a>
+                <a href="https://www.technologiestiftung-berlin.de/de/datenschutz/">Datenschutzerklärung</a>
+              </div>  
+            </div>
+          </section>
+        </footer>
       </div>
     </main>
     <script src="vendor/js/highlight.min.js" type="text/javascript"></script>

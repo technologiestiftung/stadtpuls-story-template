@@ -229,19 +229,25 @@ button:hover a {
   color: var(--purple);
 }
 
+.white-dot-pattern {
+  background-color: var(--white);
+  background-image: url('images/patterns/white.svg');
+}
+
+.black-dot-pattern {
+  background-color: var(--black);
+  background-image: url('images/patterns/black.svg');
+}
+
 /* LAYOUT */
 /* ------------------------------------------------------- */
 main {
-  background-color: var(--white);
-  background-image: url('images/patterns/white.svg');
   min-height: 100vh;
 }
 
 /* HEADER */
 /* ----------------------------------------------------- */
 header {
-  background-color: var(--black);
-  background-image: url('images/patterns/black.svg');
   position: relative;
   overflow: hidden;
   width: 100%;
@@ -349,7 +355,6 @@ header a:focus {
   align-items: center;
   position: relative;
   flex-wrap: wrap;
-  padding-left: 32px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -358,15 +363,17 @@ header a:focus {
   }
 }
 
+.header-profile-separator {
+  padding: 0 1rem;
+  opacity: 0.8;
+}
+
 .header-profile-img {
   width: 24px;
   height: 24px;
   display: inline-block;
   background-color: var(--white);
   border-radius: 50%;
-  position: absolute;
-  top: -2px;
-  left: 0;
 }
 
 .header-profile-link {
@@ -429,53 +436,63 @@ header a:focus {
   background: var(--white);
 }
 
-/* ARTICLE WRAPPER */
+/* CONTAINERS */
 /* ------------------------------------------------------- */
-article {
+.container {
   padding: 10rem 10rem 10rem;
   max-width: var(--content-max-width);
   margin: 0 auto;
-  background: var(--white);
-  min-height: calc(50vh+20rem);
   position: relative;
   z-index: 10;
 }
 
 @media screen and (min-width: 640px) {
-  article {
+  .container {
     padding: 10rem 12rem;
-    margin-top: -28rem;
   }
 }
 
 @media screen and (min-width: 900px) {
-  article {
+  .container {
     padding: 12rem 14rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  article {
+  .container {
     padding: 14rem 16rem;
+  }
+}
+
+/* ARTICLE WRAPPER */
+/* ------------------------------------------------------- */
+article {
+  background: var(--white);
+  min-height: calc(50vh+20rem);
+}
+
+@media screen and (min-width: 640px) {
+  article.container {
+    margin-top: -28rem;
   }
 }
 
 /* PROSE CONTAINER */
 /* ------------------------------------------------------- */
 
-article > .prose {
+.prose {
   font-size: 3.5rem;
   max-width: 100%;
 }
 
 @media screen and (min-width: 900px) {
-  article > .prose {
+  .prose {
     font-size: 4rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  article > .prose {
+  .prose {
     font-size: 4.5rem;
   }
 }
@@ -524,11 +541,11 @@ article .lead {
 
 /* CODE BLOCK */
 /* ------------------------------------------------------- */
-article > .prose pre code.hljs {
+.prose pre code.hljs {
   padding: 0;
 }
 
-article > .prose > pre {
+.prose > pre {
   font-family: var(--font-monospace);
   font-size: 100%;
   background: var(--black);
@@ -536,43 +553,43 @@ article > .prose > pre {
   padding-right: 0 !important;
 }
 
-article > .prose code .hljs-comment {
+.prose code .hljs-comment {
   color: var(--gray-500);
 }
 
-article > .prose code .hljs-title {
+.prose code .hljs-title {
   color: #c855fa;
 }
 
-article > .prose code .hljs-attr {
+.prose code .hljs-attr {
   color: var(--warning);
 }
 
-article > .prose code .hljs-literal,
-article > .prose code .hljs-number {
+.prose code .hljs-literal,
+.prose code .hljs-number {
   color: var(--error);
 }
 
-article > .prose code .hljs-built_in,
-article > .prose code .hljs-keyword,
-article > .prose code .hljs-section,
-article > .prose code .hljs-selector-tag {
+.prose code .hljs-built_in,
+.prose code .hljs-keyword,
+.prose code .hljs-section,
+.prose code .hljs-selector-tag {
   color: #1cfce6;
 }
 
-article > .prose code .hljs-addition,
-article > .prose code .hljs-attribute,
-article > .prose code .hljs-bullet,
-article > .prose code .hljs-code,
-article > .prose code .hljs-deletion,
-article > .prose code .hljs-quote,
-article > .prose code .hljs-regexp,
-article > .prose code .hljs-selector-attr,
-article > .prose code .hljs-selector-class,
-article > .prose code .hljs-selector-pseudo,
-article > .prose code .hljs-string,
-article > .prose code .hljs-symbol,
-article > .prose code .hljs-template-tag {
+.prose code .hljs-addition,
+.prose code .hljs-attribute,
+.prose code .hljs-bullet,
+.prose code .hljs-code,
+.prose code .hljs-deletion,
+.prose code .hljs-quote,
+.prose code .hljs-regexp,
+.prose code .hljs-selector-attr,
+.prose code .hljs-selector-class,
+.prose code .hljs-selector-pseudo,
+.prose code .hljs-string,
+.prose code .hljs-symbol,
+.prose code .hljs-template-tag {
   color: var(--green);
 }
 
@@ -635,6 +652,161 @@ article > .prose code .hljs-template-tag {
   }
 }
 
+/* AUTHOR */
+/* ------------------------------------------------------- */
+.authors-container {
+  margin: 32rem 0;
+  padding: 16rem 0 0;
+  border-top: 1px solid var(--gray-100);
+  display: grid;
+  gap: 16rem;
+}
+
+@media screen and (min-width: 900px) {
+  .authors-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.author-block {
+  display: grid;
+  grid-template-columns: 32rem 1fr;
+  gap: 8rem;
+}
+
+.author-block h3 {
+  grid-area: title;
+  font-size: 5rem;
+  line-height: 5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.author-block small {
+  color: var(--gray-500);
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.author-block p {
+  grid-area: description;
+  font-size: 3.5rem;
+  line-height: 5rem;
+}
+
+.author-block footer {
+  margin-top: 3rem;
+}
+
+.author-block footer > a:not(:first-of-type) {
+  margin-left: 2rem;
+  padding-left: 2rem;
+  border-left: 1px solid var(--gray-100);
+}
+
+/* FOOTER */
+/* ------------------------------------------------------- */
+footer {
+  position: relative;
+  font-size: 3.5rem;
+  line-height: 4rem;
+}
+
+/* SHARING INFO */
+/* ------------------------------------------------------- */
+.sharing-info h2 {
+  font-weight: bold;
+  margin: 0;
+}
+
+.sharing-info p {
+  font-size: 120%;
+}
+
+.sharing-links {
+  margin-top: 4rem;
+}
+
+/* SOCIAL BUTTON CSS */
+/* ------------------------------------------------------- */
+.prose .share-btn {
+  display: inline-block;
+  color: var(--purple);
+  border: 1px solid var(--purple);
+  padding: 0.2em 0.8em;
+  text-decoration: none;
+  outline: none;
+  text-align: center;
+  margin: 0 0.2em;
+  transition: all 200ms ease-out;
+}
+
+.share-btn:focus,
+.share-btn:hover {
+  color: var(--blue);
+  border: 1px solid var(--green);
+  text-decoration: none;
+  opacity: 0.8;
+}
+
+.share-btn:active {
+  color: #e2e2e2;
+}
+
+/* FINANCE */
+/* ------------------------------------------------------- */
+.finance {
+  background: var(--white);
+}
+
+.finance > ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+}
+
+.finance > ul > li {
+  display: flex;
+  flex-direction: column;
+  font-size: 3.5rem;
+  color: var(--gray-700);
+  gap: 4rem;
+}
+
+.finance > ul > li img {
+  height: 10rem;
+}
+
+/* CREDITS */
+/* ------------------------------------------------------- */
+.credits {
+  background: var(--gray-50);
+}
+
+.credits .container {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  color: var(--gray-500);
+  font-size: 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.credits .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+}
+
+.credits a {
+  color: var(--gray-500);
+}
+
+.credits a:hover {
+  color: var(--blue);
+}
+
 /* CHARTS */
 /* ------------------------------------------------------- */
 /* CHART 1 */
@@ -645,8 +817,6 @@ article > .prose code .hljs-template-tag {
   justify-content: space-between;
   gap: 8px;
   padding: 10rem 8rem;
-  background-color: var(--white);
-  background-image: url('images/patterns/white.svg');
   position: relative;
   margin: 0 auto;
   max-width: var(--content-max-width);
