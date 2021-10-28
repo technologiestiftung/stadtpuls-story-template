@@ -732,10 +732,14 @@ footer {
 
 .sharing-info p {
   font-size: 120%;
+  line-height: 130%;
 }
 
 .sharing-links {
   margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 /* SOCIAL BUTTON CSS */
@@ -748,7 +752,7 @@ footer {
   text-decoration: none;
   outline: none;
   text-align: center;
-  margin: 0 0.2em;
+  margin: 0;
   transition: all 200ms ease-out;
 }
 
