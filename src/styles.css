@@ -156,7 +156,8 @@ html.no-scroll {
 a,
 .prose a {
   color: var(--blue);
-  transition: color 200ms ease-out, opacity 200ms ease-out;
+  transition: color 200ms ease-out, opacity 200ms ease-out,
+    text-decoration-color 200ms ease-out;
   text-decoration: underline;
   text-decoration-color: var(--green);
 }
@@ -293,6 +294,11 @@ header a {
   color: var(--white);
 }
 
+header a:hover {
+  color: var(--green);
+  text-decoration-color: var(--purple);
+}
+
 header a:focus {
   box-shadow: 0 0 0 3px var(--black), 0 0 0 6px var(--green);
 }
@@ -376,7 +382,8 @@ header a:focus {
 }
 
 .header-hero-img,
-.header-hero-color {
+.header-hero-color,
+.header-hero-squares {
   position: absolute;
   top: 0;
   left: 0;
@@ -388,11 +395,24 @@ header a:focus {
 }
 
 .header-hero-color {
-  background-color: var(--hero-bg-color);
+  background: var(--hero-bg-color);
   opacity: 0.8;
   mix-blend-mode: color;
   pointer-events: none;
   z-index: 0;
+}
+
+.header-hero-squares {
+  background: url('images/header-squares.svg') no-repeat bottom center;
+  pointer-events: none;
+  z-index: 5;
+  mix-blend-mode: color-dodge;
+}
+
+@media screen and (max-width: 900px) {
+  .header-hero-squares {
+    opacity: 0;
+  }
 }
 
 .header-publication-date {
