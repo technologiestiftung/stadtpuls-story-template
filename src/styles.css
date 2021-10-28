@@ -670,8 +670,19 @@ article .lead {
 
 .author-block {
   display: grid;
-  grid-template-columns: 32rem 1fr;
-  gap: 8rem;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+@media screen and (min-width: 640px) {
+  .author-block {
+    grid-template-columns: 32rem 1fr;
+    gap: 8rem;
+  }
+}
+
+.author-block img {
+  width: 32rem;
 }
 
 .author-block h3 {
