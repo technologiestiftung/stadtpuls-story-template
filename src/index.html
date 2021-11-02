@@ -18,15 +18,15 @@
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
 
-    <meta itemprop="name" content="Stadtpuls Stories - YOUR STORYNAME HERE" />
+    <meta itemprop="name" content="YOUR STORYNAME HERE" />
     <meta itemprop="description" content="YOUR STORY DESCRIPTION HERE" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@citylabberlin" />
-    <meta name="twitter:title" content="Stadtpuls Stories - YOUR STORYNAME HERE" />
+    <meta name="twitter:title" content="YOUR STORYNAME HERE" />
     <meta name="twitter:description" content="YOUR STORY DESCRIPTION HERE" />
 
-    <meta property="og:title" content="Stadtpuls Stories - YOUR STORYNAME HERE" />
+    <meta property="og:title" content="YOUR STORYNAME HERE" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="de-DE" />
     <meta property="og:url" content="https://stories.stadtpuls.com/YOUR-STORY-SLUG-HERE" />
@@ -50,6 +50,7 @@
     <link rel="stylesheet" href="vendor/css/typography.min.css" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="vendor/css/shades-of-purple.min.css" />
+    <link rel="stylesheet" href="vendor/css/mapbox-gl.min.css" />
   </head>
   <body>
     <main>
@@ -325,6 +326,44 @@ const selector = insert[position]</code></pre>
             <p>
               Die Plattform Stadtpuls sammelt Sensordaten Berlins, bereitet diese auf und stellt sie der gesamten Stadtgesellschaft frei zugänglich zur Verfügung. Egal ob du Forscher:in, Tüftler:in oder IoT-Neuling bist: du kannst aktiver Teil der Plattform werden!
             </p>
+            <a class="sensor-card">
+              <h4 class="sensor-card-title">
+                <img src="https://stadtpuls.com/images/sensor-symbols/17.svg" alt="Symbol für das Sensor \"enviro+ carbon monoxide\"" />
+                <span>enviro+ carbon monoxide</span>
+              </h4>
+              <div class="sensor-card-metadata">
+                <span class="sensor-card-type">
+                  <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
+                    <path d="M14 5a1 1 0 0 1 0 2h-3v8a1 1 0  0 1-2 0v-4H7v4a1 1 0 0 1-2 0V7H2a1 1 0 1 1 0-2h12ZM8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" fill="currentColor" fill-rule="nonzero"></path>
+                  </svg>
+                  <span>Unit Counter</span>
+                </span>
+                <span class="sensor-card-author">
+                  <img src="https://source.boringavatars.com/pixel/24/janedoe?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC" alt="Avatar of janedoe" />
+                  <span>Jane Doe</span>
+                </span>
+              </div>
+              <p class="sensor-card-description">
+                Carbon monoxide measured with enviro+ attached to Raspberry Pi Zero in kO
+              </p>
+              <section class="sensor-card-graphics">
+                <div class="sensor-card-map" id="sensor-card-map"></div>
+                <div class="sensor-card-graphics-gradient"></div>
+                <canvas id="sensor-card-chart" height="75px"></canvas>
+              </section>
+            </a>
+            <p>
+              Dann bist du hier genau richtig! Die Stadt Berlin, deren
+              Hochschulen aber auch Privatpersonen erheben bereits enorm viele
+              Sensordaten über unsere Stadt. Dabei spielen Klimadaten, aber auch
+              städtische Echtzeit-Sensordaten zu Themen wie "Lärmbelästigung"
+              oder "Füllstände von Mülleimern" eine wichtige Rolle. Diese Daten
+              in einer gemeinsamen Datenbasis vorzuhalten, zugänglich zu machen
+              und zu visualisieren ist ein erster Schritt in Richtung smarte
+              vernetzte Stadt und legt den Grundstein für weitere Analysen,
+              Prozessoptimierung und für eine bessere Stadtplanung. Man könnte
+              sagen:
+            </p>
           </section>
           <section class="authors-container">
             <div class="author-block" itemprop="author">
@@ -432,6 +471,11 @@ const selector = insert[position]</code></pre>
     </main>
     <script src="vendor/js/highlight.min.js" type="text/javascript"></script>
     <script src="vendor/js/chart.min.js" type="text/javascript"></script>
-    <script src="index.js" type="text/javascript"></script>
+    <script src="vendor/js/mapbox-gl.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.highlightAll();
+      mapboxgl.accessToken = "pk.eyJ1IjoidGVjaG5vbG9naWVzdGlmdHVuZyIsImEiOiJja2dxZ28xcmwwNW12MnhwMmhheGQyYnYwIn0.Ffzn6ClW1CSbb9HESTJ3Pw";
+    </script>
+    <script src="charts.js" type="text/javascript"></script>
   </body>
 </html>

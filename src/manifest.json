@@ -1,0 +1,8 @@
+{
+  "short_name": "Stadtpuls Stories",
+  "name": "Stadtpuls Berlin",
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#0000c2",
+  "background_color": "#46eca1"
+}

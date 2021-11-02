@@ -1,5 +1,5 @@
-hljs.highlightAll();
-
+/* CHART 1 */
+/* ------------------------------------------------------- */
 const chart1Context = document.getElementById('chart1').getContext('2d');
 new Chart(chart1Context, {
     type: 'doughnut',
@@ -42,6 +42,8 @@ new Chart(chart1Context, {
     }
 });
 
+/* CHART 2 */
+/* ------------------------------------------------------- */
 fetch('https://api.stadtpuls.com/api/v3/sensors/12/records')
   .then((response) => response.json())
   .then(({ data }) =>	drawChart2(data.slice(0, 200)))
@@ -134,4 +136,71 @@ function drawChart2(data) {
         }
       }
   });
+}
+
+/* SENSOR CARD CHART */
+/* ------------------------------------------------------- */
+fetch('https://api.stadtpuls.com/api/v3/sensors/10/records')
+  .then((response) => response.json())
+  .then(({ data }) =>	drawChart3(data.slice(0, 50)))
+  .catch((err) => console.warn('Something went wrong.', err));
+
+function drawChart3(data) {
+  const chart2Context = document.getElementById('sensor-card-chart').getContext('2d');
+  new Chart(chart2Context, {
+      type: 'line',
+      data: {
+        labels: data.map(({ recorded_at }) => recorded_at),
+        datasets: [{
+          data: data.map(({ measurements }) => measurements[0]),
+          borderColor: '#8330ff',
+          borderWidth: 2,
+          fill: false,
+          tension: 0.1
+        }]
+      },
+      options: {
+        elements: {
+          point: {
+            radius: 0,
+            backgroundColor: '#8330ff',
+          }
+        },
+        plugins: {
+          legend: {
+            display: false
+          },
+          tooltip: {
+            enabled: false
+          }
+        },
+        scales: {
+          x: {
+            display: false,
+          },
+          y: {
+            display: false,
+          },
+        }
+      }
+  });
+}
+
+/* SENSOR CARD MAP */
+/* ------------------------------------------------------- */
+fetch('https://api.stadtpuls.com/api/v3/sensors/10')
+  .then((response) => response.json())
+  .then(({ data }) =>	drawSensorCardMap(data[0]))
+  .catch((err) => console.warn('Something went wrong.', err));
+
+function drawSensorCardMap(data) {
+  const map = new mapboxgl.Map({
+    container: 'sensor-card-map',
+    style: 'mapbox://styles/technologiestiftung/ckquzll4z1usx17rwlc5gyq7v',
+    center: [data.longitude, data.latitude],
+    zoom: 12,
+    logoPosition: 'top-left',
+    attributionControl: false
+  });
+  map.addControl(new mapboxgl.AttributionControl(), 'top-right');
 }
