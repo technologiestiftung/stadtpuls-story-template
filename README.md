@@ -109,3 +109,12 @@ There are a few CSS classes that help with styling:
 * `.tag`:<br />Utility to highlight a text referencing a specific dataset in a chart with the same color. Can set the color using the css variable `--data-color`. This can be set on an element-basis with an inline style tag. (Example: `
 <span class="tag" style="--data-color: var(--purple)">Datenarchitektur</span>`)
 
+
+#### Referencing a Stadtpuls sensor
+
+There is a special HTML Structure and JavaScript code that can be used to show a little Card showing information about a Stadtpuls sensor. Just add the HTML element below, and information about the sensor with the provided id will be fetched and automatically filled into the a tag.
+
+**HTML**:
+```html
+<a class="sensor-card" data-sensor-id="10"></a>
+```

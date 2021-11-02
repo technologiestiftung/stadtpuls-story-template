@@ -203,7 +203,7 @@ function fetchAndShowSensorInfo(sensorId, el) {
       fillSensorHTML(el, data[0])
       drawSensorCardMap(el, data[0])
     })
-    .catch((err) => console.warn(`Something went wrong when fetching sensor with id ${id}.`, err));
+    .catch((err) => console.warn(`Something went wrong when fetching sensor with id ${sensorId}.`, err));
 }
 
 function drawSensorCardMap(el, data) {
@@ -221,6 +221,7 @@ function drawSensorCardMap(el, data) {
 }
 
 function fillSensorHTML(el, data) {
+  el.setAttribute('href', `https://stadtpuls.com/sensors/${data.id}`)
   el.innerHTML = `
   <h4 class="sensor-card-title">
     <img src="https://stadtpuls.com/images/sensor-symbols/${data.id}.svg" alt="Symbol für das Sensor \"${data.name}\"" />
