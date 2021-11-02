@@ -4,33 +4,33 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stadtpuls Stories - DEINE STORY TITEL HIER</title>
+    <title>Stadtpuls Stories - STORY_TITLE</title>
     <title>{longTitle}</title>
-    <meta name="description" content="YOUR STORY DESCRIPTION HERE" />
+    <meta name="description" content="STORY_DESCRIPTION" />
 
     <meta property="og:type" content="article" />
 
     <meta name="theme-color" content="#8330ff" />
-    <meta name="keywords" content="YOUR,STORY,KEYWORDS,HERE" />
+    <meta name="keywords" content="STORY_KEYWORDS" />
 
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
     />
 
-    <meta itemprop="name" content="YOUR STORYNAME HERE" />
-    <meta itemprop="description" content="YOUR STORY DESCRIPTION HERE" />
+    <meta itemprop="name" content="STORY_TITLE" />
+    <meta itemprop="description" content="STORY_DESCRIPTION" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@citylabberlin" />
-    <meta name="twitter:title" content="YOUR STORYNAME HERE" />
-    <meta name="twitter:description" content="YOUR STORY DESCRIPTION HERE" />
+    <meta name="twitter:site" content="STORY_AUTHOR_TWITTER_ACCOUNT" />
+    <meta name="twitter:title" content="STORY_TITLE" />
+    <meta name="twitter:description" content="STORY_DESCRIPTION" />
 
-    <meta property="og:title" content="YOUR STORYNAME HERE" />
+    <meta property="og:title" content="STORY_TITLE" />
     <meta property="og:type" content="article" />
     <meta property="og:locale" content="de-DE" />
-    <meta property="og:url" content="https://stories.stadtpuls.com/YOUR-STORY-SLUG-HERE" />
-    <meta property="og:description" content="YOUR STORY DESCRIPTION HERE" />
+    <meta property="og:url" content="https://stories.stadtpuls.com/STORY_SLUG" />
+    <meta property="og:description" content="STORY_DESCRIPTION" />
     <meta property="og:site_name" content="Stadtpuls Stories" />
 
     <meta itemprop="image" content="images/social-image.jpg" />
@@ -59,7 +59,7 @@
           <img
             class="header-hero-img"
             src="images/story-cover.jpg"
-            alt="DIE BESCHREIBUNG DEINES STORY-COVER HIER"
+            aria-hidden="true"
           />
           <div class="header-hero-color" aria-hidden="true"></div>
           <div class="header-hero-squares" aria-hidden="true"></div>
@@ -73,27 +73,27 @@
           </a>
           <div itemscope itemtype="http://schema.org/Article">
             <h1 class="header-title" itemprop="name">
-              Der Beginn einer neuen Daten&shy;geschichte
+              STORY_TITLE
             </h1>
             <p class="header-publication-info">
               <a
                 class="header-profile-link"
-                href="https://stadtpuls.com/accounts/janedoe"
+                href="https://stadtpuls.com/accounts/STORY_AUTHOR_1_STADTPULS_USERNAME"
                 target="_blank"
                 rel="noreferrer noopener"
                 itemprop="author"
               >
-                <span> Jane Doe </span>
+                <span>STORY_AUTHOR_1_DISPLAY_NAME</span>
               </a>
               <span class="header-profile-separator">&</span>
               <a
                 class="header-profile-link"
-                href="https://stadtpuls.com/accounts/johndoe"
+                href="https://stadtpuls.com/accounts/STORY_AUTHOR_2_STADTPULS_USERNAME"
                 target="_blank"
                 rel="noreferrer noopener"
                 itemprop="author"
               >
-                <span> John Doe </span>
+                <span>STORY_AUTHOR_2_DISPLAY_NAME</span>
               </a>
               <span class="header-publication-date">
                 –
@@ -326,7 +326,7 @@ const selector = insert[position]</code></pre>
             <p>
               Die Plattform Stadtpuls sammelt Sensordaten Berlins, bereitet diese auf und stellt sie der gesamten Stadtgesellschaft frei zugänglich zur Verfügung. Egal ob du Forscher:in, Tüftler:in oder IoT-Neuling bist: du kannst aktiver Teil der Plattform werden!
             </p>
-            <a class="sensor-card">
+            <a class="sensor-card" href="">
               <h4 class="sensor-card-title">
                 <img src="https://stadtpuls.com/images/sensor-symbols/17.svg" alt="Symbol für das Sensor \"enviro+ carbon monoxide\"" />
                 <span>enviro+ carbon monoxide</span>
@@ -370,15 +370,15 @@ const selector = insert[position]</code></pre>
               <img
                 class="author-portrait"
                 src="images/author-1.png"
-                alt="Portrait of Author 1"
+                alt="Portrait of STORY_AUTHOR_1_DISPLAY_NAME"
               />
               <div>
-                <h3>Jane Doe</h3>
-                <small>Open Data Researcher</small>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic assumenda.</p>
+                <h3>STORY_AUTHOR_1_DISPLAY_NAME</h3>
+                <small>STORY_AUTHOR_1_ROLE</small>
+                <p>STORY_AUTHOR_1_BIO</p>
                 <footer>
-                  <a href="https://stadpuls.com/janedoe">@janedoe</a>
-                  <a href="https://janedoe.com">Portfolio</a>
+                  <a href="https://stadpuls.com/STORY_AUTHOR_1_STADTPULS_USERNAME">@STORY_AUTHOR_N_STADTPULS_USERNAME</a>
+                  <a href="STORY_AUTHOR_1_PORTFOLIO_URL">Portfolio</a>
                 </footer>
               </div>
             </div>
@@ -386,14 +386,15 @@ const selector = insert[position]</code></pre>
               <img
                 class="author-portrait"
                 src="images/author-2.png"
-                alt="Portrait of Author 2"
+                alt="Portrait of STORY_AUTHOR_2_DISPLAY_NAME"
               />
               <div>
-                <h3>John Doe</h3>
-                <small>Open Data Researcher</small>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque, hic assumenda. Optio ullam, facere, odio distinctio maiores.</p>
+                <h3>STORY_AUTHOR_2_DISPLAY_NAME</h3>
+                <small>STORY_AUTHOR_2_ROLE</small>
+                <p>STORY_AUTHOR_2_BIO</p>
                 <footer>
-                  <a href="https://stadpuls.com/johndoe">@johndoe</a>
+                  <a href="https://stadpuls.com/STORY_AUTHOR_2_STADTPULS_USERNAME">@STORY_AUTHOR_2_STADTPULS_USERNAME</a>
+                  <a href="https://stadpuls.com/STORY_AUTHOR_2_TWITTER_USERNAME">Twitter</a>
                 </footer>
               </div>
             </div>
