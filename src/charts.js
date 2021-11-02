@@ -188,14 +188,29 @@ function drawChart3(data) {
 
 /* SENSOR CARD MAP */
 /* ------------------------------------------------------- */
-fetch('https://api.stadtpuls.com/api/v3/sensors/10')
-  .then((response) => response.json())
-  .then(({ data }) =>	drawSensorCardMap(data[0]))
-  .catch((err) => console.warn('Something went wrong.', err));
+const allSensorCards = Array.from(document.getElementsByClassName('sensor-card'))
+allSensorCards.forEach((el) => {
+  const id = el.getAttribute("data-sensor-id")
+  if (!id) return
+  fetchAndShowSensorInfo(id, el)
+})
 
-function drawSensorCardMap(data) {
+function fetchAndShowSensorInfo(sensorId, el) {
+  fetch(`https://api.stadtpuls.com/api/v3/sensors/${sensorId}`)
+    .then((response) => response.json())
+    .then(({ data }) =>	{
+      if (data.length === 0 || !data[0]) return
+      fillSensorHTML(el, data[0])
+      drawSensorCardMap(el, data[0])
+    })
+    .catch((err) => console.warn(`Something went wrong when fetching sensor with id ${id}.`, err));
+}
+
+function drawSensorCardMap(el, data) {
+  const mapEl = el.getElementsByClassName('sensor-card-map')[0];
+  if (!mapEl) return
   const map = new mapboxgl.Map({
-    container: 'sensor-card-map',
+    container: mapEl,
     style: 'mapbox://styles/technologiestiftung/ckquzll4z1usx17rwlc5gyq7v',
     center: [data.longitude, data.latitude],
     zoom: 12,
@@ -203,4 +218,33 @@ function drawSensorCardMap(data) {
     attributionControl: false
   });
   map.addControl(new mapboxgl.AttributionControl(), 'top-right');
+}
+
+function fillSensorHTML(el, data) {
+  el.innerHTML = `
+  <h4 class="sensor-card-title">
+    <img src="https://stadtpuls.com/images/sensor-symbols/${data.id}.svg" alt="Symbol für das Sensor \"${data.name}\"" />
+    <span>${data.name}</span>
+  </h4>
+  <div class="sensor-card-metadata">
+    <span class="sensor-card-type">
+      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
+        <path d="M14 5a1 1 0 0 1 0 2h-3v8a1 1 0  0 1-2 0v-4H7v4a1 1 0 0 1-2 0V7H2a1 1 0 1 1 0-2h12ZM8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" fill="currentColor" fill-rule="nonzero"></path>
+      </svg>
+      <span>${data.category_id}</span>
+    </span>
+    <span class="sensor-card-author">
+      <img src="https://source.boringavatars.com/pixel/24/janedoe?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC" alt="Avatar of janedoe" />
+      <span>${data.user_id}</span>
+    </span>
+  </div>
+  <p class="sensor-card-description">
+    ${data.description}
+  </p>
+  <section class="sensor-card-graphics">
+    <div class="sensor-card-map" id="sensor-card-map"></div>
+    <div class="sensor-card-graphics-gradient"></div>
+    <canvas id="sensor-card-chart" height="75px"></canvas>
+  </section>
+`
 }
