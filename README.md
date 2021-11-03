@@ -1,12 +1,15 @@
 # **Stadtpuls** Story Template
+
+[![A screenshot of the Stadtpuls Stories template](README.png)](https://stories.stadtpuls.coms)
+
 A vanilla HTML/JS/CSS template for creating stories using **[stadtpuls.com](https://stadtpuls.com)** sensor data.
 
-## What is **Stadtpuls**
+## What is **Stadtpuls** ?
 **Stadtpuls** is Berlin's open platform for sensor data. Hardware hobbyists, activists, public institutions but also businesses can use **Stadtpuls** to share some of their climate-oriented sensor data to the world to enable others to leverage it for other purposes. Think of it as the GitHub for sensor-data. 
 
 **Stadtpuls** is an open source project by the [@technologiestiftung](https://github.com/technologiestiftung), executed by the [CityLAB Berlin](https://www.citylab-berlin.org/), and publicly financed by the [City of Berlin](https://www.berlin.de/).
 
-## What are **Stadtpuls** stories
+## What are **Stadtpuls** Stories ?
 **Stadtpuls** stories are standalone web-articles that show how sensor data (possibly in correlation with external data) can be used in creative ways (They combine text, images, static charts and interactive data visualizations) to gather compelling insights (Which streets are the loudest? Which neighborhoods contribute to the most CO2 emissions and why? What are the favorite Sunday-walk routes?).
 
 You can see Stories as more advanced blog articles in form of microsites that combine various media such as text, images, videos but especially data visualizations to tell stories through data.
@@ -24,7 +27,7 @@ It does, however, import some external css stylesheets and JavaScript scripts fo
 - [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/guides/):<br/>A JS library for creating interactive web maps. Used for the display of sensor cards (Can be removed if not used).
 - [**Mapbox GL CSS**](https://docs.mapbox.com/mapbox-gl-js/guides/):<br/>The CSS styles associated withe the [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/guides/) library (Can be removed if not used).
 
-The above libraries are useful specific reasons (as cited above), however, none of these are mandatory. Therefore, feel free to add or remove any library you deem important for your own story.
+The above libraries are useful for specific reasons (as cited above), however, none of these are mandatory. Therefore, feel free to add or remove any library you deem important for your own story.
 
 ### Creating your own story
 
@@ -69,8 +72,8 @@ Search for the following texts in the `index.html` file and replace them with yo
 * `STORY_TITLE`:<br />The title of your article/story (about 65 to 70 characters including spaces)
 * `STORY_DESCRIPTION`:<br />A short description of your article/story (about 120 to 158 characters including spaces)
 * `STORY_KEYWORD`:<br />A coma-separated list keywords related to your article/story (between 10 to 30 keywords)
-* `STORY_AUTHOR_TWITTER_ACCOUNT`:<br />The twitter account
-* `STORY_SLUG`:<br />If you publish the story yourself, change the whole URL in which this word appear. Otherwise, replace `STORY_SLUG` with the name of the story in _"slug"_ form. You can sulgify the story title [here](https://slugify.online/).
+* `STORY_AUTHOR_TWITTER_ACCOUNT`:<br />The author's twitter username (If not needed/wanted, remove the relevant HTML/CSS code)
+* `STORY_SLUG`:<br />If you publish the story yourself, change the whole URL. Otherwise, replace `STORY_SLUG` with the name of the story in _"slug"_ form. You can sulgify the story title [here](https://slugify.online/).
 * `STORY_PUBLICATION_DATE`:<br />The official publication date of your story.
 
 ---
@@ -114,7 +117,23 @@ There are a few CSS classes that help with styling:
 
 There is a special HTML Structure and JavaScript code that can be used to show a little Card showing information about a Stadtpuls sensor. Just add the HTML element below, and information about the sensor with the provided id will be fetched and automatically filled into the a tag.
 
-**HTML**:
+<small>**HTML**</small>:
 ```html
 <a class="sensor-card" data-sensor-id="10"></a>
 ```
+
+### Developing workflow
+
+If you have [NodeJS](https://nodejs.org/en/) installed, you can use [`browser-sync`](https://browsersync.io/) to auto watch and reload your code in a little development server. This makes it faster and more convenient. You can use the following command in the terminal:
+
+```sh
+npx browser-sync start -s 'src' -f 'src' --no-notify --host $LOCAL_IP --port 9000
+```
+
+### Send us your story!
+
+Did you create your own story? Great! We can highlight and promote your story on our website and social media channels. Send us either the zipped code folder or the URL of your work at [info@stadtpuls.com](mailto:info@stadtpuls.com). We'll take care of the rest and keep in touch!
+
+---
+
+Made with :heart: [@CityLAB Berlin](https://www.citylab-berlin.org/)
