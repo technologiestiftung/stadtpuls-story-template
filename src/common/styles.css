@@ -330,6 +330,21 @@ header a:focus {
   color: var(--white);
 }
 
+.header-back-link {
+  float: left;
+  margin-top: 6rem;
+  z-index: 1;
+  position: relative;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: 458px) {
+  .header-back-link {
+    float: right;
+    margin-top: 0;
+  }
+}
+
 .header-title {
   font-size: 9rem;
   line-height: 11rem;
