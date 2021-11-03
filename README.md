@@ -74,6 +74,8 @@ You will need to create your own folder with you own story-code. This mostly con
 
 If you need a specific JS library or particular CSS styles, add the relevant files within your newly created folder following the structure of the `common` folder (see "The Code Structure" section above). Don't forget to link the files in your `index.html` file too.
 
+Once this is done, you will be able to add your story to the list in the overview. This happens in the `index.html` placed directly in the `src` folder. In this file, find the first anchor tag with the `stories-list-item` class and adapt its content and URLs based on your new story. Make sure to respect the sorting, which is newest first, oldest last. 
+
 ### Adapting the meta-code
 
 Aside from the story's content itself, there are a few things you should change first.
