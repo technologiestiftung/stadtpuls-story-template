@@ -993,8 +993,9 @@ article a.stories-list-item {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 240px auto;
-  border-bottom: 1px solid var(--gray-200);
+  border: 1px solid var(--gray-200);
   box-shadow: 0 4px 0 var(--gray-50);
+  margin-bottom: 10rem;
 }
 
 article a.stories-list-item:hover {
@@ -1027,7 +1028,7 @@ article .stories-list-item-cover:before {
   top: 0;
   right: 0;
   left: 0;
-  height: 240px;
+  bottom: 0;
   background: var(--purple);
   mix-blend-mode: color;
   z-index: 2;
@@ -1064,6 +1065,7 @@ article span.stories-list-item-profile-name > img {
   article a.stories-list-item {
     display: grid;
     grid-template-columns: 1fr 45%;
+    grid-template-rows: auto;
   }
 
   article .stories-list-item-content {

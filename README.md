@@ -17,11 +17,11 @@ You can see Stories as more advanced blog articles in form of microsites that co
 ## About the code
 This repo requires neither NodeJS nor a build tool. It is intentionally [_**vanilla**_](https://en.wikipedia.org/wiki/Vanilla_software) in order to make it easier for anybody with basic HTML/CSS/JavaScript skills to dive straight into making their own story.
 
-It does, however, import some external css stylesheets and JavaScript scripts for convenience. Those are:
+It does, however, import some external CSS stylesheets and JavaScript scripts for convenience. Those are:
 
 - [**Tailwind Preflight**](https://tailwindcss.com/docs/preflight):<br />A CSS reset created by TailwindCSS build on top of [modern-normalize](https://github.com/sindresorhus/modern-normalize). 
 - [**Tailwind Typography**](https://github.com/tailwindlabs/tailwindcss-typography):<br />A CSS stylesheet that provides a set of prose classes to add beautiful typographic defaults to the article main text area.
-- [**Highlight JS**](https://highlightjs.org/):<br />A js plugin that provides syntax highlighting for code blocks.
+- [**Highlight JS**](https://highlightjs.org/):<br />A JS plugin that provides syntax highlighting for code blocks.
 - [**Highlight JS - Theme "Shades of Purple"**](https://highlightjs.org/static/demo/):<br />A CSS stylesheet for styling code highlighted by the [Highlight JS](https://highlightjs.org/) plugin.
 - [**Chart.js**](https://highlightjs.org/):<br />A JS charting library used to display data visualization (You could also use [D3.js](https://d3js.org/) or any other library instead).
 - [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/guides/):<br/>A JS library for creating interactive web maps. Used for the display of sensor cards (Can be removed if not used).
@@ -31,7 +31,7 @@ The above libraries are useful for specific reasons (as cited above), however, n
 
 ### Creating your own story
 
-This repository is intended to be copied and adapted to your own need. There are two ways you can go about using the code.
+This repository is intended to be extended with your own compelling stories! There are two ways you can go about using the code:
 
 #### 1. Download the files
 
@@ -39,11 +39,11 @@ The easiest way is to download the whole repository and simply directly modify t
 
 The advantage of this solution is that it is easy and straight forward. The disadvantage is that you won't be able to receive the updates we do to our own template. If you don't care about the updates, this solution is for you.
 
-#### 2. Fork the repository
+#### 2. Make a Pull Request
 
-This solution is more advanced and requires you to be familiar with [git](https://git-scm.com/) and [GitHub's fork feature](https://docs.github.com/en/get-started/quickstart/fork-a-repo). A fork is a copy of a repository (A folder with code inside it), that can later be updated. Because repositories are versioned via git, changes in either the copied repository or the copy itself can be used to update the other. 
+This solution is more advanced and requires you to be familiar with [git](https://git-scm.com/) and [GitHub's Pull Request feature](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Because GitHub repositories are versioned via git, you can have your own local copy of the code, make changes, and later request the author of the original code (in this case us) to merge your local changes into the main repository. 
 
-If you aren't familiar with theses concept, stick to the solution 1 or learn more about [what a fork is](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+If you aren't familiar with theses concept, stick to the solution 1 or learn more about [what a Pull Request is](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
 ### The code structure
 
@@ -51,23 +51,33 @@ The code structure is simple and minimal. Here is an overview of the most import
 
 ```sh
 .
-├── design-resources    # Design files for creating imagery
-├── src                 # All the code happens here
-│   ├── fonts           # What it says... :)
-│   ├── images          # What it says... :)
-│   ├── vendor          # All external libraries go here (minified)
-│   ├── index.html      # The main file, in which the story is written
-│   ├── styles.css      # Your custom css styles go here
-│   └── charts.js       # The JS for rendering charts go here
-├── .gitignore          # Tells git what to ignore for versioning
-├── .prettierrc.js      # Tells prettier how to format code
-└── README.md           # This very file
+├── design-resources       # Design files for creating imagery
+├── src                    # All the code happens here
+│   ├── common             # Common resources used by all stories
+│   ├── template           # The folder to duplicate to make your changes into
+│   │   ├── images         # Images Specific to your story
+│   │   ├── vendor         # External libraries particular to your story (optional)
+│   │   ├── index.html     # The main file, in which your story is written
+│   │   ├── styles.css     # Your custom CSS styles go here (optional)
+│   │   └── charts.js      # The JS for rendering your story charts go here
+│   ├── one-story-here     # The folder to duplicate to make your changes into
+│   ├── another-story-here # The folder to duplicate to make your changes into
+│   └── index.html         # The file with an overview of all stories.
+├── .gitignore             # Tells git what to ignore for versioning
+├── .prettierrc.js         # Tells prettier how to format code
+└── README.md              # This very file
 ```
+
+### Preparing the code
+
+You will need to create your own folder with you own story-code. This mostly consists of an `index.html` file and an `images` folder. In the `src` folder, there is a folder called `template`. Duplicate this folder and rename it after your story. The name of the folder should contain only URL-compatible characters (you can turn the name of your story title into a URL compatible string [here](https://slugify.online/)).
+
+If you need a specific JS library or particular CSS styles, add the relevant files within your newly created folder following the structure of the `common` folder (see "The Code Structure" section above). Don't forget to link the files in your `index.html` file too.
 
 ### Adapting the meta-code
 
-Aside from the story's content itself, there are a few things you should change.
-Search for the following texts in the `index.html` file and replace them with your values:
+Aside from the story's content itself, there are a few things you should change first.
+Search and replace the following texts in the `index.html` with your values:
 
 * `STORY_TITLE`:<br />The title of your article/story (about 65 to 70 characters including spaces)
 * `STORY_DESCRIPTION`:<br />A short description of your article/story (about 120 to 158 characters including spaces)
@@ -89,10 +99,12 @@ Search for the following texts in the `index.html` file and replace them with yo
 
 ---
 
-Also, some images should be adapted as well:
+Some images should be adapted as well:
 
-* `src/images/social-image.jpg`: This file is the preview that is displayed when sharing via social media or messenger apps such a Slack or WhatsApp.
-* `src/images/author-1.png` and `src/images/author-2.png`: The portraits of the authors. These images were made with the Sketch app. The design file is in the `design-resources` folder. 
+* `src/YOUR-STORY/images/social-image.jpg`: This file is the preview that is displayed when sharing via social media or messenger apps such as Slack or WhatsApp. 
+* `src/YOUR-STORY/images/author-1.png` and `src/YOUR-STORY/images/author-2.png`: The portraits of the authors. 
+  
+These images were made with the [Sketch app](https://www.sketch.com/). The design files are in the `design-resources` folder. We also provided [Adobe Photoshop](https://www.adobe.com/de/products/photoshop.html) templates which are also in the `design-resources` folder.
 
 ### Adapting the content-code
 
@@ -109,7 +121,7 @@ There are a few CSS classes that help with styling:
 * `.lead`:<br />This CSS class adds an "introduction" style. Slightly bigger and lighter, the `.lead` class should be used at the beginning of an article to incentivize users to start  reading further.
 * `.alert`:<br />Alerts are styled boxes that are highlighted. They can be used to momentarily derivate from the main content and provide context information. They come in the following flavors: `.alert.alert-info` (should be used by default), `.alert.alert-warning`, `.alert.alert-success`, `.alert.alert-error` 
 * `.wide-block`:<br />Utility CSS class to create blocks that are wider than the main text content. Useful for bringing rhythm and/or placing larger charts.
-* `.tag`:<br />Utility to highlight a text referencing a specific dataset in a chart with the same color. Can set the color using the css variable `--data-color`. This can be set on an element-basis with an inline style tag. (Example: `
+* `.tag`:<br />Utility to highlight a text referencing a specific dataset in a chart with the same color. Can set the color using the CSS variable `--data-color`. This can be set on an element-basis with an inline style tag. (Example: `
 <span class="tag" style="--data-color: var(--purple)">Datenarchitektur</span>`)
 
 
@@ -132,7 +144,7 @@ npx browser-sync start -s 'src' -f 'src' --no-notify --host $LOCAL_IP --port 900
 
 ### Send us your story!
 
-Did you create your own story? Great! We can highlight and promote your story on our website and social media channels. Send us either the zipped code folder or the URL of your work at [info@stadtpuls.com](mailto:info@stadtpuls.com). We'll take care of the rest and keep in touch!
+Did you create your own story? Great! We can highlight and promote your story on our website and social media channels. Create a Pull Request or send us the zipped code folder at [info@stadtpuls.com](mailto:info@stadtpuls.com). We'll take care of the rest and get in touch with you once all is ready!
 
 ---
 
