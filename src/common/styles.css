@@ -981,6 +981,102 @@ footer {
   color: var(--blue);
 }
 
+/* STORIES LIST */
+/* ------------------------------------------------------- */
+article a.stories-list-item {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  transition: border 200ms ease-out, box-shadow 200ms ease-out,
+    color 200ms ease-out;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 240px auto;
+  border-bottom: 1px solid var(--gray-200);
+  box-shadow: 0 4px 0 var(--gray-50);
+}
+
+article a.stories-list-item:hover {
+  border-color: var(--purple);
+  box-shadow: 0 4px 0 var(--purple);
+}
+
+article .stories-list-item-content > * {
+  transition: color 200ms ease-out;
+}
+
+article a.stories-list-item:hover .stories-list-item-content > * {
+  color: var(--purple);
+}
+
+article .stories-list-item-cover {
+  position: relative;
+}
+
+article .stories-list-item-cover > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 0;
+}
+
+article .stories-list-item-cover:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 240px;
+  background: var(--purple);
+  mix-blend-mode: color;
+  z-index: 2;
+}
+
+article .stories-list-item-content {
+  padding: 10rem;
+  color: var(--black);
+  font-size: 100%;
+}
+
+article h3.stories-list-item-title {
+  font-size: 150%;
+  line-height: 120%;
+  margin: 0 0 2rem 0;
+}
+
+article p.stories-list-item-publication-info {
+  display: flex;
+  column-gap: 3rem;
+  flex-wrap: wrap;
+}
+
+article span.stories-list-item-profile-name {
+  display: flex;
+  gap: 1.5rem;
+}
+
+article span.stories-list-item-profile-name > img {
+  margin: 0;
+}
+
+@media screen and (min-width: 640px) {
+  article a.stories-list-item {
+    display: grid;
+    grid-template-columns: 1fr 45%;
+  }
+
+  article .stories-list-item-content {
+    order: -1;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  article a.stories-list-item {
+    border: 1px solid var(--gray-200);
+  }
+}
+
 /* CHARTS */
 /* ------------------------------------------------------- */
 /* CHART 1 */
