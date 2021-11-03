@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>STORY_TITLE - Stadtpuls Stories</title>
+    <title>{longTitle}</title>
+    <meta name="description" content="STORY_DESCRIPTION" />
+
+    <meta property="og:type" content="article" />
+
+    <meta name="theme-color" content="#8330ff" />
+    <meta name="keywords" content="STORY_KEYWORDS" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <meta itemprop="name" content="STORY_TITLE" />
+    <meta itemprop="description" content="STORY_DESCRIPTION" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="STORY_AUTHOR_TWITTER_ACCOUNT" />
+    <meta name="twitter:title" content="STORY_TITLE" />
+    <meta name="twitter:description" content="STORY_DESCRIPTION" />
+
+    <meta property="og:title" content="STORY_TITLE" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de-DE" />
+    <meta property="og:url" content="https://stories.stadtpuls.com/STORY_SLUG" />
+    <meta property="og:description" content="STORY_DESCRIPTION" />
+    <meta property="og:site_name" content="Stadtpuls Stories" />
+
+    <meta itemprop="image" content="./images/social-image.jpg" />
+    <meta name="twitter:image" content="./images/social-image.jpg" />
+    <meta property="og:image" content="./images/social-image.jpg" />
+
+    <link rel="apple-touch-icon" href="/common/images/favicons/apple-touch-icon.png" />
+
+    <link href="/common/images/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="/common/images/favicons/favicon.ico.png" type="image/png" rel="icon" />
+    <link href="/common/images/favicons/favicon-32x32.png" type="image/png" rel="icon" />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="author" href="https://www.citylab-berlin.org/" />
+    <link rel="stylesheet" href="/common/vendor/css/preflight-2.2.17.css" />
+    <link rel="stylesheet" href="/common/vendor/css/typography.min.css" />
+    <link rel="stylesheet" href="/common/styles.css" />
+    <link rel="stylesheet" href="/common/vendor/css/shades-of-purple.min.css" />
+    <link rel="stylesheet" href="/common/vendor/css/mapbox-gl.min.css" />
+  </head>
+  <body>
+    <main>
+      <header class="black-dot-pattern">
+        <section>
+          <img
+            class="header-hero-img"
+            src="./images/story-cover.jpg"
+            aria-hidden="true"
+          />
+          <div class="header-hero-color" aria-hidden="true"></div>
+          <div class="header-hero-squares" aria-hidden="true"></div>
+          <a
+            href="https://stadtpuls.com"
+            title="Die Hauptseite von Stadtpuls"
+            class="header-logo"
+          >
+            <img src="/common/images/logo.svg" alt="Stadtpuls Logo" width="157px" />
+            <span>Stories</span>
+          </a>
+          <div itemscope itemtype="http://schema.org/Article">
+            <h1 class="header-title" itemprop="name">
+              STORY_TITLE
+            </h1>
+            <p class="header-publication-info">
+              <a
+                class="header-profile-link"
+                href="https://stadtpuls.com/accounts/STORY_AUTHOR_1_STADTPULS_USERNAME"
+                target="_blank"
+                rel="noreferrer noopener"
+                itemprop="author"
+              >
+                <span>STORY_AUTHOR_1_DISPLAY_NAME</span>
+              </a>
+              <span class="header-profile-separator">&</span>
+              <a
+                class="header-profile-link"
+                href="https://stadtpuls.com/accounts/STORY_AUTHOR_2_STADTPULS_USERNAME"
+                target="_blank"
+                rel="noreferrer noopener"
+                itemprop="author"
+              >
+                <span>STORY_AUTHOR_2_DISPLAY_NAME</span>
+              </a>
+              <span class="header-publication-date">
+                –
+                <time itemprop="datePublished" datetime="2021-10-25">
+                  25. Oktober 2021
+                </time>
+              </span>
+            </p>
+          </div>
+        </section>
+      </header>
+      <div class="content-container white-dot-pattern">
+        <div class="content-gradient-overlay"></div>
+        <div class="content-gradient-cover"></div>
+        <article class="container" itemscope itemtype="http://schema.org/Article">
+          <section class="prose">
+            <p class="lead">
+              IoT ist eine Abkürzung für "Internet of Things" und bedeutet
+              übersetzt soviel wie "Internet der Dinge". Dabei unterscheidet man
+              zwischen "Sensoren", die ihre Umgebung fühlen und vermessen und
+              "Aktoren", die mit ihrer Umgebung interagieren.
+            </p>
+            <p class="lead">
+              Ein Beispiel: dein Temperatur-Sensor misst 38°C, daraufhin sendet
+              dein Aktor eine Nachricht an deine Klimaanlage, damit diese sich
+              automatisch einschaltet und dein Home Office kühlt.
+            </p>
+            <h2>Sensordaten blüten überall</h2>
+            <p>
+              Ziel der <a href="https://stadtpuls.com">Plattform</a> ist es
+              Sensordaten der Stadt Berlin aufzubereiten, zu visualisieren und
+              für alle Akteure der Stadtgesellschaft frei und kostenlos zur
+              Verfügung zu stellen. Nutzer:innen können sich über einzelne
+              IoT-Projekte informieren, selber Projekte und Sensoren anlegen
+              oder Daten aus Projekten für die eigene Analyse nutzen. Die
+              Sensor- und <code>Echtzeitdaten</code> stammen aus
+              unterschiedlichen Datenquellen der Forschung, Verwaltung und
+              Stadtgesellschaft und werden in einer Postgres-Datenbank
+              gesammelt. Schließlich visualisieren wir die Daten, um
+              Betrachter:innen einen erstes Gefühl für die Datenbasis zu
+              ermöglichen und stellen alle Daten zum Download, sowie mittels
+              REST-API kostenlos zur Verfügung.
+            </p>
+            <section class="alert alert-warning">
+              <p>
+                <b>By Max Mustermann, Jane Doe, and Jesus Ejemplo</b>
+              </p>
+              <p>
+                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
+                neuen Datengeschichte
+                <br />
+                Sehen Sie sich das Video und die Lernmaterialien des vom Autoren
+                geleiteten Workshops an
+              </p>
+            </section>
+            <h2>Sensordaten von & für Berlin</h2>
+            <p>
+              Das komplette Projekt ist quelloffen und basiert ausschließlicher
+              auf nicht-proprietärer Software. Damit wollen wir unseren Beitrag
+              zu einer offenen, transparenten Stadt beitragen.
+            </p>
+            <pre
+              class="wide-block"
+            ><code>module.exports = function (options = {}) {
+const {
+  insert = { after: 'h1' },
+  title = 'Content',
+  ignoreMissingSelector = false,
+  ignoreMissingHeadings = false,
+  toggle // ['show', 'hide', true],
+} = options
+
+if (typeof insert !== 'object') {
+  throw new PostHtmlTocError(`unexpected 'options.insert': ${insert}`)
+}
+
+const insertKeys = Object.keys(insert)
+
+switch (insertKeys.length) {
+  case 1:
+    break
+  case 0:
+    throw new PostHtmlTocError(`empty 'options.insert'`)
+  default:
+    throw new PostHtmlTocError(`too many keys in 'options.insert': ${insertKeys}`)
+}
+
+const position = insertKeys[0]
+const selector = insert[position]</code></pre>
+            <p>
+              Die Plattform Stadtpuls ist eine prototypische Offene
+              Datenplattform, welche Sensordaten von & für Berlin als in einer
+              gemeinsamen Datenbasis sammelt, als Open Data frei zugänglich
+              macht und somit der Stadt Berlin auf ihrem Weg zur smarten Stadt
+              der Zukunft helfen soll.
+            </p>
+            <section class="alert alert-error">
+              <p>
+                <b>By Max Mustermann, Jane Doe, and Jesus Ejemplo</b>
+              </p>
+              <p>
+                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
+                neuen Datengeschichte
+                <br />
+                Sehen Sie sich das Video und die Lernmaterialien des vom Autoren
+                geleiteten Workshops an
+              </p>
+            </section>
+            <p>
+              Alle Daten werden als Open Data bereitgestellt und können entweder
+              als JSON- oder CSV-Datei heruntergeladen sowie über eine Restful
+              API kostenlos für eigene Projekte genutzt werden.
+            </p>
+            <h2>Die Welt der Stadt-Sensorik</h2>
+            <p>
+              Dann browse durch die Projekte und finde den passenden Datensatz
+              für deine Datenanalyse. Bislang bieten wir Sensordaten aus sieben
+              verschiedenen Kategorien. Dazu zählen:
+            </p>
+            <section class="alert alert-info">
+              <p>
+                <b>By Max Mustermann, Jane Doe, and Jesus Ejemplo</b>
+              </p>
+              <p>
+                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
+                neuen Datengeschichte
+                <br />
+                Sehen Sie sich das Video und die Lernmaterialien des vom Autoren
+                geleiteten Workshops an
+              </p>
+            </section>
+            <p>
+              Wunderbar! Erstelle dir einen Account und stelle deine Daten für
+              andere Nutzer:innen und die Öffentlichkeit zur Verfügung. Die
+              Plattform unterstützt bislang die Anbindung an das The Things
+              Network (TTN), sodass du Sensoren, die du bereits in TTN
+              registriert hast, einfach über die HTTP-Integration von TTN mit
+              Stadtpuls verknüpfen kannst. Nach erfolgreicher Verknüpfung werden
+              die Daten deiner Sensoren zum Download sowie über eine REST-API
+              frei als Open Data bereitgestellt.
+            </p>
+            <hr />
+            <h3>Du möchtest den digitalen Puls deiner Stadt fühlen?</h3>
+          </section>
+          <section class="wide-block chart1-container white-dot-pattern">
+            <ul>
+              <li class="pl-6 relative">
+                <span style="--data-color: #1e1a5a"></span>
+                Internet Of Things
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #332f66"></span>
+                Datenforschung
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #4a4878"></span>
+                Datenvisualisierung
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #636188"></span>
+                Weiteres
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #787696"></span>
+                Datenstudie
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #9695ae"></span>
+                Datenlehre
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #b4b4c7"></span>
+                Journalismus
+              </li>
+            </ul>
+            <div class="order-first lg:order-none">
+              <canvas id="chart1"></canvas>
+            </div>
+            <ul
+              class="max-w-[200px] flex flex-col gap-2 text-sm justify-center"
+            >
+              <li class="pl-6 relative">
+                <span style="--data-color: #8330ff"></span>
+                Datenarchitektur
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #46eca1"></span>
+                Datenwissenschaft
+              </li>
+              <li class="pl-6 relative">
+                <span style="--data-color: #0000c2"></span>
+                Datenanalyse
+              </li>
+            </ul>
+          </section>
+          <section class="prose">
+            <p>
+              Die Plattform Stadtpuls
+              <span class="tag" style="--data-color: var(--purple)"
+                >Datenarchitektur</span
+              >sammelt Sensordaten Berlins, bereitet diese auf und stellt sie
+              der gesamten Stadtgesellschaft frei zugänglich zur Verfügung
+              <span class="tag" style="--data-color: var(--green)"
+                >Datenwissenschaft</span
+              >. Egal ob du Forscher:in, Tüftler:i
+              <span class="tag" style="--data-color: var(--blue)"
+                >Datenanalyse</span
+              >
+              oder IoT-Neuling bist: du kannst aktiver Teil der Plattform
+              werden!
+            </p>
+            <h2>Drei Gründe, die für Stadtpuls sprechen</h2>
+            <p>
+              Dann bist du hier genau richtig! Die Stadt Berlin, deren
+              Hochschulen aber auch Privatpersonen erheben bereits enorm viele
+              Sensordaten über unsere Stadt. Dabei spielen Klimadaten, aber auch
+              städtische Echtzeit-Sensordaten zu Themen wie "Lärmbelästigung"
+              oder "Füllstände von Mülleimern" eine wichtige Rolle. Diese Daten
+              in einer gemeinsamen Datenbasis vorzuhalten, zugänglich zu machen
+              und zu visualisieren ist ein erster Schritt in Richtung smarte
+              vernetzte Stadt und legt den Grundstein für weitere Analysen,
+              Prozessoptimierung und für eine bessere Stadtplanung. Man könnte
+              sagen:
+            </p>
+          </section>
+          <section class="wide-block chart2-container">
+            <canvas id="chart2"></canvas>
+          </section>
+          <section class="prose">
+            <p>
+              Die Plattform Stadtpuls sammelt Sensordaten Berlins, bereitet diese auf und stellt sie der gesamten Stadtgesellschaft frei zugänglich zur Verfügung. Egal ob du Forscher:in, Tüftler:in oder IoT-Neuling bist: du kannst aktiver Teil der Plattform werden!
+            </p>
+            <a class="sensor-card" data-sensor-id="10"></a>
+            <p>
+              Dann bist du hier genau richtig! Die Stadt Berlin, deren
+              Hochschulen aber auch Privatpersonen erheben bereits enorm viele
+              Sensordaten über unsere Stadt. Dabei spielen Klimadaten, aber auch
+              städtische Echtzeit-Sensordaten zu Themen wie "Lärmbelästigung"
+              oder "Füllstände von Mülleimern" eine wichtige Rolle. Diese Daten
+              in einer gemeinsamen Datenbasis vorzuhalten, zugänglich zu machen
+              und zu visualisieren ist ein erster Schritt in Richtung smarte
+              vernetzte Stadt und legt den Grundstein für weitere Analysen,
+              Prozessoptimierung und für eine bessere Stadtplanung. Man könnte
+              sagen:
+            </p>
+          </section>
+          <section class="authors-container">
+            <div class="author-block" itemprop="author">
+              <img
+                class="author-portrait"
+                src="./images/author-1.png"
+                alt="Portrait of STORY_AUTHOR_1_DISPLAY_NAME"
+              />
+              <div>
+                <h3>STORY_AUTHOR_1_DISPLAY_NAME</h3>
+                <small>STORY_AUTHOR_1_ROLE</small>
+                <p>STORY_AUTHOR_1_BIO</p>
+                <footer>
+                  <a href="https://stadpuls.com/STORY_AUTHOR_1_STADTPULS_USERNAME">@STORY_AUTHOR_1_STADTPULS_USERNAME</a>
+                  <a href="STORY_AUTHOR_1_PORTFOLIO_URL">Portfolio</a>
+                </footer>
+              </div>
+            </div>
+            <div class="author-block" itemprop="author">
+              <img
+                class="author-portrait"
+                src="./images/author-2.png"
+                alt="Portrait of STORY_AUTHOR_2_DISPLAY_NAME"
+              />
+              <div>
+                <h3>STORY_AUTHOR_2_DISPLAY_NAME</h3>
+                <small>STORY_AUTHOR_2_ROLE</small>
+                <p>STORY_AUTHOR_2_BIO</p>
+                <footer>
+                  <a href="https://stadpuls.com/STORY_AUTHOR_2_STADTPULS_USERNAME">@STORY_AUTHOR_2_STADTPULS_USERNAME</a>
+                  <a href="https://stadpuls.com/STORY_AUTHOR_2_TWITTER_USERNAME">Twitter</a>
+                </footer>
+              </div>
+            </div>
+          </section>
+        </article>
+        <footer class="white-dot-pattern">
+          <section class="container sharing-info">
+            <div class="prose">
+              <h2>Hat's dir gefallen?</h2>
+              <p>Dann kannst du diese Story hier teilen:</p>
+              <div class="sharing-links">
+                <!-- Twitter (url, text, @mention) -->
+                <a
+                  class="share-btn"
+                  href="https://twitter.com/share?url=https://stories.stadtpuls.com/STORY_SLUG&text=STORY_DESCRIPTIONvia=citylabberlin"
+                >
+                  Twitter
+                </a>
+                <!-- Facebook (url) -->
+                <a
+                  class="share-btn"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://stories.stadtpuls.com/STORY_SLUG"
+                >
+                  Facebook
+                </a>
+                <!-- LinkedIn (url, title, summary, source url) -->
+                <a
+                  class="share-btn"
+                  href="https://www.linkedin.com/shareArticle?url=https://stories.stadtpuls.com/STORY_SLUG&title=STORY_TITLE&summary=STORY_DESCRIPTION&source=https://stories.stadtpuls.com"
+                >
+                  LinkedIn
+                </a>
+                <!-- Email (subject, body) -->
+                <a class="share-btn" href="mailto:?subject=STORY_TITLE&body=https://stories.stadtpuls.com/STORY_SLUG">
+                  Email
+                </a>
+            </div>
+            </section>
+          </section>
+          <section class="finance">
+            <ul class="container">
+              <li>
+                Ein Projekt der:
+                <a href="https://technologiestiftung-berlin.de/">
+                  <img src="/common/images/tsb-logo.svg" alt="Logo der Technologiestiftung Berlin">
+                </a>
+              </li>
+              <li>
+                Durchgeführt vom:
+                <a href="https://www.citylab-berlin.org/">
+                  <img src="/common/images/citylab-logo.svg" alt="Logo des CityLABs Berlin">
+                </a>
+              </li>
+              <li>
+                Gefördert von:
+                <a href="https://www.berlin.de/">
+                  <img src="/common/images/berlin-logo.svg" alt="Logo der Stadt Berlin">
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="credits">
+            <div class="container">
+              <span>
+                © 2021 Technologiestiftung Berlin
+              </span>
+              <div class="links">
+                <a href="https://www.technologiestiftung-berlin.de/de/impressum/">Impressum</a>
+                <a href="https://www.technologiestiftung-berlin.de/de/datenschutz/">Datenschutzerklärung</a>
+              </div>  
+            </div>
+          </section>
+        </footer>
+      </div>
+    </main>
+    <script src="/common/vendor/js/highlight.min.js" type="text/javascript"></script>
+    <script src="/common/vendor/js/chart.min.js" type="text/javascript"></script>
+    <script src="/common/vendor/js/mapbox-gl.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.highlightAll();
+      mapboxgl.accessToken = "pk.eyJ1IjoidGVjaG5vbG9naWVzdGlmdHVuZyIsImEiOiJja2dxZ28xcmwwNW12MnhwMmhheGQyYnYwIn0.Ffzn6ClW1CSbb9HESTJ3Pw";
+    </script>
+    <script src="/common/sensor-cards.js" type="text/javascript"></script>
+    <script src="./charts.js" type="text/javascript"></script>
+  </body>
+</html>
