@@ -227,18 +227,24 @@ function fillSensorHTML(el, data) {
     <img src="https://stadtpuls.com/images/sensor-symbols/${data.id}.svg" alt="Symbol für das Sensor \"${data.name}\"" />
     <span>${data.name}</span>
   </h4>
-  <div class="sensor-card-metadata">
-    <span class="sensor-card-type">
-      <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" role="img">
-        <path d="M14 5a1 1 0 0 1 0 2h-3v8a1 1 0  0 1-2 0v-4H7v4a1 1 0 0 1-2 0V7H2a1 1 0 1 1 0-2h12ZM8 0a2 2 0 1 1 0 4 2 2 0 0 1 0-4Z" fill="currentColor" fill-rule="nonzero"></path>
-      </svg>
-      <span>${data.category_id}</span>
-    </span>
-    <span class="sensor-card-author">
-      <img src="https://source.boringavatars.com/pixel/24/janedoe?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC" alt="Avatar of janedoe" />
-      <span>${data.user_id}</span>
-    </span>
-  </div>
+  ${(!!data.user || !!data.category && `
+    <div class="sensor-card-metadata">
+      ${(!!data.category && `
+        <span class="sensor-card-type">
+          <span>${data.category.name}</span>
+        </span>
+      `) || ''}
+      ${(!!data.user && `
+        <span class="sensor-card-author">
+          <img
+            src="https://source.boringavatars.com/pixel/24/${data.user.name}?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
+            alt="Stadtpuls svatar of ${data.user.display_name}"
+          />
+          <span>${data.user.display_name}</span>
+        </span>
+      `) || ''}
+    </div>
+  `) || ''}
   <p class="sensor-card-description">
     ${data.description}
   </p>
