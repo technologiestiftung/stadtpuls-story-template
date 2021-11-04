@@ -106,7 +106,7 @@ Some images should be adapted as well:
 * `src/YOUR-STORY/images/social-image.jpg`: This file is the preview that is displayed when sharing via social media or messenger apps such as Slack or WhatsApp. 
 * `src/YOUR-STORY/images/author-1.png` and `src/YOUR-STORY/images/author-2.png`: The portraits of the authors. 
   
-These images were made with the [Sketch app](https://www.sketch.com/). The design files are in the `design-resources` folder. We also provided [Adobe Photoshop](https://www.adobe.com/de/products/photoshop.html) templates which are also in the `design-resources` folder.
+These images were made with the [Sketch app](https://www.sketch.com/). The design files are in the `design-resources` folder. We also provided [Adobe Photoshop](https://www.adobe.com/de/products/photoshop.html) templates which are also in the `design-resources` folder. If you don't have Photoshop, you can use the free and open source [Krita App](https://krita.org/en) to open the Photoshop templates.
 
 ### Adapting the content-code
 
