@@ -965,6 +965,9 @@ footer {
   border-top-right-radius: 4px;
   background: var(--black);
   font-family: var(--font-monospace);
+  float: left;
+  width: 100%;
+  user-select: none;
 }
 
 .code-halo {
