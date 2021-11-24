@@ -47,6 +47,7 @@
     <link rel="author" href="https://www.citylab-berlin.org/" />
     <link rel="stylesheet" href="/common/vendor/css/preflight-2.2.17.css" />
     <link rel="stylesheet" href="/common/vendor/css/typography.min.css" />
+    <link rel="stylesheet" href="/common/vendor/css/shades-of-purple.min.css" />
     <link rel="stylesheet" href="/common/styles.css" />
   </head>
   <body>
@@ -170,8 +171,8 @@
           </section>
         </article>
         <footer class="white-dot-pattern">
-          <section class="container sharing-info">
-            <div class="prose">
+          <section class="container">
+            <div class="sharing-info">
               <h2>Hat's dir gefallen?</h2>
               <p>Dann kannst du diese Story hier teilen:</p>
               <div class="sharing-links">
@@ -201,6 +202,45 @@
                   Email
                 </a>
             </div>
+          </section>
+          <section class="code-section black-dot-pattern">
+            <section class="container">
+              <div class="code-info">
+                <h2>Mach deine eigene Story</h2>
+                <p>Nutze unsere HTML/CSS Template.</p>
+                <div class="code-links">
+                  <a
+                    class="share-btn"
+                    href="https://github.com/technologiestiftung/stadtpuls-story-template"
+                  >
+
+                    Auf GitHub heruntergeladen
+                  </a>
+                </div>
+              </div>
+              <div class="code-halo"></div>
+              <pre class="code-example">
+                <code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;de&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot; /&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot; /&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot; /&gt;
+  &lt;title&gt;MEINE STORY - Stadpult Stories&lt;/title&gt;
+  &lt;meta name=&quot;description&quot; content=&quot;Meine Story ist besonders, weil...&quot; /&gt;
+
+  &lt;meta property=&quot;og:type&quot; content=&quot;article&quot; /&gt;
+
+  &lt;meta name=&quot;theme-color&quot; content=&quot;#8330ff&quot; /&gt;
+  &lt;meta name=&quot;keywords&quot; content=&quot;STORY_KEYWORDS&quot; /&gt;
+
+  &lt;meta
+    name=&quot;viewport&quot;
+    content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot;
+  /&gt;
+  &lt;meta itemprop=&quot;name&quot; content=&quot;STORY_TITLE&quot; /&gt;
+  &lt;meta itemprop=&quot;description&quot; content=&quot;STORY_DESCRIPTION&quot; /&gt;</pre>
+              </code>
             </section>
           </section>
           <section class="finance">
@@ -248,5 +288,9 @@
         </footer>
       </div>
     </main>
+    <script src="/common/vendor/js/highlight.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.highlightAll();
+    </script>
   </body>
 </html>
