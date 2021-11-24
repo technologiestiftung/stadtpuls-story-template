@@ -938,6 +938,7 @@ footer {
   position: absolute;
   bottom: 0;
   right: 10rem;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 640px) {
