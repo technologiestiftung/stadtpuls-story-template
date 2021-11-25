@@ -64,14 +64,14 @@
           <div class="header-hero-squares" aria-hidden="true"></div>
           <a
             href="/"
-            title="Die Hauptseite von Stadtpuls"
+            title="Stadtpuls Stories Übersicht"
             class="header-logo"
           >
             <img src="/common/images/logo.svg" alt="Stadtpuls Logo" width="157px" />
             <span>Stories</span>
           </a>
 <a href="/" title="Back to the overview" class="header-back-link" >
-  ← Alle Stories sehen
+  ← Alle Stories
 </a>
 <div itemscope itemtype="http://schema.org/Article">
   <h1 class="header-title" itemprop="name">
@@ -99,8 +99,8 @@
               </a>
               <span class="header-publication-date">
                 –
-                <time itemprop="datePublished" datetime="2021-10-25">
-                  25. Oktober 2021
+                <time itemprop="datePublished" datetime="2021-11-26">
+                  26. November 2021
                 </time>
               </span>
             </p>
@@ -113,49 +113,46 @@
         <article class="container" itemscope itemtype="http://schema.org/Article">
           <section class="prose">
             <p class="lead">
-              IoT ist eine Abkürzung für "Internet of Things" und bedeutet
-              übersetzt soviel wie "Internet der Dinge". Dabei unterscheidet man
-              zwischen "Sensoren", die ihre Umgebung fühlen und vermessen und
-              "Aktoren", die mit ihrer Umgebung interagieren.
+              Dies ist das Beispiel-Template für eine Story auf <a href="https://stories.stadtpuls.com">stories.stadtpuls.com</a>. Du kannst dieses Template verwenden, um deine eigene Story zu erstellen, den Code dafür <a href="https://github.com/technologiestiftung/stadtpuls-story-template">findest du auf Github</a>.
             </p>
             <p class="lead">
-              Ein Beispiel: dein Temperatur-Sensor misst 38°C, daraufhin sendet
-              dein Aktor eine Nachricht an deine Klimaanlage, damit diese sich
-              automatisch einschaltet und dein Home Office kühlt.
+              Die folgenden Textbeispiele geben dir einen Überblick, welche vorgefertigten Style-Elemente dir für die Gestaltung deiner eigenen Story zur Verfügung stehen.
             </p>
-            <h2>Sensordaten blüten überall</h2>
+            <h2>Dies ist eine Standard-Headline</h2>
             <p>
-              Ziel der <a href="https://stadtpuls.com">Plattform</a> ist es
-              Sensordaten der Stadt Berlin aufzubereiten, zu visualisieren und
-              für alle Akteure der Stadtgesellschaft frei und kostenlos zur
-              Verfügung zu stellen. Nutzer:innen können sich über einzelne
-              IoT-Projekte informieren, selber Projekte und Sensoren anlegen
-              oder Daten aus Projekten für die eigene Analyse nutzen. Die
-              Sensor- und <code>Echtzeitdaten</code> stammen aus
-              unterschiedlichen Datenquellen der Forschung, Verwaltung und
-              Stadtgesellschaft und werden in einer Postgres-Datenbank
-              gesammelt. Schließlich visualisieren wir die Daten, um
-              Betrachter:innen einen erstes Gefühl für die Datenbasis zu
-              ermöglichen und stellen alle Daten zum Download, sowie mittels
-              REST-API kostenlos zur Verfügung.
+              Dies ist ein <a href="https://www.stadtpuls.com" target="blank">Beispiel für einen Link</a>. Code kannst Du auf diese Weise kennzeichnen: <code>&lt;code&gt;Beispiel&lt;/code&gt;</code>.
+            </p>
+            <p>
+              Info-Boxen eignen sich gut, um wichtige Hinweise oder Anmerkungen zu kennzeichnen. Dieses Template verfügt über drei verschiedene Varianten: 
             </p>
             <section class="alert alert-warning">
               <p>
-                <b>By Max Mustermann, Jane Doe, and Jesus Ejemplo</b>
+                <b>Warning-Box</b>
               </p>
               <p>
-                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
-                neuen Datengeschichte
-                <br />
-                Sehen Sie sich das Video und die Lernmaterialien des vom Autoren
-                geleiteten Workshops an
+                Dies ist ein Beispiel für eine Warning-Box.
               </p>
             </section>
-            <h2>Sensordaten von & für Berlin</h2>
+            <section class="alert alert-error">
+              <p>
+                <b>Fehler-Box</b>
+              </p>
+              <p>
+                Dies ist ein Beispiel für eine Fehler-Box.
+              </p>
+            </section>
+            
+            <section class="alert alert-info">
+              <p>
+                <b>Alert-Box</b>
+              </p>
+              <p>
+                Dies ist ein Beispiel für eine Alert-Box.
+              </p>
+            </section>
+            <h2>Code</h2>
             <p>
-              Das komplette Projekt ist quelloffen und basiert ausschließlicher
-              auf nicht-proprietärer Software. Damit wollen wir unseren Beitrag
-              zu einer offenen, transparenten Stadt beitragen.
+              Code-Snippets kannst Du mit <code>&lt;pre class="wide-block"&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre></code> kennzeichnen, dein Code wird mittels Syntax Highlighting strukturiert, so wie hier gezeigt:
             </p>
             <pre
               class="wide-block"
@@ -185,60 +182,8 @@ switch (insertKeys.length) {
 
 const position = insertKeys[0]
 const selector = insert[position]</code></pre>
-            <p>
-              Die Plattform Stadtpuls ist eine prototypische Offene
-              Datenplattform, welche Sensordaten von & für Berlin als in einer
-              gemeinsamen Datenbasis sammelt, als Open Data frei zugänglich
-              macht und somit der Stadt Berlin auf ihrem Weg zur smarten Stadt
-              der Zukunft helfen soll.
-            </p>
-            <section class="alert alert-error">
-              <p>
-                <b>By Max Mustermann, Jane Doe, and Jesus Ejemplo</b>
-              </p>
-              <p>
-                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
-                neuen Datengeschichte
-                <br />
-                Sehen Sie sich das Video und die Lernmaterialien des vom Autoren
-                geleiteten Workshops an
-              </p>
-            </section>
-            <p>
-              Alle Daten werden als Open Data bereitgestellt und können entweder
-              als JSON- oder CSV-Datei heruntergeladen sowie über eine Restful
-              API kostenlos für eigene Projekte genutzt werden.
-            </p>
-            <h2>Die Welt der Stadt-Sensorik</h2>
-            <p>
-              Dann browse durch die Projekte und finde den passenden Datensatz
-              für deine Datenanalyse. Bislang bieten wir Sensordaten aus sieben
-              verschiedenen Kategorien. Dazu zählen:
-            </p>
-            <section class="alert alert-info">
-              <p>
-                <b>By Max Mustermann, Jane Doe, and Jesus Ejemplo</b>
-              </p>
-              <p>
-                Dieser Artikel ist Teil einer Serie zum Thema Der Beginn einer
-                neuen Datengeschichte
-                <br />
-                Sehen Sie sich das Video und die Lernmaterialien des vom Autoren
-                geleiteten Workshops an
-              </p>
-            </section>
-            <p>
-              Wunderbar! Erstelle dir einen Account und stelle deine Daten für
-              andere Nutzer:innen und die Öffentlichkeit zur Verfügung. Die
-              Plattform unterstützt bislang die Anbindung an das The Things
-              Network (TTN), sodass du Sensoren, die du bereits in TTN
-              registriert hast, einfach über die HTTP-Integration von TTN mit
-              Stadtpuls verknüpfen kannst. Nach erfolgreicher Verknüpfung werden
-              die Daten deiner Sensoren zum Download sowie über eine REST-API
-              frei als Open Data bereitgestellt.
-            </p>
             <hr />
-            <h3>Du möchtest den digitalen Puls deiner Stadt fühlen?</h3>
+            <h3>Interaktive Diagramme</h3>
           </section>
           <section class="wide-block chart1-container white-dot-pattern">
             <ul>
@@ -293,32 +238,16 @@ const selector = insert[position]</code></pre>
           </section>
           <section class="prose">
             <p>
-              Die Plattform Stadtpuls
+              Wenn Du auf Daten aus deinem Diagramm Bezug nimmst, kannst du diese entsprechend farblich kennzeichnen, z.B. so: 
               <span class="tag" style="--data-color: var(--purple)"
                 >Datenarchitektur</span
-              >sammelt Sensordaten Berlins, bereitet diese auf und stellt sie
-              der gesamten Stadtgesellschaft frei zugänglich zur Verfügung
+              >, 
               <span class="tag" style="--data-color: var(--green)"
                 >Datenwissenschaft</span
-              >. Egal ob du Forscher:in, Tüftler:i
+              > oder 
               <span class="tag" style="--data-color: var(--blue)"
                 >Datenanalyse</span
-              >
-              oder IoT-Neuling bist: du kannst aktiver Teil der Plattform
-              werden!
-            </p>
-            <h2>Drei Gründe, die für Stadtpuls sprechen</h2>
-            <p>
-              Dann bist du hier genau richtig! Die Stadt Berlin, deren
-              Hochschulen aber auch Privatpersonen erheben bereits enorm viele
-              Sensordaten über unsere Stadt. Dabei spielen Klimadaten, aber auch
-              städtische Echtzeit-Sensordaten zu Themen wie "Lärmbelästigung"
-              oder "Füllstände von Mülleimern" eine wichtige Rolle. Diese Daten
-              in einer gemeinsamen Datenbasis vorzuhalten, zugänglich zu machen
-              und zu visualisieren ist ein erster Schritt in Richtung smarte
-              vernetzte Stadt und legt den Grundstein für weitere Analysen,
-              Prozessoptimierung und für eine bessere Stadtplanung. Man könnte
-              sagen:
+              >.
             </p>
           </section>
           <section class="wide-block chart2-container">
@@ -326,22 +255,17 @@ const selector = insert[position]</code></pre>
           </section>
           <section class="prose">
             <p>
-              Die Plattform Stadtpuls sammelt Sensordaten Berlins, bereitet diese auf und stellt sie der gesamten Stadtgesellschaft frei zugänglich zur Verfügung. Egal ob du Forscher:in, Tüftler:in oder IoT-Neuling bist: du kannst aktiver Teil der Plattform werden!
+              Du möchtest die originalen Sensordaten von <a href="https://www.stadtpuls.com" target="blank">Stadtpuls</a> in deine Geschichte aufnehmen? Auch dafür gibt es eine einfache Möglichkeit. Füge lediglich die Sensor-ID in diesen HREF tag ein, um einen Vorschaulink zu generieren: <code>&lt;a class="sensor-card" data-sensor-id="28"&gt;&lt;/a&gt;</code>
             </p>
-            <a class="sensor-card" data-sensor-id="10"></a>
+            <a class="sensor-card" data-sensor-id="28"></a>
+          <hr />
+          </section>
+            <section class="prose">
             <p>
-              Dann bist du hier genau richtig! Die Stadt Berlin, deren
-              Hochschulen aber auch Privatpersonen erheben bereits enorm viele
-              Sensordaten über unsere Stadt. Dabei spielen Klimadaten, aber auch
-              städtische Echtzeit-Sensordaten zu Themen wie "Lärmbelästigung"
-              oder "Füllstände von Mülleimern" eine wichtige Rolle. Diese Daten
-              in einer gemeinsamen Datenbasis vorzuhalten, zugänglich zu machen
-              und zu visualisieren ist ein erster Schritt in Richtung smarte
-              vernetzte Stadt und legt den Grundstein für weitere Analysen,
-              Prozessoptimierung und für eine bessere Stadtplanung. Man könnte
-              sagen:
+              Das war es auch schon. Weitere Informationen zum Template findest du im <a href="https://github.com/technologiestiftung/stadtpuls-story-template">Github Repository</a>. Wir wünschen dir viel Erfolg beim Experimentieren und Nutzen des Templates!
             </p>
           </section>
+
           <section class="authors-container">
             <div class="author-block" itemprop="author">
               <img
