@@ -893,28 +893,18 @@ footer {
 }
 
 /* Three column layout */
-.side {
-  float: left;
-  width: 25%;
-  margin-top: 10px;
+.bars-wrapper {
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
-
-.middle {
-  float: left;
-  width: 50%;
-  margin-top: 17px;
+.bar-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  margin-bottom: 4px;
 }
-
-/* Place text to the right */
-.right {
-padding-left: 10px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.bar-row > div {
+  align-self: center;
 }
 
 /* The bar container */
@@ -926,29 +916,26 @@ padding-left: 10px;
 }
 
 /* Individual bars */
-.bar-1 {width: 90%; height: 14px; background-color: #1e1a5a;}
-.bar-2 {width: 30%; height: 14px; background-color: #8330ff;}
-
-
-/* Responsive layout - make the columns stack on top of each other instead of next to each other */
-@media (max-width: 400px) {
-  .side, .middle {
-    width: 100%;
-  }
-  /* Hide the right column on small screens */
-  .right {
-    display: none;
-  }
+.bar-1 {
+  width: 90%;
+  height: 14px;
+  background-color: #1e1a5a;
 }
+.bar-2 {
+  width: 30%;
+  height: 14px;
+  background-color: #8330ff;
+}
+
 .infobox a,
 .infobox p,
-.side{
+.side {
   font-size: 80%;
 }
-.infobox p{
+.infobox p {
   margin-top: 8px;
 }
-.infobox .info-title{
-  margin-bottom:-6px;
-  color:black;
+.infobox .info-title {
+  margin-bottom: -6px;
+  color: black;
 }
