@@ -152,7 +152,7 @@
         parent.document.getElementById('stoerfaktor').style.width = String(e.features[0].properties.stoerfaktor * 10)+"%"
         parent.document.getElementById('lautstaerke-text').textContent = String(e.features[0].properties.lautstaerke)+"/10"
         parent.document.getElementById('stoerfaktor-text').textContent = String(e.features[0].properties.stoerfaktor)+"/10"
-        parent.document.getElementById('info-image').src = "images/" + e.features[0].properties.id + ".jpeg"
+        parent.document.getElementById('info-image').src = "/wrangelkiez/images/" + e.features[0].properties.id + ".jpeg"
 
         // Copy coordinates array.
         const coordinates = e.features[0].geometry.coordinates.slice();
