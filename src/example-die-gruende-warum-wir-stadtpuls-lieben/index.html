@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="/common/vendor/css/typography.min.css" />
     <link rel="stylesheet" href="/common/vendor/css/shades-of-purple.min.css" />
     <link rel="stylesheet" href="/common/styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <main>
@@ -78,7 +79,7 @@
           </a>
           <div itemscope itemtype="http://schema.org/Article">
             <h1 class="header-title" itemprop="name">
-              Die Gründe, warum wir Stadtpuls lieben
+              Der akustische Puls einer Stadt
             </h1>
             <p class="header-publication-info">
               <a
@@ -116,24 +117,131 @@
         <article class="container" itemscope itemtype="http://schema.org/Article">
           <section class="prose">
             <p class="lead">
-              Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer quis gravida quam. Vestibulum iaculis ligula id malesuada convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris lobortis eu ipsum id mollis. Nam laoreet elit massa, sed ultrices dolor ultrices nec.
+              Eine Boombox dröhnt im Park, die U1 quietscht über die Hochbahnstrecke und die Polizei rückt mal wieder mit Sirenen an: Eine typische Soundkulisse im Berliner Szenekiez. Klingt nicht sonderlich angenehm? Wir haben uns gefragt, welche Rolle Lärm für die Identität eines Kiezes spielt und welche Muster es gibt. 
+              Wie empfinden Kiezbewohner*innen die Geräusche vor ihrem Fenster und lassen sich diese subjektiven Eindrücke in Sensordaten zum Lärmpegel wiederspiegeln? 
+              Hier erzählen wir die Geschichte von versteckten Hinterhöfen, einem lauten Supermarkt und einer Entführung.
             </p>
-            <p class="lead">
-              Etiam lobortis eros nisl, non tempor purus lacinia eu. Nulla commodo dapibus mattis. Nulla in hendrerit magna, in euismod velit. Ut tempor nisl vel turpis consequat pharetra.
-            </p>
-            <h2>Lorem ipsum dolor sit amet</h2>
-            <p>
-              Nullam tincidunt eu sapien ac consequat. In hac habitasse platea dictumst. Nulla nec dolor ut sapien tempus rutrum nec vitae massa. Morbi porta magna ex, eget porta neque dictum at. Cras in ante nulla. Sed tempor lorem velit, quis varius nunc rhoncus et. Sed viverra vitae ligula et volutpat. Vestibulum quis tristique risus. Vivamus sed dictum massa, vitae luctus purus. Nulla purus nibh, aliquet id tristique in, ultricies vitae elit.
-            </p>
+
+              <h2>Der akustische Puls einer Stadt</h2>
+              <p>
+                Absolute Stille, das gibt es praktisch nur im Vakuum. Da wo sich Schall dagegen ausbreiten kann, gibt es auch Geräusche und wo viele Menschen auf engem Raum leben, da kann es schnell laut werden. Der akustische Puls der Stadt, schlägt im Takt der Aktivität seiner Bewohner*innen und Besucher*innen und in Berlin kommt er selten zum Stillstand. Das Problem dabei: Schall wirkt auf den gesamten Organismus, indem er körperliche Stressreaktionen auslöst. Das kann dazu führen, dass wir uns nicht nur unwohl oder genervt fühlen, sondern sogar krank werden. Die Betrachtung von Geräuschkulissen- und muster hat daher in den vergangenen Jahren insbesondere in Diskursen um urbane Räume und <a href="https://www.umweltbundesamt.de/themen/verkehr-laerm/laermwirkung/stressreaktionen-herz-kreislauf-erkrankungen">Lärmbelastung als Gesundheitsrisiko</a> zunehmend an Bedeutung gewonnen. </p>
+
+              <h3>Was wir über Lärm in Berlin wissen</h3>
+              <p>Offene Verwaltungsdaten helfen uns die Lärmbelastung in Berlin zu verstehen und zu bewerten. Die <a href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=wmsk_07_05_14verkehr_gesDEN2016@senstadt&bbox=393210,5817009,394839,5817970">strategischen Lärmkarten</a> zeigen wie sich der Lärm des Hauptverkehrsstraßennetzes und des Schienennetzes auswirkt und <a href="http://www.gsi-berlin.info/redirectA.asp?filename=TG0800059100201924.xls">Erhebungen zur Verkehrslärmexposition</a> zeigen das 12,3% der Berliner*innen einer gesundheitskritischen Belastung allein durch Kfz-Verkehr ausgesetzt sind. Was in den Daten bisher nicht abgebildet ist, sind kleinräumige Auswirkungen und kleinskalige zeitliche Muster, sowie die Belastung durch Nachbarschaftslärm. Wann jede*r Einzelne eine Geräuschkulisse als Lärm empfinden ist außerdem nicht klar zu sagen, sondern hängt von dessen subjektiven empfinden ab.</p>
+  
+              <h3>Den Puls sichtbar machen</h3>
+              <p>Wir wollten wissen: Wie wird die Lebensqualität im Kiez durch Lärm beeinflusst? Welche kleinräumigen und zeitlichen Muster gibt es in Kiezen? Gibt es Zeiten und Orte, die besonders laut oder leise sind? Wie gut können wir Lärmmuster messen und passen subjektive Eindrücke und gemessene Daten zusammen?
+              <br>
+              <b>Wir haben sieben Lautstärkesensoren an Fensterbänken im Wrangelkiez installiert, um im Verlauf einer Woche den akustischen Puls des Quartiers zu erfassen.</b>
+              </p>
+
+            <img style="width: 48%; float:right; margin-left:6px"
+                  src="images/sensor.png"
+                  alt="Sensor"
+                />
             <section class="alert alert-warning">
               <p>
-                Morbi vestibulum massa egestas felis euismod ultricies. Vivamus ut dolor diam. Mauris luctus purus orci, sed dapibus massa imperdiet ut. Nulla facilisi. Vestibulum quis odio eu tellus egestas placerat eu quis augue. Integer vitae quam mollis, scelerisque tortor ut, fermentum massa.
+                <b>Die Hardware</b>
+                <br>
+                Die Grundlage für unser Sensorsetting besteht aus einem Heltec WiFi LoRa 32 (V2) Board. Dieses haben wir mit einen Sensor zur Lautstärkemessung verbaut. Der nötige Strom zum Betrieb des Boards kommt aus einer Powerbank. Ergänzt wird das ganze durch ein wasserfestes Gehäuse, um die Sensor vor Wind und Wetter zu schützen.     
               </p>
             </section>
-            <h2>Nulla tempus volutpat risus eu molestie</h2>
-            <p>
-              Donec a rhoncus tortor, quis pharetra lorem. Suspendisse nec euismod erat, porta vulputate augue. Pellentesque eget maximus mi. Vivamus laoreet ornare nisi eu porta. Phasellus et nunc nisl. In hac habitasse platea dictumst. Maecenas imperdiet sagittis volutpat. Cras a tincidunt est. In viverra facilisis ligula nec tempor. Vivamus dictum ultrices tempor. Fusce congue id ex et sodales. Aliquam ac quam nibh. Aliquam a finibus lectus, eget mattis dui.
-            </p>
+
+            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+              <img style="width: 100%;"
+                  src="images/sensor_albert.jpg"
+                  alt="Sensor"
+                />
+
+            <h2>Lärm im Wrangelkiez</h2>
+            <p>Der Wrangelkiez ist ein dicht bebautes Quartier und liegt zwischen Görlitzer Park, Skalitzer Straße, Spree und Landwehrkanal im Osten des Szenebezirk Kreuzbergs. Laut der strategischen Lärmkarte ist er an den Rändern stark von Verkehrslärm durch zwei Hauptstraßen und die Hochbahn (U1 und U3) betroffen. Im inneren des Kiezes zeigt die Karte moderate Werte an, der Effekt kleiner Straßen fließt aber auch nicht in die Lärmkarte ein. Dort befinden sich jedoch viele Cafés, Restaurants, Bars und Clubs und der Kiez ist für seine Lebendigkeit bekannt.</p>
+
+            <h3>Sensorstandorte und Messungen</h3>
+            <p>Mit unseren Sensorstandorten spiegeln wir verschiedene Facetten im Kiez wieder: Von der begrünten Seitenstraße oder einer Hinterhoflage über die Randlage am Görlitzer Park bis hin zur hochfrequentierten Straßenkreuzung oder in direkter Nachbarschaft zur Gastronomie. Alle Sensoren wurden auf Fensterbänken von Wohnungen platziert und haben für den Zeitraum von einer Woche Ende November Daten aufgenommen. Klicke auf die Standorte der Sensoren in der Karte, um zu erfahren wie die Bewohner*in ihre Wohnlage beschrieben und die Lautstärke subjektiv bewertet haben. Im Graphen unten siehst du die Messreihe des Sensors.</p>
+            <iframe src="vendor/map/sensorstandorte.html" width="100%" height="300px" title="Karte mit Sensoren"></iframe>
+
+            <div class= "infobox">
+              <div style="float:left;width:48%; margin-top:24px">
+                <h4 id="sensorname" style = "display: inline;
+  ">Sensor Fadil</h4>
+                <a id="link" style="display: inline;
+                padding-left:6px;" target="_blank" href= "https://stadtpuls.com/sensors/27">Auf Stadtpuls ansehen</a>
+                <a id="id-hidden" style="display:none">27</a>
+                <p class="info-title">Standortbeschreibung:</p>
+                <p id="bemerkung">Eckwohnung. Kreuzung. Tourismushotspot und Gastronomie. Nähe Hochbahn. Nähe Clubs. Sirenen, Sirenen, Sirenen.</p>
+                <p class="info-title" style="margin-top:-2px">Subjektive Einschätzung:</p>
+                <div class="row">
+                  <div class="side">
+                    <div>Lautstärke</div>
+                  </div>
+                  <div class="middle">
+                    <div class="bar-container">
+                      <div id="lautstaerke" class="bar-1"></div>
+                    </div>
+                  </div>
+                  <div id="lautstaerke-text" class="side right">
+                    <div>8/10</div>
+                  </div>
+                  <div class="side">
+                    <div>Störfaktor</div>
+                  </div>
+                  <div class="middle">
+                    <div class="bar-container">
+                      <div id="stoerfaktor" class="bar-2"></div>
+                    </div>
+                  </div>
+                  <div id="stoerfaktor-text" class="side right">
+                    <div>7/10</div>
+                  </div>
+                </div>
+              </div>  
+              <img id ="info-image" style="width: 48%; float:right"
+                  src="images/22.jpeg"
+                  alt="Streetview"
+                />
+            </div>
+            <section class="wide-block chart2-container">
+              <canvas id="chart2"></canvas>      
+            </section>
+
+            <h3>Analyse der Messreihen</h3>
+            <p>Die Liniengraphen zu den einzelnen Sensoren deuten mit ihren "Hügeln" bereits auf einen Tag-Nacht-Lautstärke-Puls sowie Unterschiede zwischen den verschiedenen Tagen hin. Natürlich lässt sich noch viel mehr aus den Daten herauslesen. Auch der Vergleich zwischen den verschiedenen Sensoren ist interessant. Mit Abstand die höchsten Werte erreichten bei unserer Messung die beiden Sensoren Fadil (Falkensteinstraße) und Grace (Skalitzer Straße). Vermutlich ist es kein Zufall, dass diese beiden Sensorstandorte von einer besonders hohen Verkehrsbelastung mit <a href:"https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_vmengen2019@senstadt&bbox=393230,5817109,394858,5818067">ca. 21.000 Kraftfahrzeugen pro 24 Stunden</a> sowie der Nähe zur Hochbahn entlang der Skalitzer Straße betroffen sind.
+              <br>
+              Platz 3 der lautesten Sensorstandorte belegt Albert (Wrangelstraße). Nachts ist es dort sogar ruhiger als bei Sensor Dafne weiter östlich in der Wangelstraße (Platz 4). In der subjektiven Einschätzung wurde der Standort von Albert mit 10/10 als am lautesten bewertet. Dies zeigt zum einen, dass verschiedene Lärmarten unterschiedlich wahrgenommen werden (z.B. dauerhafter Verkehrslärm vs. punktuelle, lautstarke Auseinandersetzungen auf der Straße) und zum anderen die unterschiedliche Empfindsamkeit von Person zu Person. Nicht zu vernachlässigen sind natürlich weitere Einflussfaktoren wie Jahreszeit, Temperaturen und Wetter, die die Aufenthaltsqualität und damit das Lautstärkelevel auf der Straße stärker beeinflussen als das Verkehrsaufkommen. Die Geräuschkulisse auf der Wrangelstraße ist im November, zum Zeitpunkt unserer Messungen, ruhiger als im Sommer. Die empfundene Lärmbelastung bezieht sich aber natürlich auf einen längeren Zeitraum als unsere Messungen.</p>
+
+            <h2>Analyse von Lärmmuster</h2>  
+            <section class="wide-block chart3-container" style="height:618px">
+              <h3>Tageszeiten</h3>
+              <canvas id="chart3"></canvas>
+            </section>
+            <p>Wenig überraschend ist, dass bei jedem Sensor die Lautstärke nachts nach unten geht. Der Unterschied zwischen Tag und Nacht ist dabei grundsätzlich zwischen den Sensoren ähnlich, jedoch bei Albert (Wrangelstraße) besonders groß und bei Hector (Hinterhoflage Lübbener Straße) besonders klein. Bei Hector ist es auch untertags schon sehr viel ruhiger als an den anderen Sensorstandorten. Morgens (hier noch die Zeitspanne einfügen, auf die das bezogen ist) ist die Lautstärke an allen Standorten am höchsten, meist knapp gefolgt von dem abendlichen Lärmpegel. Dies entspricht dem weit verbreiteten Tagesablauf von morgens aufbrechen (zu Arbeit, Schule, etc.) und abends Freizeitprogramm/Erledigungen/etc. und wieder nach Hause zurück kehren.</p>
+
+            <section class="wide-block chart3-container" style="height:618px">
+              <h3>Wochentage</h3>
+              <canvas id="chart4"></canvas>
+            </section>
+            <p>Sonntags ist es an fast allen Sensortstandorten ruhiger als an den anderen Wochentagen, nur bei Camille (Görlitzer Straße) und Hector (Lübbener Straße) waren der Freitag bzw. der Mittwoch noch ein wenig ruhiger. Die lautesten Tage sind jedoch durchaus unterschiedlich zwischen den verschiedenen Sensoren. Bei Sensor Albert in der Wrangelstraße und bei Sensor Grace (Skalitzer Straße) war insbesondere Freitag und Samstag viel los, wobei die hohen Durchschnittswerte inbesondere auf die kürzeren und weniger ruhigen Ruhephasen in der Nacht zurückzuführen sind. In der Görlitzer Straße (Sensor Camille) hingegen, war das Wochenende besonders leise und die lautesten Tage am Montag und Dienstag. Hab überlegt dann hier irgendwas abzuleiten, von wegen Nachtleben bei Albert und Grace, bei Camille eher untertags Personen- und Straßenverkehr, aber die Daten von Camille sind so ein auf und ab, ist echt schwer da etwas rauszulesen.</p>
+
+            <section class="wide-block chart3-container" style="height:618px">
+              <h3>Stunden</h3>
+              <canvas id="chart5"></canvas>
+            </section>
+            <p>An fast allen Sensorstandorten wird es ab 16 Uhr bzw. 17 Uhr konstant leiser, nur bei Sensor Camille gibt es um 20 Uhr nochmal einen Peak. Einen eindeutigen durchschnittlichen Tiefstwert ergeben alle Messungen zwischen 1 Uhr und 3 Uhr nachts. Bei den meisten Standorten ist liegt er bei 2 Uhr, bei Albert jedoch erst bei 3 Uhr und bei Hector im Hinterhof bricht bereits um 1 Uhr die ruhigste Stunde an.</p>
+               
+            <h2>Unser Code</h2>
+            Wenn du mehr darüber wissen willst, wie wir unsere Sonsordaten aufgenommen haben, dann guck doch mal in unserem <a href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00002-1888d1c8-44b0-4427-8b85-433f100d7265">Deepnote</a> vorbei. 
+            Dort findest du den Python-Code den wir verwendet haben, um die Daten von der Stadpuls-API abzufragen und zu verarbeiten. Diese so erstellten CSV-Dateien, haben wir dann benutzt um die interaktiven Visualisierungen in dieser Story zu erstellen. Den Code für die Graphen findest du <a href="">hier</a>.
+            <pre class="wide-block">
+              # fetch data of all our sensors from the Stadtpuls-API
+              <code>
+                for i in ['22','23','24','25','27','28','29']:
+                  data = fetch("https://api.stadtpuls.com/api/v3/sensors/"+i+"/records")
+              </code>
+              Den Pythoncode zur Verarbeitung der Daten findest du in unserem <a style="color:#8330ff;" href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00002-1888d1c8-44b0-4427-8b85-433f100d7265">Deepnote</a>.
+            </pre>
+
+            <p><b>Vielen Dank an das ganze Team von Stadtpuls vom CityLAB Berlin, die die Sensoren gebaut und bereitgestellt haben. Wir danken allen Sensorpatinnen und Paten, die unsere Sensoren Albert, Bob, Fatil, Dafne, Camille und Grace bei sich zuhause aufgenommen haben und Eindrücke und Erlebnisse aus ihrem Kiez mit uns geteilt haben.</b></p>
+
           </section>
           <section class="authors-container">
             <div class="author-block" itemprop="author">
@@ -293,9 +401,13 @@
         </footer>
       </div>
     </main>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="/common/vendor/js/chart.min.js" type="text/javascript"></script>
     <script src="/common/vendor/js/highlight.min.js" type="text/javascript"></script>
+    <script src="index.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
     <script type="text/javascript">
-      hljs.highlightAll();
+
     </script>
   </body>
 </html>

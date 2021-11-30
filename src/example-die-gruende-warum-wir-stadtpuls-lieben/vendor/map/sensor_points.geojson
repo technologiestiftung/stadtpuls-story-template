@@ -1,0 +1,13 @@
+{
+"type": "FeatureCollection",
+"name": "sensor_points",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 28, "Ort": "Freund von Yannick", "Bemerkung": "Viel befahrene Skalitzer Straße. Dicht an der Hochbahnstrecke, 5-Minuten-Takt tagsüber. Nähe Bahnhof Görlitzer Straße.", "name": "Sensor Grace", "lautstaerke": 0, "stoerfaktor": 0 }, "geometry": { "type": "Point", "coordinates": [ 13.429590743201986, 52.499072633743829 ] } },
+{ "type": "Feature", "properties": { "id": 22, "Ort": "Wohnung Fabian", "Bemerkung": "Vorderhaus. Dealer, Touristen, Polizei, Dönerbude, Supermarkt.  Mi-Sa abends, nachts Do-Sa oft laut. 03-07 Uhr nachts leise. Sonntags Kinderspielen.", "name": "Sensor Albert", "lautstaerke": 10, "stoerfaktor": 9 }, "geometry": { "type": "Point", "coordinates": [ 13.44206784476936, 52.498689141623608 ] } },
+{ "type": "Feature", "properties": { "id": 24, "Ort": "Wohnung gegenüber Görlitzer Park", "Bemerkung": "Lage gegenüber Görlitzer Park. Musik und Freizeitlärm aus dem Park. Gastronomie im Erdgeschoss.", "name": "Sensor Camille", "lautstaerke": 0, "stoerfaktor": 0 }, "geometry": { "type": "Point", "coordinates": [ 13.4391176791875, 52.497130767031457 ] } },
+{ "type": "Feature", "properties": { "id": 25, "Ort": "Wohnung Carl", "Bemerkung": "Belebte Straße mit einzelnen Bäumen. Viele Geschäfte und Gastronomie. Nähe zum Supermarkt.", "name": "Sensor Dafne", "lautstaerke": 0, "stoerfaktor": 0 }, "geometry": { "type": "Point", "coordinates": [ 13.443214909431068, 52.497913028624289 ] } },
+{ "type": "Feature", "properties": { "id": 27, "Ort": "Wohnung Otto", "Bemerkung": "Eckwohnung. Kreuzung. Tourismushotspot und Gastronomie. Nähe Hochbahn. Nähe Clubs. Sirenen, Sirenen, Sirenen.", "name": "Sensor Fadil", "lautstaerke": 8, "stoerfaktor": 7 }, "geometry": { "type": "Point", "coordinates": [ 13.443525705369391, 52.499958086365503 ] } },
+{ "type": "Feature", "properties": { "id": 29, "Ort": "Wohnung Luca", "Bemerkung": "Hinterhof mit starkem Efeu Bewuchs. Kita im Vorderhaus. Stille. Leise Gespräche unter Nachbarn.", "name": "Sensor Hector", "lautstaerke": 2, "stoerfaktor": 0 }, "geometry": { "type": "Point", "coordinates": [ 13.43729621629485, 52.498553982770147 ] } }
+]
+}
