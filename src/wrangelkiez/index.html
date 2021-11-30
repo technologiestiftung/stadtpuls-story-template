@@ -118,7 +118,7 @@
           <section class="prose">
             <p class="lead">
               Eine Boombox dröhnt im Park, die U1 quietscht über die Hochbahnstrecke und die Polizei rückt mal wieder mit Sirenen an: Eine typische Soundkulisse im Berliner Szenekiez. Klingt nicht sonderlich angenehm? Wir haben uns gefragt, welche Rolle Lärm für die Identität eines Kiezes spielt und welche Muster es gibt. 
-              Wie empfinden Kiezbewohner:innen die Geräusche vor ihrem Fenster und lassen sich diese subjektiven Eindrücke in Sensordaten zum Lärmpegel widergeben? 
+              Wie empfinden Kiezbewohner:innen die Geräusche vor ihrem Fenster und lassen sich diese subjektiven Eindrücke in Sensordaten zum Lärmpegel wiedergeben? 
               Hier erzählen wir die Geschichte von versteckten Hinterhöfen, einem lauten Supermarkt und einer Entführung.
             </p>
 
@@ -154,7 +154,7 @@
                 />
 
             <h2>Lärm im Wrangelkiez</h2>
-            <p>Der Wrangelkiez ist ein dicht bebautes Quartier und liegt zwischen Görlitzer Park, Skalitzer Straße, Spree und Landwehrkanal im Osten des Szenebezirk Kreuzbergs. Laut der strategischen Lärmkarte ist er an den Rändern stark von Verkehrslärm durch zwei Hauptstraßen und die Hochbahn (U1 und U3) betroffen. Im Inneren des Kiezes zeigt die Karte moderate Werte an, der Effekt kleiner Straßen fließt aber auch nicht in die Lärmkarte ein. Im Zentrum des Wrangelkiezes befinden sich jedoch viele Cafés, Restaurants, Bars und Clubs und der Kiez ist für seine Lebendigkeit bekannt.</p>
+            <p>Der Wrangelkiez ist ein dicht bebautes Quartier und liegt zwischen Görlitzer Park, Skalitzer Straße, Spree und Landwehrkanal im Osten des Szenebezirk Kreuzbergs. Laut der strategischen Lärmkarte ist er an den Rändern stark von Verkehrslärm durch zwei Hauptstraßen und die Hochbahn (U1 und U3) betroffen. Im Inneren des Kiezes wurde die letzten Jahr einige verkehrsberuhigende Maßnahmen eingeführt. Die Karte zeigt dort moderate Werte an, der Effekt kleiner Straßen fließt aber auch nicht in die Lärmkarte ein. Im Zentrum des Wrangelkiezes befinden sich außerdem viele Cafés, Restaurants, Bars und Clubs und der Kiez ist für seine Lebendigkeit, aber auch für anhaltende Probleme mit Drogendealern und co. bekannt.</p>
 
             <h3>Sensorstandorte und Messungen</h3>
             <p>Für unsere Sensoren haben wir sieben Sensorpaten und -patinnen gefunden, deren Wohnstandorte verschiedene Facetten im Kiez wiederspiegeln: Von der begrünten Seitenstraße oder einer Hinterhoflage über die Randlage am Görlitzer Park bis hin zur hochfrequentierten Straßenkreuzung oder in direkter Nachbarschaft zur Gastronomie. Unsere Sensoren wurden auf den Fensterbänken platziert und haben dort für den Zeitraum von einer Woche Ende November Daten aufgenommen. Klicke auf die Standorte der Sensoren in der Karte, um zu erfahren, wie die Bewohner:innen selbst ihre Wohnlage beschreiben und die Lautstärke subjektiv bewerten. Im Graphen unten siehst du die Messreihe des jeweiligen Sensors.</p>
@@ -162,8 +162,9 @@
 
             <div class= "infobox">
               <div style="float:left;width:48%; margin-top:24px">
-                <h4 id="sensorname" style = "display: inline;
-  ">Sensor Fadil</h4>
+                <h4 id="sensorname" style = "display: inline;">
+                  <span id="sensorfarbe" class="tag" style="--data-color: var(--blue)">Sensor Fadil</span>
+                </h4>
                 <a id="link" style="display: inline;
                 padding-left:6px;" target="_blank" href= "https://stadtpuls.com/sensors/27">Auf Stadtpuls ansehen</a>
                 <a id="id-hidden" style="display:none">27</a>
@@ -207,39 +208,79 @@
             <section class="wide-block chart2-container">
               <canvas id="chart2"></canvas>      
             </section>
+            <h3>Wo ist's am lautesten? - Analyse der Messreihen</h3>
+            <p>Was bei Betrachtung fast aller Messreihen als erstes auffällt, ist der deutlich erkennbare Tag-Nacht-Puls. Bei genauerem Hinsehen ist außerdem der Einfluss der Wochentage auf den Kurvenverlauf zu erkennen: Die Kurven eines Tagesverlaufs unterscheiden sich leicht an Wochen- und Wochenendtagen, wie stark, scheint allerdings abhängig vom Sensorstandort zu sein.
+            Mit Abstand die höchsten Lärmpegel erreichen bei unserer Messung die beiden Sensoren <span class="tag" style="--data-color: var(--blue)"
+            >Fadil</span> (Falkensteinstraße) und <span class="tag" style="--data-color: var(--green)"
+            >Grace</span> (Skalitzer Straße). Die recht hohe <a href="https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_vmengen2019@senstadt&bbox=393230,5817109,394858,5818067">Verkehrsbelastung</a> mit ca. 21.000 Kraftfahrzeugen pro 24 Stunden, sowie die Nähe zur Hochbahn entlang der Skalitzer Straße schlagen sich also in unseren Messwerten wieder. Platz 3 in der Rangfolge belegt <span class="tag" style="--data-color: #ff568d"
+            >Albert</span> (Wrangelstraße), obwohl es dort nachts sogar überraschenderweise ruhiger ist, als bei Sensor <span class="tag" style="--data-color: var(--gray-800)"
+            >Dafne</span>, nur wenig weiter östlich in der Wrangelstraße. Im allgemeinen einen tick leiser ist gegenüber dem Görlitzer Park bei <span class="tag" style="--data-color: var(--purple)"
+            >Camille</span>. Komplett aus dem Rahmen fällt der Sensor <span class="tag" style="--data-color: #ffb756"
+            >Hector</span>, gelegen in einem Hinterhof. Dieser Standort ist nicht nur eindeutig der leiseste, sondern weißt sogar nur leichte Tag-Nacht-Muster auf.
 
-            <h3>Analyse der Messreihen</h3>
-            <p>Was bei Betrachtung fast aller Messreihen als erstes auffällt, ist der deutlich erkennbare Tag-Nacht-Puls. Bei genauerem Hinsehen ist außerdem der erwartete Einfluss der Wochentage auf den Kurvenverlauf zu erkennen: Die Kurven eines Tagesverlaufs unterscheiden sich leicht an Wochen- und Wochenendtagen, wie stark, scheint allerdings abhängig vom Sensorstandort zu sein.
-            Mit Abstand die höchsten Lärmpegel erreichen bei unserer Messung die beiden Sensoren Fadil (Falkensteinstraße) und Grace (Skalitzer Straße). Die besonders hohe <a href:"https://fbinter.stadt-berlin.de/fb/index.jsp?loginkey=zoomStart&mapId=k_vmengen2019@senstadt&bbox=393230,5817109,394858,5818067">Verkehrsbelastung</a> mit ca. 21.000 Kraftfahrzeugen pro 24 Stunden sowie der Nähe zur Hochbahn entlang der Skalitzer Straße schlagen sich also in unseren Messwerten wieder. Platz 3 der lautesten Sensorstandorte belegt Albert (Wrangelstraße), obwohl es dort nachts überraschenderweise ruhiger ist, als bei Sensor Dafne, nur wenig weiter östlich in der Wrangelstraße. Komplett aus dem Rahmen fällt der Sensor Hector, gelegen in einem Hinterhof. Dieser Standort ist nicht nur eindeutig der leiseste, sonder weißt sogar nur sehr leichte Tag-Nacht-Unterschiede auf.
-            <h3>Vergleich der Messdaten mit subjektiven Eisnchätzung</h3>
-            B
+            <h3>Alles wie erwartet? - Vergleich mit den subjektiven Einschätzung</h3>
+            Der efeubewachsene Hinterhof in dem <span class="tag" style="--data-color: #ffb756"
+            >Hector</span> seine Messungen aufnahm scheint ein Glücksgriff zu sein, wenn man eine ruhige Oase im Kiez sucht. Die niedrigen, gemessen Lärmwerte decken sich gut mit der Einschätzung des dort ansässigen Sensorpatens. 
+            Im Gegensatz dazu wurde der Standort von <span class="tag" style="--data-color: #ff568d"
+            >Albert</span> mit 10/10 als am lautesten bewertet, im gemessenen Ranking liegt er aber nur auf Platz 3. Der Sensorpate von <span class="tag" style="--data-color: var(--blue)"
+            >Albert</span> gab auch an die Geräuschkulisse seiner Wohnlage als sehr störend zu empfinden. Das liegt zum einen an dem gegenüberliegenden Supermarkt, der als inoffizieller Treffpunkt dient und Menschen anzieht, die nichts selten auf Krawall gebürstet sind. Vielleicht erklärt diese Nähe zum Supermarkt, warum <span class="tag" style="--data-color: #ff568d"
+            >Albert</span> tagsüber deutlich höhere Werte verzeichnet als <span class="tag" style="--data-color: var(--gray-800)"
+            >Dafne</span>.
+            Der Pate von Sensor <span class="tag" style="--data-color: var(--green)"
+            >Grace</span> an der Skalitzer, hat seinen Standort als weniger laut und nur leicht störend bewertet. Das ist mit Blick auf die Messwerte zunächst überraschend. Dieser Vergleich zeigt, das die Frage, wann laute Geräusche als Lärm empfunden werden auch eine Frage persönlicher Empfindsamkeiten ist. Eine weitere Erklärung ist, das verschiedene Lärmarten bzw. Geräusche unterschiedlich wahrgenommen werden. Mehrere Sensorpaten haben uns berichtet, das kurze Lärmspitzen, wie eine Sirene oder eine punktuelle, lautstarke Auseinandersetzungen auf der Straße, für sie der größte Störfaktor sind. Solche Spitzen ließen sich durch unsere Sensoren nicht zweifelsfrei messen und identifizieren. Betrachten wir zum Beispiel die Kurve von <span class="tag" style="--data-color: var(--green)"
+            >Grace</span>, erkennen wir mehrere auffällige Ausreißer. Gut möglich, das diese durch vorbeifahrendes Einsatzfahrzeug zustande kamen, sicher können wir das aber nicht sagen.
             
-            In der subjektiven Einschätzung wurde der Standort von Albert mit 10/10 als am lautesten bewertet. Dies zeigt zum einen, dass verschiedene Lärmarten unterschiedlich wahrgenommen werden (z.B. dauerhafter Verkehrslärm vs. punktuelle, lautstarke Auseinandersetzungen auf der Straße) und zum anderen die unterschiedliche Empfindsamkeit von Person zu Person. Nicht zu vernachlässigen sind natürlich weitere Einflussfaktoren wie Jahreszeit, Temperaturen und Wetter, die die Aufenthaltsqualität und damit das Lautstärkelevel auf der Straße stärker beeinflussen als das Verkehrsaufkommen. Die Geräuschkulisse auf der Wrangelstraße ist im November, zum Zeitpunkt unserer Messungen, ruhiger als im Sommer. Die empfundene Lärmbelastung bezieht sich aber natürlich auf einen längeren Zeitraum als unsere Messungen.</p>
+            <h3>Lief ja wie geschmiert? - Einflussfaktoren, Probleme und eine Entführung</h3>
+            <p>Bei der Interpretation der Werte nicht zu vernachlässigen sind natürlich weitere Einflussfaktoren wie Jahreszeit, Temperaturen und Wetter. Die Geräuschkulisse auf der Wrangelstraße ist im November, zum Zeitpunkt unserer Messungen, erfahrungsgemäß ruhiger als im Sommer. Die von den Anwohner*innen empfundene Lärmbelastung bezieht sich aber natürlich auf einen längeren Zeitraum als unsere Messungen. Unsere Messwoche war zudem vergleichsweise ungemütlich, mit leichtem Regenfall, was den Aufenthalt im freien nicht gerade fördert. Das dürfte den Nachbarschaftslärm tendenziell eher verringern, als den Straßenverkehrslärm.
+            <br>
+            Ungünstig für die Auswertung der Daten sind auch fehlende Messwerte, das betrifft insbesondere <span class="tag" style="--data-color: var(--purple)"
+            >Camille</span>, an einem der Tage konnten hier aufgrund von WLAN-Abbrüchen fast keine Messwerte aufgenommen werden.
+            <br>
+            Unerwartet wenig Messwerte haben wir auch von Sensor <span class="tag" style="--data-color: var(--gray-500)"
+            >Bob</span> erhalten. Knappe 12 Stunden stand er auf einem Fensterbrett im Hochparterre der Sorauer Straße, bis Unbekannte ihn gegen Mittag entführten. Für unsere Auswertung ist dieser Standort damit verloren, wir können aus Bobs letzten Messwerten nur erahnen, das es in dieser kleineren Seitenstraße etwas ruhiger zugeht als in der benachbarten Wrangelstraße.
+            </p>
 
-            <h2>Analyse von Lärmmuster</h2>  
+            <h2>Analyse von Lärmmuster</h2>
+            Nach dem eher allgemeinen Vergleich der Lärmkurven, haben wir uns noch einer weiteren Analyse gewidmet. Wir wollten wissen, welche zeitlichen Muster sich an den verschiedenen Standorten ergeben und wie diese sich im Kiez unterscheiden. Dafür haben wir für jeden Sensor die Mittelwerte aller gemessenen Daten jeweils über verschiedene Tageszeiten, Wochentage und Stunden berechnet. Klicke auf die Sensornamen in den Legenden der folgenden drei Radarcharts, um einzelne Sensoren ab und zuzuschalten.
             <section class="wide-block chart3-container" style="height:618px">
               <h3>Tageszeiten</h3>
               <canvas id="chart3"></canvas>
             </section>
-            <p>Wenig überraschend ist, dass bei jedem Sensor die Lautstärke nachts nach unten geht. Der Unterschied zwischen Tag und Nacht ist dabei grundsätzlich zwischen den Sensoren ähnlich, jedoch bei Albert (Wrangelstraße) besonders groß und bei Hector (Hinterhoflage Lübbener Straße) besonders klein. Bei Hector ist es auch untertags schon sehr viel ruhiger als an den anderen Sensorstandorten. Morgens (hier noch die Zeitspanne einfügen, auf die das bezogen ist) ist die Lautstärke an allen Standorten am höchsten, meist knapp gefolgt von dem abendlichen Lärmpegel. Dies entspricht dem weit verbreiteten Tagesablauf von morgens aufbrechen (zu Arbeit, Schule, etc.) und abends Freizeitprogramm/Erledigungen/etc. und wieder nach Hause zurück kehren.</p>
+            <p>Wenig überraschend ist, dass bei jedem Sensor die Lautstärke nachts nach unten geht. Der Unterschied zwischen Tag und Nacht ist dabei grundsätzlich zwischen den Sensoren ähnlich, jedoch bei <span class="tag" style="--data-color: #ff568d"
+            >Albert</span> (Wrangelstraße) besonders groß und bei <span class="tag" style="--data-color: #ffb756"
+            >Hector</span> (Hinterhoflage) besonders klein. Morgens (6- 12 Uhr) ist die Lautstärke an allen Standorten am höchsten, meist knapp gefolgt von dem abendlichen (18- 0 Uhr) Lärmpegel. Dies entspricht dem weit verbreiteten Tagesablauf von morgens aufbrechen und abends nach Arbeit, Freizeitprogramm, Erledigungen usw. wieder nach Hause zurück kehren.</p>
 
             <section class="wide-block chart3-container" style="height:618px">
               <h3>Wochentage</h3>
               <canvas id="chart4"></canvas>
             </section>
-            <p>Sonntags ist es an fast allen Sensortstandorten ruhiger als an den anderen Wochentagen, nur bei Camille (Görlitzer Straße) und Hector (Lübbener Straße) waren der Freitag bzw. der Mittwoch noch ein wenig ruhiger. Die lautesten Tage sind jedoch durchaus unterschiedlich zwischen den verschiedenen Sensoren. Bei Sensor Albert in der Wrangelstraße und bei Sensor Grace (Skalitzer Straße) war insbesondere Freitag und Samstag viel los, wobei die hohen Durchschnittswerte inbesondere auf die kürzeren und weniger ruhigen Ruhephasen in der Nacht zurückzuführen sind. In der Görlitzer Straße (Sensor Camille) hingegen, war das Wochenende besonders leise und die lautesten Tage am Montag und Dienstag. Hab überlegt dann hier irgendwas abzuleiten, von wegen Nachtleben bei Albert und Grace, bei Camille eher untertags Personen- und Straßenverkehr, aber die Daten von Camille sind so ein auf und ab, ist echt schwer da etwas rauszulesen.</p>
+            <p>Sonntags ist es an fast allen Sensorstandorten ruhiger als an den anderen Wochentagen, nur bei <span class="tag" style="--data-color: var(--purple)"
+            >Camille</span> (Görlitzer Straße) und <span class="tag" style="--data-color: #ffb756"
+            >Hector</span> (Lübbener Straße) waren der Freitag bzw. der Mittwoch noch ein wenig ruhiger, wobei <span class="tag" style="--data-color: var(--purple)"
+            >Camille</span> durch WLAN-Ausfälle hier keine zuverlässigen Daten geliefert hat. Die lautesten Tage unterscheiden sich durchaus zwischen den verschiedenen Sensoren. Bei Sensor <span class="tag" style="--data-color: #ff568d"
+            >Albert</span> in der Wrangelstraße und bei Sensor <span class="tag" style="--data-color: var(--green)"
+            >Grace</span> (Skalitzer Straße) war insbesondere Freitag und Samstag viel los, wobei die hohen Durchschnittswerte insbesondere auf die kürzeren und weniger ruhigen Ruhephasen in der Nacht zurückzuführen sind. Gerade in der eigentlich verkehrsberuhigten Wrangelstraße spricht das für eine erhöhte Lärmbelastung durch das "Nachtleben". Bei <span class="tag" style="--data-color: var(--green)"
+            >Fadil</span> zeigen sich dagegen kaum Unterschiede in den Wochentagen, hier ist es einfach jeden Tag ähnlich laut.</p>
 
             <section class="wide-block chart3-container" style="height:618px">
               <h3>Stunden</h3>
               <canvas id="chart5"></canvas>
             </section>
-            <p>An fast allen Sensorstandorten wird es ab 16 Uhr bzw. 17 Uhr konstant leiser, nur bei Sensor Camille gibt es um 20 Uhr nochmal einen Peak. Einen eindeutigen durchschnittlichen Tiefstwert ergeben alle Messungen zwischen 1 Uhr und 3 Uhr nachts. Bei den meisten Standorten ist liegt er bei 2 Uhr, bei Albert jedoch erst bei 3 Uhr und bei Hector im Hinterhof bricht bereits um 1 Uhr die ruhigste Stunde an.</p>
-               
+            <p>An fast allen Sensorstandorten wird es nach einem Mittagshoch ab 16 Uhr bzw. 17 Uhr konstant leiser, nur beim unzuverlässigen Sensor <span class="tag" style="--data-color: var(--purple)"
+            >Camille</span> gibt es um 20 Uhr nochmal einen Peak. Ein eindeutiger durchschnittlicher Tiefpunkt, ist bei allen Standorten zwischen 1 Uhr und 3 Uhr nachts zu erkennen. Bei den meisten Standorten liegt er bei 2 Uhr, bei <span class="tag" style="--data-color: #ff568d"
+            >Albert</span> jedoch erst bei 3 Uhr und bei <span class="tag" style="--data-color: #ffb756"
+            >Hector</span> im Hinterhof bricht bereits um 1 Uhr die ruhigste Stunde an.</p>
+
+            <h2>Das Fazit</h2>
+            <p>Einige der hier präsentierten Erkenntnisse, zum Beispiel, dass es nachts und im Hinterhof ruhiger ist als zu anderen Zeiten und an anderen Orten, sind vielleicht nicht allzu überraschend. Aber hättest du gedacht, dass es an allen Orten morgens am lautesten ist? Oder dass die Besucher eines kleinen Supermarktes die Nachbarschaft deutlich messbar beschallen?
+            Einige Ergebnisse werfen außerdem neue Fragen auf: Worauf sind Ausschläge der Lautstärke zurückzuführen? Warum sind die Standorte der beiden Sensoren in der Wrangelstraße in der Nacht so unterschiedlich laut? Und vor allem: Wo ist Bob?
+            Unser Sensorprojekt zur Lautstärke im Wrangelkiez macht also Lust, sich weiter damit zu beschäftigen, auch wenn wir zugeben müssen, dass das Thema Lautstärke aufgrund seiner physikalischen Komplexität durchaus ein harter Brocken für uns war. Wenn du Lust hast, die Lärmmuster vor <b>deinem</b> Fenster sichtbar zu machen, dann verbinde doch deinen eigenen Sensort mit Stadtpuls und nutze unsern Code zur Auswertung!
+            <p>
+
             <h2>Unser Code</h2>
-            Wenn du mehr darüber wissen willst, wie wir unsere Sonsordaten aufgenommen haben, dann guck doch mal in unserem <a href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00002-1888d1c8-44b0-4427-8b85-433f100d7265">Deepnote</a> vorbei. 
-            Dort findest du den Python-Code den wir verwendet haben, um die Daten von der Stadpuls-API abzufragen und zu verarbeiten. Diese so erstellten CSV-Dateien, haben wir dann benutzt um die interaktiven Visualisierungen in dieser Story zu erstellen. Den Code für die Graphen findest du <a href="">hier</a>.
+            Wenn du mehr darüber erfahren willst, wie wir unsere Sensordaten verarbeitet haben, dann guck doch mal in unserem <a href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00002-1888d1c8-44b0-4427-8b85-433f100d7265">Online Python Notebook</a> vorbei. 
+            Dort findest du den Code den wir verwendet haben, um die Rohdaten von der Stadtpuls-API abzufragen, zu filtern und ein paar Berechnungen anzustellen. Die dort generierten CSV-Dateien, haben wir dann benutzt um die interaktiven Visualisierungen für diese Story zu erstellen. Den Code für die Graphen findest du in unserem <a href="">Story-Repository</a>.
             <pre class="wide-block">
-              # fetch data of all our sensors from the Stadtpuls-API
               <code>
                 for i in ['22','23','24','25','27','28','29']:
                   data = fetch("https://api.stadtpuls.com/api/v3/sensors/"+i+"/records")
@@ -247,7 +288,7 @@
               Den Pythoncode zur Verarbeitung der Daten findest du in unserem <a style="color:#8330ff;" href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00002-1888d1c8-44b0-4427-8b85-433f100d7265">Deepnote</a>.
             </pre>
 
-            <p><b>Vielen Dank an das ganze Team von Stadtpuls vom CityLAB Berlin, das die Sensoren gebaut und bereitgestellt hat. Wir danken allen Sensorpatinnen und Paten, die unsere Sensoren Albert, Bob, Fatil, Dafne, Camille und Grace bei sich zuhause aufgenommen haben und Eindrücke und Erlebnisse aus ihrem Kiez mit uns geteilt haben.</b></p>
+            <p><b>Vielen Dank an das Team von Stadtpuls vom CityLAB Berlin, das die Sensoren zusammengebastelt und bereitgestellt hat. Wir danken auch allen Sensorpatinnen und -paten, die unsere Sensoren Albert, Bob, Fadil, Dafne, Camille und Grace bei sich zuhause aufgenommen und Eindrücke und Erlebnisse aus ihrem Kiez mit uns geteilt haben.</b></p>
 
           </section>
           <section class="authors-container">

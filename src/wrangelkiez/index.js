@@ -21,14 +21,14 @@ function drawChart3(data,id) {
           label: 'Albert (Wrangelstr.)',
           data: sensor22,
           fill: false,
-          backgroundColor: 'rgba(180, 180, 199, 0.2)',
+          backgroundColor: 'rgba(180, 180, 199, 0.0)',
           borderColor: '#b4b4c7',
           
         }, {
           label: 'Camille (Görlitzer Str.)',
           data: sensor24,
           fill: false,
-          backgroundColor: 'rgba(131, 48, 255, 0.2)',
+          backgroundColor: 'rgba(131, 48, 255, 0.0)',
           borderColor: '#8330FF'
         }, {
           label: 'Dafne (Wrangelstr.)',
@@ -40,19 +40,19 @@ function drawChart3(data,id) {
           label: 'Fadil (Falkensteinstr.)',
           data: sensor27,
           fill: false,
-          backgroundColor: 'rgba(0, 0, 194, 0.2)',
+          backgroundColor: 'rgba(0, 0, 194, 0.0)',
           borderColor: '#0000c2'
         }, {
           label: 'Grace (Skalitzer Str.)',
           data: sensor28,
           fill: false,
-          backgroundColor: 'rgba(70, 236, 161, 0.2)',
+          backgroundColor: 'rgba(70, 236, 161, 0.0)',
           borderColor: '#46ECA1'
         }, {
           label: 'Hector (Lübbener Str.)',
           data: sensor29,
           fill: false,
-          backgroundColor: 'rgba(255, 183, 86, 0.2)',
+          backgroundColor: 'rgba(255, 183, 86, 0.0)',
           borderColor: '#ffb756'
         }]
       },
@@ -172,7 +172,7 @@ function drawChart2(data) {
             },
             callbacks: {
               labelColor: () => ({
-                backgroundColor: '#8330ff',
+                backgroundColor: '#8330ff0',
                 borderColor: '#8330ff',
                 borderWidth: 1,
               }),

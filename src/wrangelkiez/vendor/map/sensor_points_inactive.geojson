@@ -3,6 +3,6 @@
 "name": "sensor_points",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
 "features": [
-{ "type": "Feature", "properties": { "id": 23, "Ort": "Wohnung Ines", "Bemerkung": "Verkehrsberuhigte Straße. Verweilende Menschen auf Sitzbänken, Gespräche. Fahrradwerkstatt als Nachbarschaftstreff. <span style='color:red;'> Bob wurde entführt!</span>", "name": "Sensor Bob", "lautstaerke": 3, "stoerfaktor": 3 }, "geometry": { "type": "Point", "coordinates": [ 13.438530371692776, 52.49885717123496 ] } }
+{ "type": "Feature", "properties": { "id": 23, "Ort": "Wohnung Ines", "Bemerkung": "Verkehrsberuhigte Straße. Verweilende Menschen auf Sitzbänken, Gespräche. Fahrradwerkstatt als Nachbarschaftstreff. <span style='color:red;'> Bob wurde entführt!</span>","farbe":"<span id='sensorfarbe' class='tag' style='--data-color: var(--gray-500)'>Sensor Bob</span>", "name": "Sensor Bob", "lautstaerke": 3, "stoerfaktor": 3 }, "geometry": { "type": "Point", "coordinates": [ 13.438530371692776, 52.49885717123496 ] } }
 ]
 }

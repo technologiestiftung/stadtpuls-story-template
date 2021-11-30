@@ -144,7 +144,8 @@
       
 
       map.on('click', ['layer-with-pulsing-dot','layer-with-inactive-dot'], (e) => {
-        parent.document.getElementById('sensorname').textContent = e.features[0].properties.name
+        parent.document.getElementById('sensorname').innerHTML = e.features[0].properties.farbe
+        console.log(e.features[0].properties.farbe)
         parent.document.getElementById('bemerkung').innerHTML = e.features[0].properties.Bemerkung
         parent.document.getElementById('link').href = "https://stadtpuls.com/sensors/" + e.features[0].properties.id
         parent.document.getElementById('id-hidden').textContent = e.features[0].properties.id
