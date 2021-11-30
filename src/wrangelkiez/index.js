@@ -228,7 +228,7 @@ function drawChart2(data) {
   
 }
 
-d3.csv('/wrangelkiezvendor/data/22.csv')
+d3.csv('/wrangelkiez/vendor/data/22.csv')
   .get(function(data) {drawChart2(data) 
 });
 
@@ -236,17 +236,17 @@ var element = document.getElementById('id-hidden');
 element.addEventListener('DOMSubtreeModified', rebuildChart);
   function rebuildChart() {
     window.myChart.destroy()
-    d3.csv('/wrangelkiezvendor/data/'+ element.innerHTML +'.csv')
+    d3.csv('/wrangelkiez/vendor/data/'+ element.innerHTML +'.csv')
     .get(function(data) {drawChart2(data) 
   });
   }
 
-  d3.csv('/wrangelkiezvendor/data/tod.csv')
+  d3.csv('/wrangelkiez/vendor/data/tod.csv')
   .get(function(data) {drawChart3(data,3) 
 });
-d3.csv('/wrangelkiezvendor/data/day.csv')
+d3.csv('/wrangelkiez/vendor/data/day.csv')
 .get(function(data) {drawChart3(data,4) 
 });
-d3.csv('/wrangelkiezvendor/data/hour.csv')
+d3.csv('/wrangelkiez/vendor/data/hour.csv')
 .get(function(data) {drawChart3(data,5) 
 });
