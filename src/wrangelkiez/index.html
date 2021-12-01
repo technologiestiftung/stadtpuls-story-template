@@ -276,6 +276,25 @@
             Dort findest du den Code, den wir verwendet haben, um die Rohdaten von der Stadtpuls-API abzufragen, zu filtern und ein paar Berechnungen anzustellen. Die dort generierten CSV-Dateien haben wir benutzt, um die interaktiven Visualisierungen für diese Story zu erstellen. Den Code für die Graphen findest du im <a href="https://github.com/technologiestiftung/stadtpuls-story-template">Repository</a> zu dieser Story.
             <pre class="wide-block">
               <code>
+                # function to fetch sensor data from stadtpuls api
+                def fetch(start_url):
+                  data = []
+                  def fetch_data(url):
+                    parsed_uri = urlparse(url)
+                    base_url = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
+                    try:
+                      response = requests.get(url)
+                      if response.status_code == 200:
+                        json = response.json()
+                        data.extend(response.json()["data"])
+                        if "nextPage" in response.json():
+                          fetch_data("{}{}".format(base_url, json["nextPage"]))
+                    except requests.HTTPError as err:
+                      print("OS error: {0}".format(err))
+                  fetch_data(start_url)
+                  
+                  return data
+
                 sensor_id = '22' # define sensor id here, this is Albert
                 time_begin = '2021-11-18' # define the timerange
                 time_end = '2021-11-24'
