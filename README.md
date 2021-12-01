@@ -5,19 +5,22 @@
 A vanilla HTML/JS/CSS template for creating stories using **[stadtpuls.com](https://stadtpuls.com)** sensor data.
 
 ## What is **Stadtpuls** ?
-**Stadtpuls** (german for "city pulse") is Berlin's open platform for sensor data. Hardware hobbyists, activists, public institutions but also businesses can use **Stadtpuls** to share their sensor data to the world and enable others to leverage it for other purposes. Think of it as the GitHub for sensor data. 
+
+**Stadtpuls** (german for "city pulse") is Berlin's open platform for sensor data. Hardware hobbyists, activists, public institutions but also businesses can use **Stadtpuls** to share their sensor data to the world and enable others to leverage it for other purposes. Think of it as the GitHub for sensor data.
 
 **Stadtpuls** is an open source project by the [CityLAB Berlin](https://www.citylab-berlin.org/), a project of the [Technologiestiftung Berlin](https://github.com/technologiestiftung), supported by the [Senate Chancellery Berlin](https://www.berlin.de/rbmskzl/en/).
 
 ## What are **Stadtpuls** Stories?
+
 **Stadtpuls** stories are standalone web articles that show how sensor data can be used in creative ways by combining text, images, static charts and interactive data visualizations to gather compelling insights. Which streets are the loudest? Which neighborhoods contribute most to the CO2 emissions and why? What are the favorite Sunday walk routes? **Stadtpuls** provides interesting live sensor data which can be used for citizen science projects for free. Stories are like advanced blog articles in the form of micro-sites. They tell stories through data.
 
 ## About the code
+
 This repo requires neither NodeJS nor a build tool. It is intentionally [_**vanilla**_](https://en.wikipedia.org/wiki/Vanilla_software) in order to make it easier for anybody with basic HTML/CSS/JavaScript skills to dive straight into creating their own story.
 
 It does, however, import some external CSS stylesheets and JavaScript scripts for convenience. Those are:
 
-- [**Tailwind Preflight**](https://tailwindcss.com/docs/preflight):<br />A CSS reset setup created by TailwindCSS build on top of [modern-normalize](https://github.com/sindresorhus/modern-normalize). 
+- [**Tailwind Preflight**](https://tailwindcss.com/docs/preflight):<br />A CSS reset setup created by TailwindCSS build on top of [modern-normalize](https://github.com/sindresorhus/modern-normalize).
 - [**Tailwind Typography**](https://github.com/tailwindlabs/tailwindcss-typography):<br />A CSS stylesheet that provides a set of prose classes to add beautiful typographic defaults to the article main text area.
 - [**Highlight JS**](https://highlightjs.org/):<br />A JS plugin that provides syntax highlighting for code blocks.
 - [**Highlight JS - Theme "Shades of Purple"**](https://highlightjs.org/static/demo/):<br />A CSS stylesheet for styling code highlighted by the [Highlight JS](https://highlightjs.org/) plugin.
@@ -39,7 +42,7 @@ The advantage of this solution is that it is easy and straight forward. The disa
 
 #### 2. Make a Pull Request
 
-This solution is more advanced and requires you to be familiar with [git](https://git-scm.com/) and [GitHub's Pull Request feature](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Because GitHub repositories are versioned via git, you can have your own local copy of the code, make changes, and later request the author of the original code (in this case us) to merge your local changes into the main repository. 
+This solution is more advanced and requires you to be familiar with [git](https://git-scm.com/) and [GitHub's Pull Request feature](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). Because GitHub repositories are versioned via git, you can have your own local copy of the code, make changes, and later request the author of the original code (in this case us) to merge your local changes into the main repository.
 
 If you aren't familiar with theses concepts, stick to the first solution or learn more about [what a Pull Request is](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 
@@ -72,38 +75,38 @@ You will need to create your own folder with you own story code. This mostly con
 
 If you need a specific JS library or particular CSS styles, add the relevant files within your newly created folder following the structure of the `common` folder (see "The Code Structure" section above). Don't forget to link the files in your `index.html` file too.
 
-Once this is done, you will be able to add your story to the list in the overview. This happens in the `index.html` placed directly in the `src` folder. In this file, find the first anchor tag with the `stories-list-item` class, duplicate it, and adapt its content and URLs based on your new story. Make sure to respect the sorting, which is newest first, oldest last. 
+Once this is done, you will be able to add your story to the list in the overview. This happens in the `index.html` placed directly in the `src` folder. In this file, find the first anchor tag with the `stories-list-item` class, duplicate it, and adapt its content and URLs based on your new story. Make sure to respect the sorting, which is newest first, oldest last.
 
 ### Adapting the meta-code
 
 Aside from the story's content itself, there are a few things you should change first.
 Search and replace the following texts in the `index.html` with your values:
 
-* `STORY_TITLE`:<br />The title of your article/story (about 65 to 70 characters including spaces)
-* `STORY_DESCRIPTION`:<br />A short description of your article/story (about 120 to 158 characters including spaces)
-* `STORY_KEYWORD`:<br />A coma-separated list keywords related to your article/story (between 10 to 30 keywords)
-* `STORY_AUTHOR_TWITTER_ACCOUNT`:<br />The author's twitter username (If not needed/wanted, remove the relevant HTML/CSS code)
-* `STORY_SLUG`:<br />If you publish the story yourself, change the whole URL. Otherwise, replace `STORY_SLUG` with the name of the story in _"slug"_ form. You can slugify the story title [here](https://slugify.online/).
-* `STORY_PUBLICATION_DATE`:<br />The official publication date of your story.
+- `STORY_TITLE`:<br />The title of your article/story (about 65 to 70 characters including spaces)
+- `STORY_DESCRIPTION`:<br />A short description of your article/story (about 120 to 158 characters including spaces)
+- `STORY_KEYWORD`:<br />A coma-separated list keywords related to your article/story (between 10 to 30 keywords)
+- `STORY_AUTHOR_TWITTER_ACCOUNT`:<br />The author's twitter username (If not needed/wanted, remove the relevant HTML/CSS code)
+- `STORY_SLUG`:<br />If you publish the story yourself, change the whole URL. Otherwise, replace `STORY_SLUG` with the name of the story in _"slug"_ form. You can slugify the story title [here](https://slugify.online/).
+- `STORY_PUBLICATION_DATE`:<br />The official publication date of your story.
 
 ---
 
 <small>**Caution**: Replace `N` by the author's number</small>
 
-* `STORY_AUTHOR_N_DISPLAY_NAME`:<br />The author's display name.
-* `STORY_AUTHOR_N_ROLE`:<br />The author's role (eg. _"Open Data Researcher"_).
-* `STORY_AUTHOR_N_BIO`:<br />A super short bio (eg. _"Dr. Benjamin Seibel leitet das Ideation & Prototyping Lab und betreute zuvor Open Data-Projekte bei der Technologiestiftung Berlin."_).
-* `STORY_AUTHOR_N_STADTPULS_USERNAME`:<br />Stadtpuls.com username (You can find it in the URL of the author's profile page on Stadtpuls.com).
-* `STORY_AUTHOR_N_TWITTER_USERNAME`:<br />author's twitter.com username (Or Remove the HTML link if not wished).
-* `STORY_AUTHOR_N_PORTFOLIO_URL`:<br />author's portfolio URL (Or Remove the HTML link if not wished).
+- `STORY_AUTHOR_N_DISPLAY_NAME`:<br />The author's display name.
+- `STORY_AUTHOR_N_ROLE`:<br />The author's role (eg. _"Open Data Researcher"_).
+- `STORY_AUTHOR_N_BIO`:<br />A super short bio (eg. _"Dr. Benjamin Seibel leitet das Ideation & Prototyping Lab und betreute zuvor Open Data-Projekte bei der Technologiestiftung Berlin."_).
+- `STORY_AUTHOR_N_STADTPULS_USERNAME`:<br />Stadtpuls.com username (You can find it in the URL of the author's profile page on Stadtpuls.com).
+- `STORY_AUTHOR_N_TWITTER_USERNAME`:<br />author's twitter.com username (Or Remove the HTML link if not wished).
+- `STORY_AUTHOR_N_PORTFOLIO_URL`:<br />author's portfolio URL (Or Remove the HTML link if not wished).
 
 ---
 
 Some images should be adapted as well:
 
-* `src/YOUR-STORY/images/social-image.jpg`: This file is the preview that is displayed when sharing via social media or messenger apps such as Slack or WhatsApp. 
-* `src/YOUR-STORY/images/author-1.png` and `src/YOUR-STORY/images/author-2.png`: The portraits of the authors. 
-  
+- `src/YOUR-STORY/images/social-image.jpg`: This file is the preview that is displayed when sharing via social media or messenger apps such as Slack or WhatsApp.
+- `src/YOUR-STORY/images/author-1.png` and `src/YOUR-STORY/images/author-2.png`: The portraits of the authors.
+
 These images were made with the [Sketch app](https://www.sketch.com/). The design files are in the `design-resources` folder. Additionally we provide [Adobe Photoshop](https://www.adobe.com/de/products/photoshop.html) templates which are also in the `design-resources` folder. If you don't own Photoshop, you can use the free and open source [Krita App](https://krita.org/en) to open the Photoshop templates.
 
 ### Adapting the content code
@@ -118,18 +121,17 @@ Basic formatting tags such as `<strong>`, `<em>`, `<blockquote>`, `<h1>` to `<h6
 
 There are a few CSS classes that help with styling:
 
-* `.lead`:<br />This CSS class adds an "introduction" style. Slightly bigger and lighter, the `.lead` class should be used at the beginning of an article to incentivize users to start  reading further.
-* `.alert`:<br />Alerts are styled boxes that are highlighted. They can be used to momentarily derivate from the main content and provide context information. They come in the following flavors: `.alert.alert-info` (should be used by default), `.alert.alert-warning`, `.alert.alert-success`, `.alert.alert-error` 
-* `.wide-block`:<br />Utility CSS class to create blocks that are wider than the main text content. Useful for bringing rhythm and/or placing larger charts.
-* `.tag`:<br />Utility to highlight a text referencing a specific dataset in a chart with the same color. Can set the color using the CSS variable `--data-color`. This can be set on an element-basis with an inline style tag. (Example: `
-<span class="tag" style="--data-color: var(--purple)">Datenarchitektur</span>`)
-
+- `.lead`:<br />This CSS class adds an "introduction" style. Slightly bigger and lighter, the `.lead` class should be used at the beginning of an article to incentivize users to start reading further.
+- `.alert`:<br />Alerts are styled boxes that are highlighted. They can be used to momentarily derivate from the main content and provide context information. They come in the following flavors: `.alert.alert-info` (should be used by default), `.alert.alert-warning`, `.alert.alert-success`, `.alert.alert-error`
+- `.wide-block`:<br />Utility CSS class to create blocks that are wider than the main text content. Useful for bringing rhythm and/or placing larger charts.
+- `.tag`:<br />Utility to highlight a text referencing a specific dataset in a chart with the same color. Can set the color using the CSS variable `--data-color`. This can be set on an element-basis with an inline style tag. (Example: ` <span class="tag" style="--data-color: var(--purple)">Datenarchitektur</span>`)
 
 #### Referencing a Stadtpuls sensor
 
 There is a special HTML structure and JavaScript code that can be used to show a little Card showing information about a Stadtpuls sensor. Just add the HTML element below, and information about the sensor with the provided ID will be fetched and automatically filled into the a tag.
 
 <small>**HTML**</small>:
+
 ```html
 <a class="sensor-card" data-sensor-id="10"></a>
 ```
@@ -149,3 +151,5 @@ Did you create your own story? Great! We can highlight and promote your story on
 ---
 
 Made with :heart: [@CityLAB Berlin](https://www.citylab-berlin.org/)
+
+<!-- touch by ff6347 -->
