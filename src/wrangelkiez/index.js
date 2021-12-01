@@ -22,7 +22,7 @@ function drawChart3(data,id) {
           data: sensor22,
           fill: false,
           backgroundColor: 'rgba(180, 180, 199, 0.0)',
-          borderColor: '#b4b4c7',
+          borderColor: '#ff568d',
           
         }, {
           label: 'Camille (Görlitzer Str.)',
