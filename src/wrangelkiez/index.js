@@ -34,7 +34,7 @@ function drawChart3(data,id) {
           label: 'Dafne (Wrangelstr.)',
           data: sensor25,
           fill: false,
-          backgroundColor: 'rgba(16, 12, 83, 0.2)',
+          backgroundColor: 'rgba(16, 12, 83, 0)',
           borderColor: '#100c53'
         }, {
           label: 'Fadil (Falkensteinstr.)',
@@ -202,9 +202,6 @@ function drawChart2(data) {
               time: {
                 unit: 'day',
                 // tooltipFormat: 'ddd, MMMM dd, yyyy',
-                // displayFormats: {
-                //     day: 'd dd ddd dddd',
-                // },
             //     ticks: {
             //       ...tickStyles.ticks,
 
