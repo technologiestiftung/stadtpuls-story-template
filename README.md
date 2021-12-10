@@ -24,7 +24,7 @@ It does, however, import some external CSS stylesheets and JavaScript scripts fo
 - [**Tailwind Typography**](https://github.com/tailwindlabs/tailwindcss-typography):<br />A CSS stylesheet that provides a set of prose classes to add beautiful typographic defaults to the article main text area.
 - [**Highlight JS**](https://highlightjs.org/):<br />A JS plugin that provides syntax highlighting for code blocks.
 - [**Highlight JS - Theme "Shades of Purple"**](https://highlightjs.org/static/demo/):<br />A CSS stylesheet for styling code highlighted by the [Highlight JS](https://highlightjs.org/) plugin.
-- [**Chart.js**](https://highlightjs.org/):<br />A JS charting library used to display data visualization (You could also use [D3.js](https://d3js.org/) or any other library instead).
+- [**Chart.js**](https://www.chartjs.org):<br />A JS charting library used to display data visualization (You could also use [D3.js](https://d3js.org/) or any other library instead).
 - [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/guides/):<br/>A JS library for creating interactive web maps. Used for the display of sensor cards (can be removed if not used).
 - [**Mapbox GL CSS**](https://docs.mapbox.com/mapbox-gl-js/guides/):<br/>The CSS styles associated withe the [**Mapbox GL JS**](https://docs.mapbox.com/mapbox-gl-js/guides/) library (can be removed if not used).
 
