@@ -251,6 +251,40 @@ main {
   min-height: 100vh;
 }
 
+/* HEADER STADTPULS LINK
+/* ----------------------------------------------------- */
+.header-stadtpuls-link {
+  width: 100%;
+  background: var(--blue);
+  position: absolute;
+  max-width: var(--content-max-width);
+  padding: 14px 18px;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  z-index: 20;
+}
+
+.header-stadtpuls-link a {
+  color: var(--gray-400);
+  text-decoration-color: var(--blue);
+  font-size: 3.5rem;
+}
+
+.header-stadtpuls-link a strong {
+  color: var(--white);
+  transition: color 200ms ease-in-out, text-decoration-color 200ms ease-in-out;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  font-size: 4.8rem;
+  font-family: var(--font-headline);
+}
+
+.header-stadtpuls-link a:hover strong {
+  color: var(--green);
+  text-decoration-color: var(--purple);
+}
+
 /* HEADER */
 /* ----------------------------------------------------- */
 header {
@@ -265,7 +299,7 @@ header {
 }
 
 header > section {
-  padding: 6rem 6rem 12rem;
+  padding: 24rem 6rem 12rem;
   max-width: var(--content-max-width);
   margin: 0 auto;
   color: var(--white);
@@ -274,19 +308,19 @@ header > section {
 
 @media screen and (min-width: 640px) {
   header > section {
-    padding: 8rem 12rem 42rem;
+    padding: 26rem 12rem 42rem;
   }
 }
 
 @media screen and (min-width: 900px) {
   header > section {
-    padding: 10rem 14rem 42rem;
+    padding: 28rem 14rem 42rem;
   }
 }
 
 @media screen and (min-width: 1024px) {
   header > section {
-    padding: 12rem 16rem 42rem;
+    padding: 30rem 16rem 42rem;
   }
 }
 
