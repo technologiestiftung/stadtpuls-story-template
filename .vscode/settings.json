@@ -1,10 +1,24 @@
 {
-  "spellright.language": [
-    "en"
-  ],
-  "spellright.documentTypes": [
-    "markdown",
-    "latex",
-    "plaintext"
-  ]
+  "spellright.language": ["en"],
+  "spellright.documentTypes": ["markdown", "latex", "plaintext"],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#a0dae3",
+    "activityBar.activeBorder": "#d36bc5",
+    "activityBar.background": "#a0dae3",
+    "activityBar.foreground": "#15202b",
+    "activityBar.inactiveForeground": "#15202b99",
+    "activityBarBadge.background": "#d36bc5",
+    "activityBarBadge.foreground": "#15202b",
+    "sash.hoverBorder": "#a0dae3",
+    "statusBar.background": "#79cad7",
+    "statusBar.foreground": "#15202b",
+    "statusBarItem.hoverBackground": "#52bacb",
+    "statusBarItem.remoteBackground": "#79cad7",
+    "statusBarItem.remoteForeground": "#15202b",
+    "titleBar.activeBackground": "#79cad7",
+    "titleBar.activeForeground": "#15202b",
+    "titleBar.inactiveBackground": "#79cad799",
+    "titleBar.inactiveForeground": "#15202b99"
+  },
+  "peacock.color": "#79cad7"
 }
