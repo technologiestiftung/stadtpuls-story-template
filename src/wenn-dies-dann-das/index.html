@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wenn Dies Dann Das - Stadtpuls Stories</title>
+    <meta name="description" content="STORY_DESCRIPTION" />
+
+    <meta property="og:type" content="article" />
+
+    <meta name="theme-color" content="#8330ff" />
+    <meta name="keywords" content="ifttt, automation, low code, pipedream, http observablehq" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+
+    <meta itemprop="name" content="Wenn Dies Dann Das" />
+    <meta itemprop="description" content="STORY_DESCRIPTION" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="fmoronzirfas" />
+    <meta name="twitter:title" content="Wenn Dies Dann Das" />
+    <meta name="twitter:description" content="STORY_DESCRIPTION" />
+
+    <meta property="og:title" content="Wenn Dies Dann Das" />
+    <meta property="og:type" content="article" />
+    <meta property="og:locale" content="de-DE" />
+    <meta property="og:url" content="https://stories.stadtpuls.com/STORY_SLUG" />
+    <meta property="og:description" content="STORY_DESCRIPTION" />
+    <meta property="og:site_name" content="Stadtpuls Stories" />
+
+    <meta itemprop="image" content="/template/images/social-image.jpg" />
+    <meta name="twitter:image" content="/template/images/social-image.jpg" />
+    <meta property="og:image" content="/template/images/social-image.jpg" />
+
+    <link rel="apple-touch-icon" href="/common/images/favicons/apple-touch-icon.png" />
+
+    <link href="/common/images/favicons/favicon.ico" type="image/x-icon" rel="shortcut icon" />
+    <link href="/common/images/favicons/favicon.ico.png" type="image/png" rel="icon" />
+    <link href="/common/images/favicons/favicon-32x32.png" type="image/png" rel="icon" />
+
+    <link rel="manifest" href="/manifest.json" />
+
+    <link rel="author" href="https://www.citylab-berlin.org/" />
+    <link rel="stylesheet" href="/common/vendor/css/preflight-2.2.17.css" />
+    <link rel="stylesheet" href="/common/vendor/css/typography.min.css" />
+    <link rel="stylesheet" href="/common/styles.css" />
+    <link rel="stylesheet" href="/common/vendor/css/shades-of-purple.min.css" />
+    <link rel="stylesheet" href="/common/vendor/css/mapbox-gl.min.css" />
+  </head>
+  <body>
+    <main>
+      <section class="header-stadtpuls-link">
+        <a
+          href="https://stadtpuls.com"
+          title="Die Stadtpuls ist die offene Datenplattform für IoT-Projekte in Berlin."
+        >
+          ← Zurück zu <strong>stadtpuls.com</strong>
+        </a>
+      </section>
+      <header class="black-dot-pattern">
+        <section>
+          <img
+            class="header-hero-img"
+            src="/template/images/story-cover.jpg"
+            aria-hidden="true"
+          />
+          <div class="header-hero-color" aria-hidden="true"></div>
+          <div class="header-hero-squares" aria-hidden="true"></div>
+          <a
+            href="/"
+            title="Stadtpuls Stories Übersicht"
+            class="header-logo"
+          >
+            <img src="/common/images/logo.svg" alt="Stadtpuls Logo" width="157px" />
+            <span>Stories</span>
+          </a>
+<a target="blank" rel="nofollow" href="/" title="Back to the overview" class="header-back-link" >
+  ← Alle Stories
+</a>
+<div itemscope itemtype="http://schema.org/Article">
+  <h1 class="header-title" itemprop="name">
+    Wenn Dies Dann Das
+  </h1>
+  <p class="header-publication-info">
+    <a
+      class="header-profile-link"
+      href="https://stadtpuls.com/accounts/CityLAB-Berlin"
+      target="_blank"
+      rel="noreferrer noopener"
+      itemprop="author"
+    >
+      <span>Fabian Morón Zirfas</span>
+    </a>
+              <span class="header-profile-separator">&</span>
+              <a
+                class="header-profile-link"
+                href="https://stadtpuls.com/accounts/CityLAB-Berlin"
+                target="_blank"
+                rel="noreferrer noopener"
+                itemprop="author"
+              >
+                <span>CityLAB-Berlin</span>
+              </a>
+              <span class="header-publication-date">
+                –
+                <time itemprop="datePublished" datetime="2021-11-26">
+                  26. November 2021
+                </time>
+              </span>
+            </p>
+          </div>
+        </section>
+      </header>
+      <div class="content-container white-dot-pattern">
+        <div class="content-gradient-overlay"></div>
+        <div class="content-gradient-cover"></div>
+        <article class="container" itemscope itemtype="http://schema.org/Article">
+          <section class="prose">
+
+            <p class="lead">
+              Mit unsere Plattform Stadtpuls wollen wir einen Gemeinschaft aufbauen in der
+              alle Beiträge willkommen sind und große und kleine Projekte ihre Daten offen
+              für andere bereitstellen können. Nun ist nicht jede:r des Programmierens
+              Mächtig oder will sich auch nicht sofort in Code stürzen um eine kleine Idee
+              zu skizzieren. Daher steht oft die Frage im Raum: “Wie bekomme ich schnell und
+              einfach Daten da rein?”
+            </p>
+            <p>
+              Mit diesem Experiment möchten wir Wege aufzeigen, die ohne, oder zumindest mit
+              so wenig Programmcode wie möglich auskommen. Ganz kommen wir daran vorbei,
+              aber wir versuchen es so gering wie möglich zu halten.
+            </p>
+            <p>
+              Was ist das alltäglichste und omnipräsenteste Gerät welches mir erlaubt Werte
+              zu messen? Unser Smartphone. Wir tragen in unseren Taschen tag täglich einen
+              Computer mit uns herum, der mehr Leistung hat als die besseren Taschenrechner
+              mit denen wir Menschen zum Mond geschossen haben. Hinzu kommt, dass in diesem
+              Gerät auch noch ein Haufen Sensoren verbaut sind. Von Barometer und
+              Accelerometer zu Mikrofonen und Kameras. Der Zugriff ist nicht immer ganz
+              einfach. Hier jedoch widmen wir uns dem am einfachsten auslesbarem. Dem GPS
+              Sensor.
+            </p>
+            <h2 id="inhalte">Inhalte</h2>
+            <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
+            <!-- code_chunk_output -->
+            <ul>
+              <li>
+                <a target="blank" rel="nofollow" href="#stadtpuls-story-wenn-dies-dann-das"
+                  >Stadtpuls Story Wenn Dies Dann Das</a
+                >
+                <ul>
+                  <li><a target="blank" rel="nofollow" href="#inhalte">Inhalte</a></li>
+                  <li>
+                    <a target="blank" rel="nofollow" href="#voraussetzungen">Voraussetzungen</a>
+                    <ul>
+                      <li><a target="blank" rel="nofollow" href="#was-ist-iftttcom">Was ist ifttt.com</a></li>
+                      <li>
+                        <a target="blank" rel="nofollow" href="#was-ist-observablehqcom">Was ist observablehq.com</a>
+                      </li>
+                      <li><a target="blank" rel="nofollow" href="#was-ist-mapboxcom">Was ist Mapbox.com</a></li>
+                    </ul>
+                  </li>
+                  <li><a target="blank" rel="nofollow" href="#sensor-und-token">Sensor und Token</a></li>
+                  <li>
+                    <a target="blank" rel="nofollow" href="#iftttcom-applet-erstellen">ifttt.com Applet erstellen</a>
+                  </li>
+                  <li>
+                    <a target="blank" rel="nofollow" href="#iftttcom-applet-auf-dem-smartphone-einrichten"
+                      >ifttt.com Applet auf dem Smartphone einrichten</a
+                    >
+                    <ul>
+                      <li>
+                        <a target="blank" rel="nofollow" href="#iftttcom-troubleshooting">ifttt.com Troubleshooting</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a target="blank" rel="nofollow" href="#daten-visalisieren-mit-observablehq"
+                      >Daten visalisieren mit ObservableHQ</a
+                    >
+                  </li>
+                  <li><a target="blank" rel="nofollow" href="#zwischen--fazit">(Zwischen-) Fazit</a></li>
+                </ul>
+              </li>
+            </ul>
+            <!-- /code_chunk_output -->
+            <h2 id="voraussetzungen">Voraussetzungen</h2>
+            <p>
+              Damit wir zügig loslegen können müssen wir ein paar digitale Tools
+              zusammentragen.
+            </p>
+            <ol type="1">
+              <li>Einen <a target="blank" rel="nofollow" href="https://stadtpuls.com">stadtpuls.com</a> Account</li>
+              <li>Einen <a target="blank" rel="nofollow" href="https://ifttt.com">ifttt.com</a> Account</li>
+              <li>Einen <a target="blank" rel="nofollow" href="https://observablehq.com">observablehq.com</a> Account</li>
+              <li>Einen <a target="blank" rel="nofollow" href="https://mapbox.com">mapbox.com</a> Account.</li>
+              <li>
+                Unser Smartphone (ob iOS oder Android ist in diesem Fall egal) mit der
+                ifttt.com Mobile Applikation
+              </li>
+            </ol>
+            <p>
+              Alle vier Plattformen sind entweder komplett kostenlos (Yeah! Stadtpuls) oder
+              haben eine großzügigen kostenfreien Account. Was Stadtpuls ist muss ich hier
+              nicht nochmals erklären, aber was machen die anderen beiden für uns?
+            </p>
+            <h3 id="was-ist-ifttt.com">Was ist ifttt.com</h3>
+            <p>
+              ifttt steht für “if this then that” und ist eine kommerzielle (Freemium)
+              Plattform die es uns erlaubt verschiedenste Services zusammen zu knüpfen.
+              <strong>Wenn</strong> ich eine Email erhalte, <strong>dann</strong> speichere
+              den Absender in einer Goggle Tabelle. <strong>Wenn</strong> es morgens 8 Uhr
+              ist, <strong>dann</strong> schick mir eine SMS mit dem Wetter für Berlin.
+              <strong>Wenn</strong> ich auf der Arbeit ankomme <strong>dann</strong> füge in
+              Kalender einen Eintrag hinzu. Und so weiter und so weiter. Die Plattform
+              erlaubt es auch IoT Geräte wie Phillips Hue Glühbirnen, Nuki Smart Locks oder
+              zum Beispiel Nest Produkte mit anderen Services zu verbinden. Vergleichbare
+              Plattformen wären zapier.com, Microsoft Flow oder Huginn et. al.
+            </p>
+            <h3 id="was-ist-observablehq.com">Was ist observablehq.com</h3>
+            <p>
+              ObservableHQ ist ebenfalls eine kommerzielle Plattform die ihre Wurzeln in der
+              Open Source Community hat. Sie erlaubt es interaktive Notebooks zu
+              veröffentlichen um Daten zu explorieren. Wir können mit Javascript Code in
+              einzelnen Zellen Daten aus APIs wie stadtpuls.com ziehen und diese mit
+              Bibliotheken wie D3.js, Plot.js oder in unserem Falle Mapbox.gl.js
+              visualisieren. Hinzukommt, dass wir neben Javascript Code auch Zellen mit
+              Markdown, HTML, TeX und sogar SQL Datenbanken anlegen können um unsere
+              Notebooks mit Informationen und Daten anzureichern. Vergleichbare Plattformen
+              wären hier Google Colab, deepnote.com, Juypter Notebook oder RStudio et. al.
+            </p>
+            <h3 id="was-ist-mapbox.com">Was ist Mapbox.com</h3>
+            <p>
+              Mapbox ist auch eine kommerzielle Plattformen die im Bereich interaktive
+              Karten den Ton angibt.
+            </p>
+            <p>TBD</p>
+            <h2 id="sensor-und-token">Sensor und Token</h2>
+            <p>
+              Nachdem wir all unsere Accounts erstellt haben, legen wir zuallererst in
+              unserem Stadtpuls.com Account einen neuen Sensor an. Als Kategorie wählen wir
+              “Sonstige” und als Integration “HTTP”. Alle anderen Werte und Namen seien dem
+              Leser überlassen.
+            </p>
+
+            <figure>
+              <img src="images/new-sensor.png" alt="Interface zum erstellen eines neuen Sensors" />
+              <figcaption aria-hidden="true">
+                “Interface zum erstellen eines neuen Sensors”
+              </figcaption>
+              </figure>
+
+
+            <p>
+              Um Daten an stadtpuls.com über HTTP schicken zu können müssen wir uns
+              programmatisch authentifizieren können. Dafür erstellen wir uns ebenfalls in
+              unserem Account einen neuen Token. Auch diesem geben wir einen sinnvollen
+              Namen. Achtung der Token der uns nur einmalig gezeigt wird hat schreibrechte
+              auf all unsere Sensoren. Deshalb sollte dieser niemals in Blog Posts,
+              Screenshots oder sonst wo gezeigt werden. Wir speichern uns den Token in
+              unserem Passwortmanager für später.
+            </p>
+            <figure>
+              <img
+                src="images/new-token.png"
+                alt="“Keine Sorge der Token würde gelöscht”"
+              />
+              <figcaption aria-hidden="true">
+                “Keine Sorge der Token würde gelöscht”
+              </figcaption>
+            </figure>
+            <p>
+              Ausführliche Informationen zu Sensoren und Tokens sind in der
+              <a target="blank" rel="nofollow" href="https://stadtpuls.com/docs">Dokumentation</a> zu finden.
+            </p>
+            <h2 id="ifttt.com-applet-erstellen">ifttt.com Applet erstellen</h2>
+            <p>
+              In unserem ifttt.com Account benutzen wir den großen “Create” Knopf um eine
+              neues Applet zu erstellen. Als erstes definieren wir unseren Trigger/Auslöser
+              “If This” und drücken den “Add” Knopf. Dies führt uns zu einer Suche in der
+              wir alle Services filtern können. Hier suchen wir nach “button” bis wir den
+              “Button Widget” Service gefunden haben und wählen ihn an. Gegebenenfalls
+              müssen wir den Service noch aktivieren. Zu konfigurieren gibt es hier nichts.
+            </p>
+            <figure>
+              <img src="images/button-widget.png" alt="Logo des Button Widgets" />
+
+              <figcaption aria-hidden="true">Logo des Button Widget</figcaption>
+              </figure>
+            <p>
+              Zurück in unserer “Create” Ansicht definieren wir nun das “Then That”, die
+              Aktion die ausgeführt werden soll wenn der Knopf gedrückt wird. Wieder in der
+              Service Suche geben wir “webhooks” in das Suchfeld ein bis wir den Webhooks
+              Service gefunden haben und aktivieren ihn.
+            </p>
+            <figure>
+              <img src="images/webhook-widget.png" alt="Logo des Webhook Widgets" />
+
+              <figcaption aria-hidden="true">Logo des Webhook Widget</figcaption>
+              </figure>
+            <p>
+              Der Webhooks Service braucht ein paar Angaben von uns um zu funktionieren.
+            </p>
+            <ul>
+              <li>
+                Als URL geben wir von der Seite des Sensors auf stadtpuls.com die URL unter
+                “API Schnittstelle” an.
+              </li>
+              <li>Als Methode geben wir <code>POST</code> an.</li>
+              <li>Also Content Type wählen wir <code>application/json</code>.</li>
+              <li>
+                Als Additional Headers geben wir
+                <code>authorization: Bearer TOKEN</code> an. Wobei ihr natürlich das
+                <code>TOKEN</code> mit dem Token den wir vorher erzeugt haben ersetzen
+                müsst.
+              </li>
+              <li>
+                Als Body geben wir folgenden Text ein
+                <code
+                  >{"measurements":[&lt;&lt;&lt; {{Longitude}}&gt;&gt;&gt;,&lt;&lt;&lt;
+                  {{Latitude}}&gt;&gt;&gt;]}</code
+                >.
+              </li>
+            </ul>
+            <figure>
+
+              <img src="images/new-webhook.png"  alt="Screenshot des Interfaces des Webhooks/>
+
+              <figcaption aria-hidden="true">Screenshot des Interfaces des Webhooks</figcaption>
+              </figure>
+
+            <p>
+              Jetzt können wir unsere Aktion speichern und unser Applet ebenfalls speichern.
+            </p>
+            <figure>
+
+              <img src="images/ifttt-applet.png" alt="Das komplette Applet"/>
+
+              <figcaption aria-hidden="true">Das komplette Applet</figcaption>
+              </figure>
+
+            <p>Zu guter Letzt müssen wir dem Applet noch einen Namen geben.</p>
+            <h2 id="ifttt.com-applet-auf-dem-smartphone-einrichten">
+              ifttt.com Applet auf dem Smartphone einrichten
+            </h2>
+            <p>
+              Damit wir von unserem Smartphone aus Daten senden können müssen wir die Mobile
+              Applikation für
+              <a target="blank" rel="nofollow" href="https://apps.apple.com/us/app/ifttt-automation-workflow/id660944635"
+                >iOS</a
+              >
+              oder
+              <a
+                href="https://play.google.com/store/apps/details?id=com.ifttt.ifttt&amp;hl=en_US&amp;gl=US"
+                >Android</a
+              >
+              installieren. Die folgenden Beispiel und Bilder basieren auf der iOS App,
+              sollten aber auch auf Android vergleichbar sein (Beiträge in Form von Pull
+              Requests sind willkommen).
+            </p>
+            <p>
+              Nachdem dies getan ist und wir uns in der App mit unserem Account eingeloggt
+              haben, sollte unser Applet auf der Startseite sichtbar sein. Aus der App
+              direkt scheint es keine Möglichkleit zu geben dieses Applet auszuführen. Es
+              ist jedoch möglich dies im “Today View” von iOS einzurichten. Dafür wischen
+              wir vom HomeScreen aus nach rechts und scrollen im Today View ganz nach unten
+              um diesen zu bearbeiten. Dort scrollen wir wiederrum nach ganz unten und
+              wählen den nochmals bearbeiten. Es folgt eine Liste aller möglichen Widgets.
+              Hier aktivieren wir die ifttt.com App. Nun sollte unser Widget sichtbar sein.
+            </p>
+            <p>
+              Hurrra! Mit einem druck auf das Widget können wir unsere Geo Position an
+              stadtpuls.com senden. Als kleiner Bonus gibt es auch für die Apple Watch eine
+              App die installiert werden kann. Damit können wir unsere Position auch direkt
+              vom Handgelenk aus senden.
+            </p>
+            <p>
+              Um sicher zu gehen, dass alles so funktioniert hat wie wir uns das wünschen
+              werfen wir einen Blick auf die Seite unseres Sensors in stadtpuls.com. Hier
+              sollten wir, sobald wir Daten gesendet haben, diese auch im Chart und in der
+              Tabelle sehen.
+            </p>
+            <p>
+              <a class="sensor-card" data-sensor-id="73"></a>
+            </p>
+            <section class="alert alert-info">
+              <p>
+                <b>Achtung!</b>
+              </p>
+              <p>
+                stadtpuls.com zeigt aktuell nur den ersten Messwert an. In diesem
+                Fall unseren Longitude Wert. Es werden jedoch alle gesendeten Werte in der
+                Datenbank gespeichert und diese sind auch über die REST Schnittstelle
+                abrufbar. Um dies zu verifizieren fügen wir die URL die wir vorher im Applet
+                als URL angegeben haben in die Browser Adressleiste ein und schauen ob wir
+                unsere Daten auch wieder sehen.
+              </p>
+            </section>
+            <h3 id="ifttt.com-troubleshooting">ifttt.com Troubleshooting</h3>
+
+            <section class="alert alert-warning">
+
+              <p>
+                Für den Fall, dass unsere Daten nicht angekommen sind können wir in der IFTTT
+                App oder auch auf ifttt.com die Aktivität Logs einsehen. Basierend hierauf
+                müssen wir prüfen ob unser Webhook auch richtig gesendet hat.
+              </p>
+            </section>
+            <p>Mögliche Fehler
+              sind:</p>
+            <ul>
+              <li>
+                <code>401 Unauthorized</code>. Das bedeutet der Token ist falsch oder die Formatierung
+                stimmt nicht. Es ist wichtig, dass der Header <code>authorization</code> ist
+                und der Token <code>Bearer &lt;TOKEN&gt;</code> ist. Natürlich muss hier
+                <code>&lt;TOKEN&gt;</code> mit unserem Token ersetzt werden.
+              </li>
+              <li>
+                <code>404 Not Found</code>. Das bedeutet das der Service nicht gefunden wurde. Ist die
+                URL die richtige? Das Format ist
+                <code
+                  >https://api.stadtpuls.com/api/v3/sensors/&lt;ID UNSERES
+                  SENSORS&gt;/records</code
+                >.
+              </li>
+              <li>
+                <code>400 Bad Request</code>. Die API von stadtpuls.com ist pedantisch was die Daten
+                angeht die sie verarbeiten will. Der ContentType muss
+                <code>application/json</code> sein und die Struktur des JSONs muss wie folgt
+                sein. <code>{"measurements":[&lt;NUMBER&gt;,&lt;NUMBER&gt;]}</code> Gibt es
+                einen Schreibfehler?
+              </li>
+            </ul>
+            <p>
+              Mehr Hilfe können wir im
+              <a target="blank" rel="nofollow" href="https://github.com/technologiestiftung/stadtpuls/discussions"
+                >Diskussions Forum auf GitHub</a
+              >
+              finden.
+            </p>
+            <h2 id="daten-visalisieren-mit-observablehq">
+              Daten visalisieren mit ObservableHQ
+            </h2>
+            <p>
+              Da eine Tabelle oder ein eindimensionales Chart nicht die sinvollste und auch
+              ansprechenste Visalisierung von Geo Information ist wollen wir unsere Daten
+              auf einer Karte darstellen. Dazu nutzen wir unseren ObservableHQ Account den
+              wir vorher erstellt haben. Wir loggen uns ein und navigieren zu folgender URL:
+              <a target="blank" rel="nofollow" href="https://observablehq.com/@ff6347/ifttt-to-stadtpuls-story"
+                >observablehq.com/<span
+                  class="citation"
+                  data-cites="ff6347/ifttt-to-stadtpuls-story"
+                  >@ff6347/ifttt-to-stadtpuls-story</span
+                ></a
+              >. Dort finden wir hinter dem <code>...</code> Menu oben rechts die
+              Möglickkeit eine “Fork” dieses Notebooks zu erstellen. Ein Fork ist eine Kopie
+              die wir editieren können und die weiterhin das Original Notebook referenziert.
+              Dies erlaubt es uns dem Originalen Author des Notebooks Änderungen
+              vorzuschalgen die er in sein Notebook wiederrum übernehmen kann.
+            </p>
+            <section class="alert alert-info">
+              <p>In unserem Fork müssen wir drei Zellen anpassen.</p>
+            </section>
+
+            <ol type="1">
+              <li>
+                <code>STADTPULS_API_URL</code> - Hier müssen wir die URL der stadtpuls.com
+                API angeben die wir auch bereits vorher in unserem Applet angegeben haben. Beispiel im Originalen Notebook <a href="https://observablehq.com/@ff6347/ifttt-to-stadtpuls-story#STADTPULS_API_URL">Beispiel im Originalen Notebook</a>
+              </li>
+              <li>
+                <code>MAPBOX_TOKEN</code> - Hier müssen wir den Token für die Mapbox API
+                angeben. <a href="https://observablehq.com/@ff6347/ifttt-to-stadtpuls-story#MAPBOX_TOKEN">Beispiel im Originalen Notebook</a>. Diesen Token finden wir in unserem
+                <a target="blank" rel="nofollow" href="https://account.mapbox.com/access-tokens/">Mapbox Account</a>.
+              </li>
+              <li>
+                <code>STYLE_URL</code> - Diese URL sagt Mapbox Bibliothek welcher Kartenstil
+                verwendet werden soll. <a href="https://observablehq.com/@ff6347/ifttt-to-stadtpuls-story#STYLE_URL">Beispiel im Originalen Notebook</a>. Es gibt
+                <a target="blank" rel="nofollow" href="https://docs.mapbox.com/api/maps/styles/#mapbox-styles"
+                  >Standard Stile</a
+                >
+                wie <code>mapbox://styles/mapbox/streets-v11</code> oder
+                <code>mapbox://styles/mapbox/dark-v10</code> und viele mehr oder wir können
+                auch einen eigenen Stil erstellen. Diese sind dann nur mit unserem eigenen
+                <code>MAPBOX_TOKEN</code> zugänglich.
+              </li>
+            </ol>
+
+            <p>
+              Sobald dies getan ist sollte unser Notebook sich von selber aktualisieren und
+              nun unsere Daten anzeigen. Unten sehen wir da originale Notebook eingebettet
+              in einem iFrame.
+            </p>
+            <iframe
+              width="100%"
+              height="476"
+              frameborder="0"
+              src="https://observablehq.com/embed/@ff6347/ifttt-to-stadtpuls-story?cells=map"
+            >
+            </iframe>
+            <h2 id="zwischen--fazit">(Zwischen-) Fazit</h2>
+            <p class="lead">
+              Plattformen wie ifttt.com erlauben es uns mit einfachen Mitteln mit Stadtpuls
+              zu interagieren ohne eine Zeile Code zu schreiben. Die Visualisierung dieser
+              Daten ist leider nicht so einfach. Dank vieler Beispiel und offenen
+              Plattformen wie ObservableHQ kann sich das nötige wissen jedoch angeeignet
+              werden.
+            </p>
+            <p class="lead">Nun bleibt nur die Frage offen “Was bringt uns das?”</p>
+            <p class="lead">
+              Geokoordinaten sind nur Daten. Die Bedeutung dieser hängt von der
+              Interpretation ab. Zeige ich meinen Weg zur Arbeit? Zeichne ich nicht
+              barrierefrei Orte auf? Erstelle ich eine Karte von Orten an denen ich mich
+              besonders un/wohl fühle? Die Bedeutung ist dann Teil des Projektes das Ihr aus
+              dieser Blaupause macht.
+            </p>
+
+
+          <section class="authors-container">
+            <div class="author-block" itemprop="author">
+              <img
+                class="author-portrait"
+                src="images/avatar.png"
+                alt="Portrait von Fabian Morón Zirfas"
+              />
+              <div>
+                <h3>Fabian Morón Zirfas</h3>
+                <small>Autor und Entwickler</small>
+                <p>Ich bin ein "Creative Technologist" an der Technologiestiftung Berlin und mache hin und wieder Zeug das Dinge beinhaltet.</p>
+                <footer>
+                  <a target="blank" rel="nofollow" href="https://stadpuls.com/hash">@hash</a>
+                  <a target="blank" rel="nofollow" href="https://fabianmoronzirfas.me">Portfolio</a>
+                </footer>
+              </div>
+            </div>
+            <!-- <div class="author-block" itemprop="author">
+              <img
+                class="author-portrait"
+                src="/template/images/author-2.png"
+                alt="Portrait of STORY_AUTHOR_2_DISPLAY_NAME"
+              />
+              <div>
+                <h3>STORY_AUTHOR_2_DISPLAY_NAME</h3>
+                <small>STORY_AUTHOR_2_ROLE</small>
+                <p>STORY_AUTHOR_2_BIO</p>
+                <footer>
+                  <a target="blank" rel="nofollow" href="https://stadpuls.com/STORY_AUTHOR_2_STADTPULS_USERNAME">@STORY_AUTHOR_2_STADTPULS_USERNAME</a>
+                  <a target="blank" rel="nofollow" href="https://stadpuls.com/STORY_AUTHOR_2_TWITTER_USERNAME">Twitter</a>
+                </footer>
+              </div>
+            </div> -->
+          </section>
+        </article>
+        <footer class="white-dot-pattern">
+          <section class="container">
+            <div class="sharing-info">
+              <h2>Hat's dir gefallen?</h2>
+              <p>Dann kannst du diese Story hier teilen:</p>
+              <div class="sharing-links">
+                <!-- Twitter (url, text, @mention) -->
+                <a
+                  class="share-btn"
+                  href="https://twitter.com/share?url=https://stories.stadtpuls.com/example-die-gruende-warum-wir-stadtpuls-lieben&text=Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer quis gravida quam. Vestibulum iaculis ligula id malesuada convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris lobortis eu ipsum id mollis. Nam laoreet elit massa, sed ultrices dolor ultrices nec.via=citylabberlin"
+                >
+                  Twitter
+                </a>
+                <!-- Facebook (url) -->
+                <a
+                  class="share-btn"
+                  href="https://www.facebook.com/sharer/sharer.php?u=https://stories.stadtpuls.com/example-die-gruende-warum-wir-stadtpuls-lieben"
+                >
+                  Facebook
+                </a>
+                <!-- LinkedIn (url, title, summary, source url) -->
+                <a
+                  class="share-btn"
+                  href="https://www.linkedin.com/shareArticle?url=https://stories.stadtpuls.com/example-die-gruende-warum-wir-stadtpuls-lieben&title=Die Gründe, warum wir Stadtpuls lieben&summary=Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer quis gravida quam. Vestibulum iaculis ligula id malesuada convallis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris lobortis eu ipsum id mollis. Nam laoreet elit massa, sed ultrices dolor ultrices nec.&source=https://stories.stadtpuls.com"
+                >
+                  LinkedIn
+                </a>
+                <!-- Email (subject, body) -->
+                <a target="blank" rel="nofollow" class="share-btn" href="mailto:?subject=Die Gründe, warum wir Stadtpuls lieben&body=https://stories.stadtpuls.com/example-die-gruende-warum-wir-stadtpuls-lieben">
+                  E-Mail
+                </a>
+            </div>
+          </section>
+          <section class="code-section black-dot-pattern">
+            <section class="container">
+              <div class="code-info">
+                <h2>Schreib’ deine eigene Geschichte!</h2>
+                <p>Mit unserem vorgefertigten HTML/CSS Template.</p>
+                <div class="code-links">
+                  <a
+                    class="share-btn"
+                    href="https://github.com/technologiestiftung/stadtpuls-story-template"
+                  >
+
+                    Auf GitHub herunterladen
+                  </a>
+                </div>
+              </div>
+              <div class="code-halo"></div>
+              <pre class="code-example">
+                <code>&lt;a
+  href=&quot;/&quot;
+  title=&quot;Back to the overview&quot;
+  class=&quot;header-back-link&quot;
+&gt;
+  &larr; Alle Stories sehen
+&lt;/a&gt;
+&lt;div&gt;
+  &lt;h1 class=&quot;header-title&quot;&gt;
+    Wenn Dies Dann Das
+  &lt;/h1&gt;
+  &lt;p class=&quot;header-publication-info&quot;&gt;
+    &lt;a
+      class=&quot;header-profile-link&quot;
+      href=&quot;https://stadtpuls.com/accounts/STORY_AUTHOR_1_STADTPULS_USERNAME&quot;
+    &gt;
+      STORY_AUTHOR_1_DISPLAY_NAME
+    &lt;/a&gt;
+    &lt;span class=&quot;header-profile-separator&quot;&gt;&amp;&lt;/span&gt;
+    &lt;a
+      class=&quot;header-profile-link&quot;
+      href=&quot;https://stadtpuls.com/accounts/STORY_AUTHOR_2_STADTPULS_USERNAME&quot;
+    &gt;
+      STORY_AUTHOR_2_DISPLAY_NAME
+    &lt;/a&gt;</code>
+            </section>
+          </section>
+          <section class="finance">
+            <ul class="container">
+              <li>
+                &nbsp;
+                <a target="blank" rel="nofollow" href="https://www.citylab-berlin.org/">
+                  <img
+                    src="/common/images/citylab-logo.svg"
+                    alt="Logo des CityLABs Berlin"
+                  />
+                </a>
+              </li>
+              <li>
+                Ein Projekt der:
+                <a target="blank" rel="nofollow" href="https://technologiestiftung-berlin.de/">
+                  <img
+                    src="/common/images/tsb-logo.svg"
+                    alt="Logo der Technologiestiftung Berlin"
+                  />
+                </a>
+              </li>
+
+              <li>
+                Gefördert von:
+                <a target="blank" rel="nofollow" href="https://www.berlin.de/">
+                  <img
+                    src="/common/images/berlin-logo.svg"
+                    alt="Logo der Stadt Berlin"
+                  />
+                </a>
+              </li>
+            </ul>
+          </section>
+          <section class="credits">
+            <div class="container">
+              <span>
+                © 2021 Technologiestiftung Berlin
+              </span>
+              <div class="links">
+                <a target="blank" rel="nofollow" href="https://www.technologiestiftung-berlin.de/de/impressum/">Impressum</a>
+                <a target="blank" rel="nofollow" href="https://www.technologiestiftung-berlin.de/de/datenschutz/">Datenschutzerklärung</a>
+              </div>
+            </div>
+          </section>
+        </footer>
+      </div>
+    </main>
+    <script src="/common/vendor/js/highlight.min.js" type="text/javascript"></script>
+    <script src="/common/vendor/js/chart.min.js" type="text/javascript"></script>
+    <script src="/common/vendor/js/mapbox-gl.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      hljs.highlightAll();
+      mapboxgl.accessToken = "pk.eyJ1IjoidGVjaG5vbG9naWVzdGlmdHVuZyIsImEiOiJja2dxZ28xcmwwNW12MnhwMmhheGQyYnYwIn0.Ffzn6ClW1CSbb9HESTJ3Pw";
+    </script>
+    <script src="/common/sensor-cards.js" type="text/javascript"></script>
+    <script src="/template/charts.js" type="text/javascript"></script>
+  </body>
+</html>
