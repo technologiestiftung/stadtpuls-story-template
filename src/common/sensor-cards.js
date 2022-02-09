@@ -36,7 +36,9 @@ function fillSensorHTML(el, data) {
   el.setAttribute('href', `https://stadtpuls.com/sensors/${data.id}`)
   el.innerHTML = `
   <h4 class="sensor-card-title">
-    <img src="https://stadtpuls.com/images/sensor-symbols/${data.id}.svg" alt="Symbol für das Sensor \"${data.name}\"" />
+    <img src="https://stadtpuls.com/images/sensor-symbols/${
+      data.icon_id
+    }.svg" alt="Symbol für das Sensor \"${data.name}\"" />
     <span>${data.name}</span>
   </h4>
   ${(!!data.user || !!data.category && `
