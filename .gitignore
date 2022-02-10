@@ -1,8 +1,6 @@
 .DS_Store
 .vscode/settings.json
 node_modules
-src/wenn-dies-dann-das/draft.html
-src/wenn-dies-dann-das/pandoc.sh
 package.json
 src/package-lock.json
 package-lock.json
