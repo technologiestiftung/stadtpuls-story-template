@@ -126,13 +126,13 @@
           <section class="prose">
 
             <p class="lead">
-              Mit Stadtpuls wollen wir eine Gemeinschaft aufbauen in der
+              Mit Stadtpuls wollen wir eine Gemeinschaft aufbauen, in der
               alle Beiträge willkommen sind und große wie kleine Projekte ihre Daten offen
-              für andere bereitstellen können. 
-              In dieser Stadtpuls Story zeigen wir, wie man auch ohne große Programmierkenntnisse einfach kleine Projekte skizzieren kann. Ganz ohne Code kommen wir zwar nicht aus, aber wir versuchen den Aufwand so gering wie möglich zu halten.
+              für die Stadtgesellschaft bereit stellen können. 
+              In dieser Stadtpuls Story zeigen wir, wie man auch ohne Programmierkenntnisse unkompliziert kleine Projekte mit Sensordaten skizzieren kann. Ganz ohne Code kommen wir zwar nicht aus, aber wir versuchen den Aufwand so gering wie möglich zu halten.
             </p>
             <p>
-              Wir tragen in unseren Taschen tagtäglich einen Computer mit uns herum, der mehr Leistung hat als die Computer, mit deren Hilfe wir Menschen zum Mond geschossen haben. Hinzu kommt, dass in diesem Gerät auch noch ein Haufen Sensoren verbaut sind, etwa Barometer, Accelerometer, Mikrofone und Kameras. Der programmatische Zugriff ist allerdings nicht ganz einfach. In diesem Beispiel verwenden wir den GPS-Sensor unseres Smartphones.
+              Wir tragen in unseren Taschen tagtäglich einen Computer mit uns herum, der mehr Leistung hat als die Computer, mit deren Hilfe wir Menschen zum Mond geschossen haben. Hinzu kommt, dass in diesem Gerät auch noch ein Haufen Sensoren verbaut sind, etwa Barometer, Accelerometer, Mikrofone und Kameras. Der programmatische Zugriff ist allerdings nicht ganz einfach. In diesem Beispiel-Projekt verwenden wir den GPS-Sensor unseres Smartphones um unsere Position an Stadtpuls zu übermitteln und auf einer Karte anzuzeigen.
             </p>
             <h2 id="inhalte">Übersicht</h2>
             <!-- @import "[TOC]" {cmd="toc" depthFrom=2 depthTo=6 orderedList=false} -->
@@ -209,12 +209,12 @@
             <p>
               <a target="blank" rel="nofollow" href="https://observablehq.com">ObservableHQ</a> ist eine kommerzielle Plattform mit Wurzeln in der
               Open Source-Community. Sie erlaubt es, interaktive Notebooks zu
-              erstellen und veröffentlichen, um Daten zu explorieren. Wir können mit JavaScript Code in
+              erstellen und zu veröffentlichen, um Daten zu explorieren. Wir können mit JavaScript-Code in
               einzelnen Zellen Daten aus APIs wie <a href="https://www.stadtpuls.com">stadtpuls.com</a> ziehen und diese mit
               Bibliotheken wie D3.js, Plot.js oder in unserem Falle Mapbox.gl.js
               visualisieren. Hinzu kommt, dass wir neben JavaScript-Code auch Zellen mit
               Markdown, HTML, TeX und sogar SQL Datenbanken anlegen können, um unsere
-              Notebooks mit Informationen und Daten anzureichern. Vergleichbare Plattformen wären hier Google Colab, deepnote.com, Juypter Notebook oder RStudio et. al.
+              Notebooks mit Informationen und Daten anzureichern. Vergleichbare Plattformen wären hier Google Colab, deepnote.com, Jupyter Notebook oder RStudio.
             </p>
             <h3 id="was-ist-mapbox.com">Was ist Mapbox.com?</h3>
             <p>
@@ -256,7 +256,7 @@
             </p>
             <h2 id="ifttt.com-applet-erstellen">Ein ifttt.com Applet erstellen</h2>
             <p>
-              In unserem ifttt.com Account benutzen wir den "Create" Knopf, um eine neues Applet zu erstellen. Als erstes definieren wir unseren Trigger/Auslöser <i>"If This"</i> und drücken den "Add" Knopf. Wir gelangen zu einer Suche, in der wir alle verfügbaren Services filtern können. Hier suchen wir nach "button", um den "Button Widget" Service zu finden und wählen ihn aus. Gegebenenfalls müssen wir den Service noch aktivieren. Zu konfigurieren gibt es hier nichts.
+              In unserem ifttt.com Account benutzen wir den "Create" Knopf, um eine neues Applet zu erstellen. Als erstes definieren wir unseren Trigger/Auslöser <i>"If This"</i> und drücken den "Add" Knopf. Wir gelangen zu einer Suche, in der wir alle verfügbaren Services filtern können. Hier suchen wir nach "button", um den "Button Widget" Service zu finden und wählen diesen aus. Gegebenenfalls müssen wir den Service noch aktivieren. Zu konfigurieren gibt es hier nichts.
             </p>
             <figure>
               <img src="/wenn-dies-dann-das/images/button-widget.png" alt="Logo des Button Widgets" />
@@ -266,7 +266,7 @@
             <p>
               Zurück in unserer "Create" Ansicht definieren wir nun das <i>"Then That"</i>, also die
               Aktion, die ausgeführt werden soll, wenn der Knopf gedrückt wird. Wieder in der
-              Service-Suche geben wir dieses mal "webhooks" in das Suchfeld ein und aktivieren den gefundenen  "Webhooks Service".
+              Services-Suche geben wir dieses mal "webhooks" in das Suchfeld ein und aktivieren den gefundenen  "Webhooks Service".
             </p>
             <figure>
               <img src="/wenn-dies-dann-das/images/webhook-widget.png" alt="Logo des Webhook Widgets" />
@@ -309,7 +309,7 @@
               <figcaption aria-hidden="true">Das komplette Applet</figcaption>
               </figure>
 
-            <p>Zu guter Letzt müssen wir dem Applet noch einen Namen geben.</p>
+            <p>Zu guter Letzt dürfen wir dem Applet noch einen Namen geben.</p>
             <h2 id="ifttt.com-applet-auf-dem-smartphone-einrichten">
               Das ifttt.com Applet auf dem Smartphone einrichten
             </h2>
@@ -329,7 +329,7 @@
               direkt scheint es keine Möglichkleit zu geben, dieses Applet auszuführen. Es
               ist jedoch möglich, dies im "Today View" von iOS einzurichten. Dafür wischen
               wir vom HomeScreen aus nach rechts und scrollen im Today View ganz nach unten,
-              um diesen zu bearbeiten. Dort scrollen wir wiederrum nach ganz unten und
+              um diesen zu bearbeiten. Dort scrollen wir wiederum nach ganz unten und
               wählen nochmals "bearbeiten". Es folgt eine Liste aller verfügbaren Widgets.
               Hier aktivieren wir die ifttt.com App. Nun sollte unser Widget angezeigt werden.
             </p>
@@ -389,7 +389,7 @@
             <p>
               Mehr Hilfe können wir im
               <a target="blank" rel="nofollow" href="https://github.com/technologiestiftung/stadtpuls/discussions"
-                >Diskussions Forum auf GitHub</a
+                >Diskussions-Gruppe auf GitHub</a
               >
               finden.
             </p>
@@ -397,8 +397,7 @@
               Daten visalisieren mit ObservableHQ
             </h2>
             <p>
-              Da eine einfache Tabelle und ein eindimensionales Chart nicht unbedingt die sinvollste oder
-              ansprechenste Visalisierung von Geo-Informationen sind, wollen wir unsere Daten
+              Da eine einfache Tabelle und ein eindimensionales Chart nicht unbedingt die attraktivsten Visalisierungen von Geo-Informationen sind, wollen wir unsere Daten
               übersichtlich und nachvollziehbar auf einer Karte darstellen. Dazu nutzen wir den zuvor erstellten ObservableHQ Account. Wir loggen uns ein und navigieren zu folgender URL:
               <a target="blank" rel="nofollow" href="https://observablehq.com/@ff6347/ifttt-to-stadtpuls-story"
                 >observablehq.com/<span
