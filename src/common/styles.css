@@ -945,6 +945,7 @@ footer {
 /* ------------------------------------------------------- */
 #back-to-top-link {
   position: fixed;
+  z-index: 10;
   bottom: 5rem;
   right: 10rem;
   padding: 6px 12px;
