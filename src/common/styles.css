@@ -172,15 +172,19 @@ a,
   text-decoration-color: var(--green);
 }
 
-.prose p pre,
-.prose p code,
+.prose code::before,
+.prose code::after {
+  content: '';
+}
+
+.prose code:not(.hljs),
 .prose .tag {
   font-family: var(--font-monospace);
   font-weight: normal;
   display: inline-block;
-  padding: 3px 4px;
-  line-height: 120%;
-  font-size: 105%;
+  padding: 4px 4px 3px;
+  line-height: 100%;
+  font-size: 100%;
   border-radius: 3px;
   background: var(--gray-100);
   color: var(--gray-800);
