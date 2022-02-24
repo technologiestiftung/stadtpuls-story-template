@@ -1,1 +1,7 @@
 .DS_Store
+.vscode/settings.json
+node_modules
+package.json
+src/package-lock.json
+package-lock.json
+src/.vscode/settings.json

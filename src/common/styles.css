@@ -6,6 +6,7 @@
     url('fonts/Sora-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Sora';
@@ -13,6 +14,7 @@
     url('fonts/Sora-Italic.ttf') format('truetype');
   font-weight: 400;
   font-style: italic;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Sora';
@@ -20,6 +22,7 @@
     url('fonts/Sora-Bold.ttf') format('truetype');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: 'Sora';
@@ -27,6 +30,7 @@
     url('fonts/Sora-BoldItalic.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
@@ -35,6 +39,7 @@
     url('fonts/SpaceGrotesk-Light.woff') format('woff');
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -43,6 +48,7 @@
     url('fonts/SpaceGrotesk-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -51,6 +57,7 @@
     url('fonts/SpaceGrotesk-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -59,6 +66,7 @@
     url('fonts/SpaceGrotesk-Bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -67,6 +75,7 @@
     url('fonts/SpaceGrotesk[wght].woff') format('woff');
   font-weight: 300 700;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -75,6 +84,7 @@
     url('fonts/SpaceGrotesk[wght].woff') format('woff');
   font-weight: 300 900;
   font-style: monospace;
+  font-display: swap;
 }
 
 /* VARIABLES */
@@ -162,15 +172,19 @@ a,
   text-decoration-color: var(--green);
 }
 
-.prose p pre,
-.prose p code,
+.prose code::before,
+.prose code::after {
+  content: '';
+}
+
+.prose code:not(.hljs),
 .prose .tag {
   font-family: var(--font-monospace);
   font-weight: normal;
   display: inline-block;
-  padding: 3px 4px;
-  line-height: 120%;
-  font-size: 105%;
+  padding: 4px 4px 3px;
+  line-height: 100%;
+  font-size: 100%;
   border-radius: 3px;
   background: var(--gray-100);
   color: var(--gray-800);
@@ -931,6 +945,38 @@ footer {
   line-height: 4rem;
 }
 
+/* BACK TO TOP BUTTON */
+/* ------------------------------------------------------- */
+#back-to-top-link {
+  position: fixed;
+  z-index: 10;
+  bottom: 5rem;
+  right: 10rem;
+  padding: 6px 12px;
+  background: var(--blue);
+  color: var(--white);
+  transform: translateY(-50%);
+  transition: opacity 200ms ease-out, color 200ms ease-out,
+    background 200ms ease-out;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#back-to-top-link.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+#back-to-top-link:hover {
+  background: var(--purple);
+}
+
+#back-to-top-link:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--white), 0 0 0 6px var(--green);
+  border: 0;
+}
+
 /* SHARING INFO & CODE INFO */
 /* ------------------------------------------------------- */
 .sharing-info,
@@ -1010,8 +1056,8 @@ footer {
   position: absolute;
   border-top-left-radius: 100%;
   border-top-right-radius: 100%;
-  background:var(--green);
-  box-shadow: 0 0 200px  var(--green);
+  background: var(--green);
+  box-shadow: 0 0 200px var(--green);
   z-index: 1;
   color: var(--green);
   left: 50%;
