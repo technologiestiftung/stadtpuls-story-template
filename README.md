@@ -150,8 +150,59 @@ npx browser-sync start -s 'src' -f 'src' --no-notify --host $LOCAL_IP --port 900
 
 Did you create your own story? Great! We can highlight and promote your story on our website and social media channels. Create a Pull Request or send us the zipped code folder at [info@stadtpuls.com](mailto:info@stadtpuls.com). We'll take care of the rest and get in touch with you once all is ready!
 
----
+## Contributors ✨
 
-Made with :heart: [@CityLAB Berlin](https://www.citylab-berlin.org/)
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-<!-- touch by ff6347 -->
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/vogelino"><img src="https://avatars.githubusercontent.com/u/2759340?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Lucas Vogel</b></sub></a><br /><a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=vogelino" title="Code">💻</a> <a href="#design-vogelino" title="Design">🎨</a> <a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=vogelino" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://github.com/dnsos"><img src="https://avatars.githubusercontent.com/u/15640196?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Dennis Ostendorf</b></sub></a><br /><a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=dnsos" title="Code">💻</a></td>
+    <td align="center"><a href="https://fabianmoronzirfas.me/"><img src="https://avatars.githubusercontent.com/u/315106?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Fabian Morón Zirfas</b></sub></a><br /><a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=ff6347" title="Code">💻</a> <a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=ff6347" title="Documentation">📖</a> <a href="#content-ff6347" title="Content">🖋</a></td>
+    <td align="center"><a href="https://github.com/Lisa-Stubert"><img src="https://avatars.githubusercontent.com/u/61182572?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Lisa-Stubert</b></sub></a><br /><a href="#content-Lisa-Stubert" title="Content">🖋</a> <a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=Lisa-Stubert" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/ester-t-s"><img src="https://avatars.githubusercontent.com/u/91192024?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Ester</b></sub></a><br /><a href="#content-ester-t-s" title="Content">🖋</a></td>
+    <td align="center"><a href="http://www.awsm.de/"><img src="https://avatars.githubusercontent.com/u/434355?v=4?s=64" width="64px;" alt=""/><br /><sub><b>Ingo Hinterding</b></sub></a><br /><a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=Esshahn" title="Code">💻</a> <a href="#content-Esshahn" title="Content">🖋</a> <a href="https://github.com/technologiestiftung/stadtpuls-story-template/commits?author=Esshahn" title="Documentation">📖</a></td>
+  </tr>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+
+## Content Licencing
+
+Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/). 
+
+## Credits
+
+<table>
+  <tr>
+    <td>
+      <a src="https://citylab-berlin.org/en/start/">
+        <br />
+        <br />
+        <img width="200" src="https://logos.citylab-berlin.org/logo-citylab-berlin.svg" />
+      </a>
+    </td>
+    <td>
+      A project by: <a src="https://www.technologiestiftung-berlin.de/en/">
+        <br />
+        <br />
+        <img width="150" src="https://logos.citylab-berlin.org/logo-technologiestiftung-berlin-en.svg" />
+      </a>
+    </td>
+    <td>
+      Supported by: <a src="https://www.berlin.de/rbmskzl/en/">
+        <br />
+        <br />
+        <img width="80" src="https://logos.citylab-berlin.org/logo-berlin-senatskanzelei-en.svg" />
+      </a>
+    </td>
+  </tr>
+</table>
