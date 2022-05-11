@@ -1,4 +1,4 @@
-![](https://img.shields.io/badge/Build%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiesitftung%20Berlin-blue)
+![](https://img.shields.io/badge/Built%20with%20%E2%9D%A4%EF%B8%8F-at%20Technologiestiftung%20Berlin-blue)
 
 # **Stadtpuls** Story Template
 
@@ -177,7 +177,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 ## Content Licencing
 
-Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/). 
+Texts and content available as [CC BY](https://creativecommons.org/licenses/by/3.0/de/).
 
 ## Credits
 
