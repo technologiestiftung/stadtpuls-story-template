@@ -1,0 +1,49 @@
+
+
+/* Three column layout */
+.bars-wrapper {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.bar-row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 12px;
+  margin-bottom: 4px;
+}
+.bar-row > div {
+  align-self: center;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #e7eaf2;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-1 {
+  width: 80%;
+  height: 14px;
+  background-color: #1e1a5a;
+}
+.bar-2 {
+  width: 70%;
+  height: 14px;
+  background-color: #8330ff;
+}
+
+.infobox a,
+.infobox p,
+.side {
+  font-size: 80%;
+}
+.infobox p {
+  margin-top: 8px;
+}
+.infobox .info-title {
+  margin-bottom: -6px;
+  color: black;
+}
