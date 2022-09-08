@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Sensorstandorte</title>
+    <meta
+      name="viewport"
+      content="initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1IjoidGVjaG5vbG9naWVzdGlmdHVuZyIsImEiOiJja2dxZ28xcmwwNW12MnhwMmhheGQyYnYwIn0.Ffzn6ClW1CSbb9HESTJ3Pw';
+      const map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/technologiestiftung/ckquzll4z1usx17rwlc5gyq7v',
+        center: [13.326469, 52.515481],
+        zoom: 15.0,
+        minZoom: 14.0,
+      });
+
+      // This implements `StyleImageInterface`
+      // to draw a pulsing dot icon on the map.
+      const size = 200;
+      const pulsingDot = {
+        width: size,
+        height: size,
+        data: new Uint8Array(size * size * 4),
+
+        onAdd: function () {
+          const canvas = document.createElement('canvas');
+          canvas.width = this.width;
+          canvas.height = this.height;
+          this.context = canvas.getContext('2d');
+        },
+
+        render: function () {
+          const duration = 2500;
+          const t = (performance.now() % duration) / duration;
+
+          const radius = (size / 2) * 0.3;
+          const outerRadius = (size / 2) * 0.7 * t + radius;
+          const context = this.context;
+
+          context.clearRect(0, 0, this.width, this.height);
+          context.beginPath();
+          context.arc(
+            this.width / 2,
+            this.height / 2,
+            outerRadius,
+            0,
+            Math.PI * 2
+          );
+          context.fillStyle = `rgba(123, 232, 167, ${1 - t})`;
+          context.fill();
+
+          context.beginPath();
+          context.arc(this.width / 2, this.height / 2, radius, 0, Math.PI * 2);
+          context.fillStyle = 'rgba(0, 21, 186, 1)';
+          context.strokeStyle = 'white';
+          context.lineWidth = 2 + 4 * (1 - t);
+          context.fill();
+          context.stroke();
+
+          this.data = context.getImageData(0, 0, this.width, this.height).data;
+
+          map.triggerRepaint();
+          return true;
+        },
+      };
+
+      map.on('load', () => {
+        map.addImage('pulsing-dot', pulsingDot, { pixelRatio: 2 });
+
+        map.addSource('dot-point', {
+          type: 'geojson',
+          data: 'sensor_99.geojson',
+        });
+
+        map.addLayer({
+          id: 'layer-with-pulsing-dot',
+          type: 'symbol',
+          source: 'dot-point',
+          layout: {
+            'icon-image': 'pulsing-dot',
+            'icon-allow-overlap': true,
+            'text-allow-overlap': true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
