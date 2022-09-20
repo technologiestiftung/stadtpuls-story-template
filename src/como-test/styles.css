@@ -46,6 +46,9 @@
   color: black;
 }
 
+#myModal {
+  /* position: absolute; */
+}
 /* Style the Image Used to Trigger the Modal */
 #img2 {
   border-radius: 5px;
@@ -60,8 +63,8 @@
 /* The Modal (background) */
 .modal {
   display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  position: absolute !important; /* Stay in place */
+  z-index: 111; /* Sit on top */
   padding-top: 100px; /* Location of the box */
   left: 0;
   top: 0;
@@ -70,6 +73,10 @@
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+}
+
+.display_block {
+  display: block;
 }
 
 /* Modal Content (Image) */
