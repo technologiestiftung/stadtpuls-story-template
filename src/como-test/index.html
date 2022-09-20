@@ -122,7 +122,7 @@
             <iframe src="/como-test/vendor/map/sensor_99.html" width="100%" height="300px" title="Karte mit Sensoren"></iframe>
 
             <p>
-              <strong>Für unser Datenportrait haben wir uns drei aufeinanderfolgende Workshoptage im Juni 2022 angeschaut. Der Kurvenverlauf erzählt eine Geschichte von unterschiedlichen Lüftungsverhalten und deren Auswirkungen.</strong>
+              Für unser Datenportrait haben wir uns drei aufeinanderfolgende Workshoptage im Juni 2022 angeschaut. Der Kurvenverlauf erzählt eine Geschichte von unterschiedlichen Lüftungsverhalten und deren Auswirkungen.
             </p>
             
             <!-- try to code this dataviz --> 
@@ -203,7 +203,7 @@
             <iframe src="/como-test/vendor/map/sensor_110.html" width="100%" height="300px" title="Karte mit Sensoren"></iframe>
             
             <p>
-              <strong>Für unsere Data Story analysierten wir einen Zeitraum von zwei Wochen vom Montag, dem 4. Juli bis Sonntag, dem 17. Juli 2022. Das CO2-Liniendiagramm schlägt so kontinuierlich aus wie ein Beat und erzählt die Geschichte eines regelmäßig belegten Raumes durch unterschiedlich viele Musiker:innen unterschiedlichen Temperaments.</strong>
+              Für unsere Data Story analysierten wir einen Zeitraum von zwei Wochen vom Montag, dem 4. Juli bis Sonntag, dem 17. Juli 2022. Das CO2-Liniendiagramm schlägt so kontinuierlich aus wie ein Beat und erzählt die Geschichte eines regelmäßig belegten Raumes durch unterschiedlich viele Musiker:innen unterschiedlichen Temperaments.
             </p>
 
             <!-- try to code this dataviz --> 
@@ -255,7 +255,7 @@
             <iframe src="/como-test/vendor/map/sensor_108.html" width="100%" height="300px" title="Karte mit Sensoren"></iframe>            
 
             <p>
-              <strong>Für unseren Data Showcase schauten wir uns im Musiksalon von Schloss Biesdorf ein Sonntagskonzert am 10. Juli 2022 an. Der kurze und dafür intensive Betrachtungszeitraum der ersten Tageshälfte, von 8 Uhr morgens bis 14 Uhr mittags, erzählt die Geschichte einer umsichtigen Veranstaltung.</strong>
+              Für unseren Data Showcase schauten wir uns im Musiksalon von Schloss Biesdorf ein Sonntagskonzert am 10. Juli 2022 an. Der kurze und dafür intensive Betrachtungszeitraum der ersten Tageshälfte, von 8 Uhr morgens bis 14 Uhr mittags, erzählt die Geschichte einer umsichtigen Veranstaltung.
             </p>
 
             <!-- try to code this dataviz --> 
@@ -301,42 +301,6 @@
               Vielen Dank an das Team von Stadtpuls vom CityLAB Berlin, das uns die Plattform für unsere Data Story zur Verfügung gestellt hat. Wir danken auch allen COMo-Teilnehmer:innen, die aktiv am Projekt teilnehmen, dauerhaft Daten sammeln und diese für die interessierte Stadtgesellschaft öffentlich machen.
             </p>
             
-            
-            <h2 style="color: red;" >Unser Code --> für COMo adoptierbar???</h2>
-            Wenn du mehr darüber erfahren willst, wie wir unsere Sensordaten verarbeitet haben, dann guck doch mal in unserem <a href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00008-adf6dbfa-d0dd-4fc2-8a85-eea3b050dd7e">Online Python Notebook</a> vorbei. 
-
-            Dort findest du den Code, den wir verwendet haben, um die Rohdaten von der Stadtpuls-API abzufragen, zu filtern und ein paar Berechnungen anzustellen. Die dort generierten CSV-Dateien haben wir benutzt, um die interaktiven Visualisierungen für diese Story zu erstellen. Den Code für die Graphen findest du im <a href="https://github.com/technologiestiftung/stadtpuls-story-template">Repository</a> zu dieser Story.
-            <pre class="wide-block">
-              <code>
-                # function to fetch sensor data from stadtpuls api
-                def fetch(start_url):
-                  data = []
-                  def fetch_data(url):
-                    parsed_uri = urlparse(url)
-                    base_url = '{uri.scheme}://{uri.netloc}'.format(uri=parsed_uri)
-                    try:
-                      response = requests.get(url)
-                      if response.status_code == 200:
-                        json = response.json()
-                        data.extend(response.json()["data"])
-                        if "nextPage" in response.json():
-                          fetch_data("{}{}".format(base_url, json["nextPage"]))
-                    except requests.HTTPError as err:
-                      print("OS error: {0}".format(err))
-                  fetch_data(start_url)
-                  
-                  return data
-
-                sensor_id = '22' # define sensor id here, this is Albert
-                time_begin = '2021-11-18' # define the timerange
-                time_end = '2021-11-24'
-                data = fetch("https://api.stadtpuls.com/api/v3/sensors/"+sensor_id+"/records")
-                data = pd.DataFrame.from_dict(data) 
-                data = data[time_begin:time_end] # extract only measurements in the timerange
-              </code>
-            </pre>
-            <p>Den kompletten Python-Code zur Verarbeitung der Daten findest du in <a style="color:#8330ff;" href="https://deepnote.com/project/Stadtpuls-Story-Larm-svXmxLJuSAGiqoQitfBt3w/%2Fnotebook.ipynb/#00008-adf6dbfa-d0dd-4fc2-8a85-eea3b050dd7e">Deepnote</a>.</p>
-
           </section>
           
           <!-- Autorinnen -->
