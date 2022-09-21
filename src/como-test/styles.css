@@ -1,141 +1,45 @@
-/* Three column layout */
-.bars-wrapper {
-  margin-top: 12px;
-  margin-bottom: 12px;
+/* ZOOMABLE IMAGE */
+.zoomable-image-open {
+  overflow: hidden;
 }
-.bar-row {
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 12px;
-  margin-bottom: 4px;
-}
-.bar-row > div {
-  align-self: center;
-}
-
-/* The bar container */
-.bar-container {
-  width: 100%;
-  background-color: #e7eaf2;
-  text-align: center;
-  color: white;
-}
-
-/* Individual bars */
-.bar-1 {
-  width: 80%;
-  height: 14px;
-  background-color: #1e1a5a;
-}
-.bar-2 {
-  width: 70%;
-  height: 14px;
-  background-color: #8330ff;
-}
-
-.infobox a,
-.infobox p,
-.side {
-  font-size: 80%;
-}
-.infobox p {
-  margin-top: 8px;
-}
-.infobox .info-title {
-  margin-bottom: -6px;
-  color: black;
-}
-
-#myModal {
-  /* position: absolute; */
-}
-/* Style the Image Used to Trigger the Modal */
-#img2 {
-  border-radius: 5px;
+.zoomable-image-trigger {
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
   cursor: pointer;
-  transition: 0.3s;
 }
-
-#img2:hover {
-  opacity: 0.7;
+.zoomable-image-trigger:hover {
+  cursor: zoom-in;
+  opacity: 0.5;
 }
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: absolute !important; /* Stay in place */
-  z-index: 111; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
+.zoomable-image-container {
+  z-index: 10;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  padding: 8px;
+  cursor: zoom-out;
 }
-
-.display_block {
-  display: block;
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-}
-
-/* Caption of Modal Image (Image Text) - Same Width as the Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
-}
-
-/* Add Animation - Zoom in the Modal */
-.modal-content,
-#caption {
-  animation-name: zoom;
-  animation-duration: 0.6s;
-}
-
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* The Close Button */
-.close {
+.zoomable-image-backdrop {
   position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: var(--black);
+  opacity: 0.8;
+  pointer-events: none;
 }
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
+.zoomable-image-img {
+  max-width: 100%;
+  max-height: 100%;
+  pointer-events: none;
+  position: relative;
+  z-index: 20;
+  background: var(--white);
 }
