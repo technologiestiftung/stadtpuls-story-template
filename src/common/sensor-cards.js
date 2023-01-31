@@ -1,3 +1,6 @@
+// let window.API_BASE_URL = window.API_BASE_URL || `https://stadtpuls.com/data`
+window.API_BASE_URL = window.API_BASE_URL || `http://localhost:3333/data`
+
 /* SENSOR CARD MAP */
 /* ------------------------------------------------------- */
 const allSensorCards = Array.from(document.getElementsByClassName('sensor-card'))
@@ -8,12 +11,14 @@ allSensorCards.forEach((el) => {
 })
 
 function fetchAndShowSensorInfo(sensorId, el) {
-  fetch(`https://api.stadtpuls.com/api/v3/sensors/${sensorId}`)
-    .then((response) => response.json())
-    .then(({ data }) =>	{
-      if (data.length === 0 || !data[0]) return
-      fillSensorHTML(el, data[0])
-      drawSensorCardMap(el, data[0])
+  fetch(`${API_BASE_URL}/sensors.json`)
+    .then(response => response.json())
+    .then((sensors) => {
+      if (sensors?.length === 0) return
+      const sensor = sensors.find(s => s.id === +sensorId)
+      if (!sensors) return
+      fillSensorHTML(el, sensor)
+      drawSensorCardMap(el, sensor)
     })
     .catch((err) => console.warn(`Something went wrong when fetching sensor with id ${sensorId}.`, err));
 }
@@ -36,19 +41,18 @@ function fillSensorHTML(el, data) {
   el.setAttribute('href', `https://stadtpuls.com/sensors/${data.id}`)
   el.innerHTML = `
   <h4 class="sensor-card-title">
-    <img src="https://stadtpuls.com/images/sensor-symbols/${
-      data.icon_id
+    <img src="https://stadtpuls.com/images/sensor-symbols/${data.icon_id
     }.svg" alt="Symbol für das Sensor \"${data.name}\"" />
     <span>${data.name}</span>
   </h4>
-  ${(!!data.user || !!data.category && `
+  ${data.user || data.category ? `
     <div class="sensor-card-metadata">
-      ${(!!data.category && `
+      ${(data.category && `
         <span class="sensor-card-type">
           <span>${data.category.name}</span>
         </span>
       `) || ''}
-      ${(!!data.user && `
+      ${data.user ? `
         <span class="sensor-card-author">
           <img
             src="https://source.boringavatars.com/pixel/24/${data.user.name}?colors=F9FCFD,100C53,0000C2,46ECA1,8330FF,F2F3F8,CFD0DC"
@@ -56,9 +60,9 @@ function fillSensorHTML(el, data) {
           />
           <span>${data.user.display_name}</span>
         </span>
-      `) || ''}
+      ` : ''}
     </div>
-  `) || ''}
+  ` : ''}
   <p class="sensor-card-description">
     ${data.description}
   </p>
