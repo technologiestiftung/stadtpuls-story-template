@@ -1,5 +1,5 @@
 // let window.API_BASE_URL = window.API_BASE_URL || `https://stadtpuls.com/data`
-window.API_BASE_URL = window.API_BASE_URL || `http://localhost:3333/data`
+window.API_BASE_URL = window.API_BASE_URL || `https://stadtpuls.com/data`
 
 /* SENSOR CARD MAP */
 /* ------------------------------------------------------- */
